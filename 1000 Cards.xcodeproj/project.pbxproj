@@ -10,7 +10,7 @@
 		F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C961DAD58FB00421A53 /* AppDelegate.swift */; };
 		F75D9C991DAD58FB00421A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C981DAD58FB00421A53 /* ViewController.swift */; };
 		F75D9C9C1DAD58FB00421A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75D9C9A1DAD58FB00421A53 /* Main.storyboard */; };
-		F75D9C9F1DAD58FB00421A53 /* _000_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C9D1DAD58FB00421A53 /* _000_Cards.xcdatamodeld */; };
+		F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */; };
 		F75D9CA11DAD58FB00421A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75D9CA01DAD58FB00421A53 /* Assets.xcassets */; };
 		F75D9CA41DAD58FB00421A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75D9CA21DAD58FB00421A53 /* LaunchScreen.storyboard */; };
 		F75D9CAC1DAD5A2E00421A53 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9CAB1DAD5A2E00421A53 /* SignUpViewController.swift */; };
@@ -21,7 +21,7 @@
 		F75D9C961DAD58FB00421A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F75D9C981DAD58FB00421A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F75D9C9B1DAD58FB00421A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F75D9C9E1DAD58FB00421A53 /* _000_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _000_Cards.xcdatamodel; sourceTree = "<group>"; };
+		F75D9C9E1DAD58FB00421A53 /* 1000_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1000_Cards.xcdatamodel; sourceTree = "<group>"; };
 		F75D9CA01DAD58FB00421A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75D9CA31DAD58FB00421A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F75D9CA51DAD58FB00421A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				F75D9CA01DAD58FB00421A53 /* Assets.xcassets */,
 				F75D9CA21DAD58FB00421A53 /* LaunchScreen.storyboard */,
 				F75D9CA51DAD58FB00421A53 /* Info.plist */,
-				F75D9C9D1DAD58FB00421A53 /* _000_Cards.xcdatamodeld */,
+				F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */,
 			);
 			path = "1000 Cards";
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75D9C991DAD58FB00421A53 /* ViewController.swift in Sources */,
-				F75D9C9F1DAD58FB00421A53 /* _000_Cards.xcdatamodeld in Sources */,
+				F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */,
 				F75D9CAC1DAD5A2E00421A53 /* SignUpViewController.swift in Sources */,
 				F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */,
 			);
@@ -300,13 +300,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F75D9C9D1DAD58FB00421A53 /* _000_Cards.xcdatamodeld */ = {
+		F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F75D9C9E1DAD58FB00421A53 /* _000_Cards.xcdatamodel */,
+				F75D9C9E1DAD58FB00421A53 /* 1000_Cards.xcdatamodel */,
 			);
-			currentVersion = F75D9C9E1DAD58FB00421A53 /* _000_Cards.xcdatamodel */;
-			path = _000_Cards.xcdatamodeld;
+			currentVersion = F75D9C9E1DAD58FB00421A53 /* 1000_Cards.xcdatamodel */;
+			path = 1000_Cards.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
