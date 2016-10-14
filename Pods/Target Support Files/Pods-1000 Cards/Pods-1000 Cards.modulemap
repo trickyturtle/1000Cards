@@ -1,0 +1,6 @@
+framework module Pods_1000_Cards {
+  umbrella header "Pods-1000 Cards-umbrella.h"
+
+  export *
+  module * { export * }
+}
