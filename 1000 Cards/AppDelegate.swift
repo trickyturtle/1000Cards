@@ -17,6 +17,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Override point for customization after application launch.
+        // ****************************************************************************
+        // Initialize Parse SDK
+        // ****************************************************************************
+        
+        let configuration = ParseClientConfiguration {
+            // Add your Parse applicationId:
+            $0.applicationId = "wUHmrz15Gi0nJByzPhhy2qHmVB8c2U6HGk9Cuha3"
+            
+            // Uncomment and add your clientKey (it's not required if you are using Parse Server):
+            $0.clientKey = "lXDx3atzdjgn66EEisSkcOd37Cr8uTe67z3U0boc"
+            
+            // Uncomment the following line and change to your Parse Server address;
+            //            $0.server = "mongodb://admin:WU57ZSxqTr3caFDq6U5ddGOw@mongodb3.back4app.com:27017/e0faa70b7b14401f9a39d91e4e052c48?ssl=true"
+            
+            // Enable storing and querying data from Local Datastore.
+            // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
+            $0.isLocalDatastoreEnabled = true
+        }
+        Parse.initialize(with: configuration)
+        
+        // ****************************************************************************
+        // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
+        // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
+        // Uncomment the line inside ParseStartProject-Bridging-Header and the following line here:
+        // PFFacebookUtils.initializeFacebook()
+        // ****************************************************************************
+        
+        PFUser.enableAutomaticUser()
+        
         return true
     }
 

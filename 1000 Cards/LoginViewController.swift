@@ -36,13 +36,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: AnyObject) {
+        /********************** TO DELETE ***********************/
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+        /********************************************************************/
+        
         /*
         * Uncomment to allow user login
         *
         PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
-                self.performSegue(withIdentifier: self.homePageSegue, sender: nil)
+                 let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                 self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
             } else if (error != nil) {
                 //failure
                 let controller = UIAlertController(title: "Login error occured", message: "Please ensure username and password entered correctly.", preferredStyle: .alert)

@@ -9,10 +9,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SlideMenuControllerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>58B068D4981D3C34C343E4D320790511</key>
+		<key>3DC0D8042E5C294B75A12A04FF14A920</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7CC73F1D12B525D91BA6863A0E06021C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE8B221CADCA4C61B1CFD578002E9746</key>
 		<dict>
 			<key>primary</key>
 			<true/>

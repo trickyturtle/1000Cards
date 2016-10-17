@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DC0D8042E5C294B75A12A04FF14A920"
-               BuildableName = "Pods_1000_Cards.framework"
-               BlueprintName = "Pods-1000 Cards"
+               BlueprintIdentifier = "BE8B221CADCA4C61B1CFD578002E9746"
+               BuildableName = "SlideMenuControllerSwift.framework"
+               BlueprintName = "SlideMenuControllerSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DC0D8042E5C294B75A12A04FF14A920"
-            BuildableName = "Pods_1000_Cards.framework"
-            BlueprintName = "Pods-1000 Cards"
+            BlueprintIdentifier = "BE8B221CADCA4C61B1CFD578002E9746"
+            BuildableName = "SlideMenuControllerSwift.framework"
+            BlueprintName = "SlideMenuControllerSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+class GamesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,4 @@ class HomePageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

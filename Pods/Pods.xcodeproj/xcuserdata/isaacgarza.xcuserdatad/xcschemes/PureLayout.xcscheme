@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DC0D8042E5C294B75A12A04FF14A920"
-               BuildableName = "Pods_1000_Cards.framework"
-               BlueprintName = "Pods-1000 Cards"
+               BlueprintIdentifier = "7CC73F1D12B525D91BA6863A0E06021C"
+               BuildableName = "PureLayout.framework"
+               BlueprintName = "PureLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DC0D8042E5C294B75A12A04FF14A920"
-            BuildableName = "Pods_1000_Cards.framework"
-            BlueprintName = "Pods-1000 Cards"
+            BlueprintIdentifier = "7CC73F1D12B525D91BA6863A0E06021C"
+            BuildableName = "PureLayout.framework"
+            BlueprintName = "PureLayout"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
