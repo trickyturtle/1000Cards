@@ -36,15 +36,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: AnyObject) {
-        /********************** TO DELETE ***********************/
+        /********************** TO DELETE ***********************
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
-        /********************************************************************/
+        ********************************************************************/
         
         /*
         * Uncomment to allow user login
-        *
+        */
         PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
             }
         }
-        */
+        /**/
     }
     
     

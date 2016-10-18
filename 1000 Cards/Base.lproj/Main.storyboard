@@ -22,7 +22,6 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gcl-x3-FCz" userLabel="usernameTF">
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.96709299087524414" green="0.9670640230178833" blue="0.96708047389984131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -176,13 +175,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAm-dQ-Z5f">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="5iu-LI-Woa" kind="show" id="Jl8-Lz-cgl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qMU-kt-Xbi" firstAttribute="top" secondItem="g3c-6b-Ssy" secondAttribute="top" id="18L-BF-1s9"/>
-                            <constraint firstAttribute="bottom" secondItem="qMU-kt-Xbi" secondAttribute="bottom" id="c57-Vf-yvv"/>
-                            <constraint firstItem="qMU-kt-Xbi" firstAttribute="leading" secondItem="g3c-6b-Ssy" secondAttribute="leading" id="pEa-YF-chc"/>
-                            <constraint firstAttribute="trailing" secondItem="qMU-kt-Xbi" secondAttribute="trailing" id="szd-t7-ukk"/>
+                            <constraint firstAttribute="bottom" secondItem="qMU-kt-Xbi" secondAttribute="bottom" id="Dug-Ns-GPm"/>
+                            <constraint firstItem="qMU-kt-Xbi" firstAttribute="top" secondItem="VAm-dQ-Z5f" secondAttribute="bottom" constant="59" id="OTZ-RP-z41"/>
+                            <constraint firstItem="VAm-dQ-Z5f" firstAttribute="leading" secondItem="g3c-6b-Ssy" secondAttribute="leading" constant="153" id="Pl5-ZI-CPR"/>
+                            <constraint firstItem="VAm-dQ-Z5f" firstAttribute="top" secondItem="yvv-dG-vCd" secondAttribute="bottom" constant="68" id="cba-xD-UCX"/>
+                            <constraint firstAttribute="trailing" secondItem="qMU-kt-Xbi" secondAttribute="trailing" id="fLf-Ak-e0W"/>
+                            <constraint firstItem="qMU-kt-Xbi" firstAttribute="leading" secondItem="g3c-6b-Ssy" secondAttribute="leading" id="mh6-wi-6JK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Games" image="Cards-25.png" id="JoQ-8a-hfn"/>
@@ -192,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oi7-0z-OCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="-539"/>
+            <point key="canvasLocation" x="2744.8000000000002" y="-539.28035982008998"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nVP-uI-VhE">
@@ -228,7 +235,6 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7NC-X2-F7n" userLabel="emailTF">
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.96709299087524414" green="0.9670640230178833" blue="0.96708047389984131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -326,7 +332,6 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1o-cg-ikX" userLabel="emailTF">
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.96709299087524414" green="0.9670640230178833" blue="0.96708047389984131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -337,7 +342,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adC-E9-JC1" userLabel="usernameTF">
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.96709299087524414" green="0.9670640230178833" blue="0.96708047389984131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -665,7 +669,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -706,10 +710,10 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="publicLibraryCell" id="M6t-Ca-9U0">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6t-Ca-9U0" id="XiJ-j4-DRr">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
