@@ -44,10 +44,14 @@ class CreateAccountViewController: UIViewController {
             user.signUpInBackground { succeeded, error in
                 if (succeeded) {
                     //The registration was successful
-                    self.performSegue(withIdentifier: self.homePageSegue, sender: nil)
+                    let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+                    self.navigationController?.setNavigationBarHidden(true, animated: true)
+                    self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
                 } else if let error = error {
                     //Something bad has occurred
+                    print("\n***************ERROR***************")
                     print(error)
+                    print("***************ERROR***************\n")
                 }
             }
         }

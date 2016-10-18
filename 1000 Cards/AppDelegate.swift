@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.clientKey = "lXDx3atzdjgn66EEisSkcOd37Cr8uTe67z3U0boc"
             
             // Uncomment the following line and change to your Parse Server address;
-            //            $0.server = "mongodb://admin:WU57ZSxqTr3caFDq6U5ddGOw@mongodb3.back4app.com:27017/e0faa70b7b14401f9a39d91e4e052c48?ssl=true"
+            $0.server = "https://parseapi.back4app.com"
             
             // Enable storing and querying data from Local Datastore.
             // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.

@@ -81,4 +81,9 @@ class DeckViewController: UIViewController, iCarouselDataSource, iCarouselDelega
         return value
     }
     
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "cardViewController")
+        self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+    }
+    
 }
