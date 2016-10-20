@@ -1,6 +1,6 @@
 //
 //  GameView.swift
-//  1000-CardsDA
+//  1000-Cards
 //
 //  Created by David Alexander on 10/19/16.
 //  Copyright © 2016 EggLord. All rights reserved.
@@ -12,9 +12,8 @@ import UIKit
 class GameView: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
     var items: [Int] = []
-
+    @IBOutlet var carousel: iCarousel!
     
-    @IBOutlet weak var carousel: iCarousel!
     override func awakeFromNib()
     {
         super.awakeFromNib()

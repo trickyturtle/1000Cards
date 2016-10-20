@@ -31,6 +31,17 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func createAccountButton(_ sender: AnyObject) {
         
+        /********************** COMMENT OUT TO ALLOW CREATE ACCOUNT ***********************/
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
+        var vcArray = self.navigationController?.viewControllers
+        vcArray?.removeAll()
+        vcArray?.append(vc as! UIViewController)
+        self.navigationController?.viewControllers = vcArray!
+        /********************************************************************/
+
+        
+        
+        // Check that the passwords matched
         if (passwordTF.text != retypePassword.text) {
             let controller = UIAlertController(title: "Password input error", message: "Passwords are not the same.", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
@@ -44,9 +55,11 @@ class CreateAccountViewController: UIViewController {
             user.signUpInBackground { succeeded, error in
                 if (succeeded) {
                     //The registration was successful
-                    let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
-                    self.navigationController?.setNavigationBarHidden(true, animated: true)
-                    self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+                    let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
+                    var vcArray = self.navigationController?.viewControllers
+                    vcArray?.removeAll()
+                    vcArray?.append(vc as! UIViewController)
+                    self.navigationController?.viewControllers = vcArray!
                 } else if let error = error {
                     //Something bad has occurred
                     print("\n***************ERROR***************")
@@ -55,6 +68,13 @@ class CreateAccountViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    @IBAction func instructDescriptButton(_ sender: AnyObject) {
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
 
     /*

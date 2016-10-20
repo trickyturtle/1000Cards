@@ -19,17 +19,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Check if user exists and logged in
         /*
-         * Uncomment to allow user login
-         */
+        //Check if user exists and logged in
         if let user = PFUser.current() {
             if user.isAuthenticated {
                 let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
                 self.navigationController?.pushViewController(vc as! UIViewController, animated: true)            }
         }
-        /**/
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,15 +36,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: AnyObject) {
-        /********************** TO DELETE ***********************
+        /********************** COMMENT OUT TO ALLOW LOGIN ***********************/
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
-        ********************************************************************/
+        /********************************************************************/
         
-        /*
-        * Uncomment to allow user login
-        */
+        /***************************************************************************
+         *  This is commented out to allow you to use the application without a login
+         *  If you would like, you may create an account by going to Create Account.
+         *  User account info is not utilized at this point in development other than for 
+         *  allowing login.
         PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
             }
         }
-        /**/
+        ********************************************************************************/
     }
 
 }
