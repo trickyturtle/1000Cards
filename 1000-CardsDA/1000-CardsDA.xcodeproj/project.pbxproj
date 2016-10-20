@@ -15,6 +15,7 @@
 		4107C66F1DB7169000681EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4107C66D1DB7169000681EC5 /* LaunchScreen.storyboard */; };
 		4107C67A1DB7169000681EC5 /* _000_CardsDATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4107C6791DB7169000681EC5 /* _000_CardsDATests.swift */; };
 		4107C6851DB7169000681EC5 /* _000_CardsDAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4107C6841DB7169000681EC5 /* _000_CardsDAUITests.swift */; };
+		41A29F011DB8433500594F6E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A29F001DB8433500594F6E /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4107C6801DB7169000681EC5 /* 1000-CardsDAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1000-CardsDAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4107C6841DB7169000681EC5 /* _000_CardsDAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _000_CardsDAUITests.swift; sourceTree = "<group>"; };
 		4107C6861DB7169000681EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41A29F001DB8433500594F6E /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4107C66D1DB7169000681EC5 /* LaunchScreen.storyboard */,
 				4107C6701DB7169000681EC5 /* Info.plist */,
 				4107C6681DB7169000681EC5 /* _000_CardsDA.xcdatamodeld */,
+				41A29F001DB8433500594F6E /* GameView.swift */,
 			);
 			path = "1000-CardsDA";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				4107C6641DB7169000681EC5 /* ViewController.swift in Sources */,
 				4107C6621DB7169000681EC5 /* AppDelegate.swift in Sources */,
+				41A29F011DB8433500594F6E /* GameView.swift in Sources */,
 				4107C66A1DB7169000681EC5 /* _000_CardsDA.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +522,7 @@
 				4107C68B1DB7169000681EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4107C68C1DB7169000681EC5 /* Build configuration list for PBXNativeTarget "1000-CardsDATests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				4107C68E1DB7169000681EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4107C68F1DB7169000681EC5 /* Build configuration list for PBXNativeTarget "1000-CardsDAUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				4107C6911DB7169000681EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
