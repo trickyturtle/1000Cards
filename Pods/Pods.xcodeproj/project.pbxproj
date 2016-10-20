@@ -7,110 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03DC68A1E9AEDA1C42C962E33555102B /* Pods-1000 Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CD2DA61E7880AA74258A156288AD4 /* Pods-1000 Cards-dummy.m */; };
-		076122857DE1DF8297397BC3B16EC2C1 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D0CAEF61F78D21FF6C62C55A3B594A70 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0843C4F69D708D09FBE149E2BC3870C1 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 290A389EB24C19D0A01632C287FD8EA8 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28BD9A15C67339B7ECCA0872FAE4B541 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A6AA3695922B58C636EC7F4FA2F66AE7 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		314B4885816D232C57EC143FDECBC52D /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DC44D81C9CE7FCA4C1DD76701E6BA086 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48F2E7F3348051776AADFD53E94DD3D8 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 095FBC4B64F83CCDD8F913A9C01D04D1 /* PureLayout-dummy.m */; };
-		4AD0513A5971C30858722D532ACAC330 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3786022BE81670EA38A10271A804FBA8 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E135443079CAE9CBE0515C12B294149 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 19821CBEC22C29EDCC25EDC6E4A3CA07 /* NSLayoutConstraint+PureLayout.m */; };
-		5C0FB810C53C6A76644C7609DA94D5A1 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F9FD5CAD85ADDC44B3137B2465E45CD0 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76A665CC1406B7DE43F2EA669D3A8C1A /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B102D7E712096AFC151381DC6A6B6E6 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D886AA2224D0710EA94D00132DAA706 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE5DDDF99728DD4B7D1D501210505B /* ALView+PureLayout.m */; };
-		98DCC363CD00E0FFC2B37A965EF0D40A /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E82C1B7AB03507F36AB8BC99102B97 /* NSArray+PureLayout.m */; };
-		9D575FD1E5C42702A47D9E8192A9F488 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		C0506A3BA2F59B9FA846ED34F9174C5C /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5A6994973C67475805F1545AC76073 /* SlideMenuController.swift */; };
-		C1740AC41C9EE8EDF6CE02E739ECB56A /* Pods-1000 Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7FAE9179CD0A7403742BDD19DBF946 /* Pods-1000 Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA405EA358EAFF92B04237668D5A3B78 /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E325145AEA4AD3F271A1F50C40C92 /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E022780BEC1861676E92BE8E703FDBA2 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E025DC78D6963F86476512C92BA7AC /* SlideMenuControllerSwift-dummy.m */; };
-		E8B5752E12E2F3DA9A33A8BFD6E903E0 /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C23BF7AC452AC48981CA9CDCE18CF6C /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED45D19506DFD8BDE8F5F8AE22B8890D /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = EBFA6B40E01FDC17DEB36D2A9D808754 /* Info.plist */; };
-		F01326F79E0161B1C2A26B0BFCE5D5E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		FD3314568BF9E2A4FA5088C222804752 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		07BF3D3C7B08DFA985B4F6CB7BFBC107 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EDBBF32757C8383A79D6F8E038C004C /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16D64D00AB86FC22827356F8E90DDCE7 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1995E13A38F33D0865ED716A12D20D82 /* Pods-1000 Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CD2DA61E7880AA74258A156288AD4 /* Pods-1000 Cards-dummy.m */; };
+		1D62908B0173F5E34EC7226D4E41C6DF /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		271B7D378E8CD5A5851ACCEBFBB74CB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		2EC85B2E2182713B643866AD2404B234 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37E9E8CD301ABA3BFD083E46AF4E12B3 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		458656CE68035D09AC2E8E4C32361661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		7C3FAB13269EF312A9D4E86AA5A5CBE8 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */; };
+		8B0FA09D6A62AC02398B2F0A175C0BBA /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
+		8F8705D432C415694A795D334A89BC99 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */; };
+		AA89403E9F177CD7CDC708EFCAA3B10A /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */; };
+		EE0668AF3E4803250A478875EB730235 /* Pods-1000 Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7FAE9179CD0A7403742BDD19DBF946 /* Pods-1000 Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8ECC1EECDF7ED9A014347BC6A63A853 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1ADC6509E91A7CDAF14E3A12C94E82F3 /* PBXContainerItemProxy */ = {
+		89031E97835453D7FF0AF3F406B1CBDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE8B221CADCA4C61B1CFD578002E9746;
-			remoteInfo = SlideMenuControllerSwift;
-		};
-		B9BBB780DAECB9A72899FD352BB7399D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7CC73F1D12B525D91BA6863A0E06021C;
+			remoteGlobalIDString = 1B32ECF35B7506CB23AB9C476D490959;
 			remoteInfo = PureLayout;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		032F44249F8FE7091E22A3F5D6F8C768 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		095FBC4B64F83CCDD8F913A9C01D04D1 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
-		186E325145AEA4AD3F271A1F50C40C92 /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
-		19821CBEC22C29EDCC25EDC6E4A3CA07 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
-		289A2CA9845C1549459C43F288DB0780 /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
-		290A389EB24C19D0A01632C287FD8EA8 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		2AEE5DDDF99728DD4B7D1D501210505B /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		2BD47102E5BF63C581B0414D6B2F29C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31F94D43C3CB85459E727707856886E0 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
-		3786022BE81670EA38A10271A804FBA8 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
-		3C23BF7AC452AC48981CA9CDCE18CF6C /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
-		44237513FD9590259FD8ECC92FA7EFE0 /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
+		01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		096B0F41BD9C76E6306E4848DFB4860C /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		249938C44B3C707521E098F2C5086AD9 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
 		47074E3C47562703CB224233F42058A3 /* Pods-1000 Cards-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-1000 Cards-acknowledgements.plist"; sourceTree = "<group>"; };
 		47D6B90336BF8A6C52FA865279D47760 /* Pods-1000 Cards-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-1000 Cards-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4C0DCB70D8FFA8F058ABADD28771443D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F5A6994973C67475805F1545AC76073 /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
 		564C0BB7B11AD354521AE75F651AF61F /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
-		5AE145BD03155C46D550021727C95EAB /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83B724DDF11DF1573287FA022108E799 /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89E82C1B7AB03507F36AB8BC99102B97 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		6D986837FA46C6AB4A8D72FCAA1B4454 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A8A6B1305E092F6D191264A1B46EF40 /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
-		9B102D7E712096AFC151381DC6A6B6E6 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		9DAF68FAE45B2DD28FAD644D27535A29 /* Pods-1000 Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-1000 Cards.modulemap"; sourceTree = "<group>"; };
 		A11CD2DA61E7880AA74258A156288AD4 /* Pods-1000 Cards-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-1000 Cards-dummy.m"; sourceTree = "<group>"; };
-		A6AA3695922B58C636EC7F4FA2F66AE7 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
-		B4D2435727A27491CA10B4A7F7ED0309 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
 		BBC9B709CEE595C7E3276D814AA7BDCF /* Pods-1000 Cards-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-1000 Cards-frameworks.sh"; sourceTree = "<group>"; };
-		C3553A7254763F3E23114AA5B1D20585 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7E025DC78D6963F86476512C92BA7AC /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D0CAEF61F78D21FF6C62C55A3B594A70 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
 		D0D8CFA81818585B10A07E9E11B88E87 /* Pods-1000 Cards-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-1000 Cards-resources.sh"; sourceTree = "<group>"; };
-		D92CAB0B9BE21A8654608083E0B83B52 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		DC44D81C9CE7FCA4C1DD76701E6BA086 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
-		EBFA6B40E01FDC17DEB36D2A9D808754 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		D0FAAEAC064C6B14E20CBAAE7EA09DBE /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		DC48A19E2AA264922693A9C30BC30743 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED39B678E6C2BADAF6E8AE1F2018B518 /* Pods-1000 Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-1000 Cards.release.xcconfig"; sourceTree = "<group>"; };
-		F9FD5CAD85ADDC44B3137B2465E45CD0 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
 		FE7FAE9179CD0A7403742BDD19DBF946 /* Pods-1000 Cards-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-1000 Cards-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46A9E629AC813696DCB6560B0877CF39 /* Frameworks */ = {
+		A5E7118053D28C177AE42579C46CD95B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3314568BF9E2A4FA5088C222804752 /* Foundation.framework in Frameworks */,
+				271B7D378E8CD5A5851ACCEBFBB74CB4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BF76C5F6BE70D8C1AF977FEB6671519 /* Frameworks */ = {
+		DF10DCD8F30E1958ED46ED4125848CF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01326F79E0161B1C2A26B0BFCE5D5E8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDE846BF63CA4E826E2104AE66B24F41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D575FD1E5C42702A47D9E8192A9F488 /* Foundation.framework in Frameworks */,
+				458656CE68035D09AC2E8E4C32361661 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,18 +94,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3066ADFB962937C7DB8381D44AF99C10 /* Support Files */ = {
+		2F7CB2F8AA04108B4168449AFCA94214 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				032F44249F8FE7091E22A3F5D6F8C768 /* Info.plist */,
-				289A2CA9845C1549459C43F288DB0780 /* SlideMenuControllerSwift.modulemap */,
-				44237513FD9590259FD8ECC92FA7EFE0 /* SlideMenuControllerSwift.xcconfig */,
-				C7E025DC78D6963F86476512C92BA7AC /* SlideMenuControllerSwift-dummy.m */,
-				9A8A6B1305E092F6D191264A1B46EF40 /* SlideMenuControllerSwift-prefix.pch */,
-				186E325145AEA4AD3F271A1F50C40C92 /* SlideMenuControllerSwift-umbrella.h */,
+				DC48A19E2AA264922693A9C30BC30743 /* Info.plist */,
+				249938C44B3C707521E098F2C5086AD9 /* PureLayout.modulemap */,
+				01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */,
+				808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */,
+				6D986837FA46C6AB4A8D72FCAA1B4454 /* PureLayout-prefix.pch */,
+				6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SlideMenuControllerSwift";
+			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -147,21 +116,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		40D1946016D558E4FCDE69279D8DFB87 /* Pods */ = {
+		5D71F06F596977F5D3BBA3F0D5892F82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D8E2BA34BF0B2CCE23249E2F95EA0598 /* PureLayout */,
-				E557350B2D483E06A4388A3428A1B1E8 /* SlideMenuControllerSwift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		45FEAA453C615B331C9B9441E0750E2B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				83B724DDF11DF1573287FA022108E799 /* Pods_1000_Cards.framework */,
-				5AE145BD03155C46D550021727C95EAB /* PureLayout.framework */,
-				C3553A7254763F3E23114AA5B1D20585 /* SlideMenuControllerSwift.framework */,
+				D0FAAEAC064C6B14E20CBAAE7EA09DBE /* Pods_1000_Cards.framework */,
+				096B0F41BD9C76E6306E4848DFB4860C /* PureLayout.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,8 +130,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				40D1946016D558E4FCDE69279D8DFB87 /* Pods */,
-				45FEAA453C615B331C9B9441E0750E2B /* Products */,
+				A2FDD832DA64F35B104DD4C55A31BF8E /* Pods */,
+				5D71F06F596977F5D3BBA3F0D5892F82 /* Products */,
 				27638BB830ECC37E53C53B6C267342C6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -195,6 +154,31 @@
 			path = "Target Support Files/Pods-1000 Cards";
 			sourceTree = "<group>";
 		};
+		9C6F93A5AE4A9293598494393460DF93 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */,
+				3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */,
+				256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */,
+				D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */,
+				2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */,
+				62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */,
+				261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */,
+				AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */,
+				5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */,
+				2F7CB2F8AA04108B4168449AFCA94214 /* Support Files */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		A2FDD832DA64F35B104DD4C55A31BF8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F93A5AE4A9293598494393460DF93 /* PureLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,111 +187,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D8E2BA34BF0B2CCE23249E2F95EA0598 /* PureLayout */ = {
-			isa = PBXGroup;
-			children = (
-				A6AA3695922B58C636EC7F4FA2F66AE7 /* ALView+PureLayout.h */,
-				2AEE5DDDF99728DD4B7D1D501210505B /* ALView+PureLayout.m */,
-				DC44D81C9CE7FCA4C1DD76701E6BA086 /* NSArray+PureLayout.h */,
-				89E82C1B7AB03507F36AB8BC99102B97 /* NSArray+PureLayout.m */,
-				D0CAEF61F78D21FF6C62C55A3B594A70 /* NSLayoutConstraint+PureLayout.h */,
-				19821CBEC22C29EDCC25EDC6E4A3CA07 /* NSLayoutConstraint+PureLayout.m */,
-				3786022BE81670EA38A10271A804FBA8 /* PureLayout.h */,
-				290A389EB24C19D0A01632C287FD8EA8 /* PureLayout+Internal.h */,
-				F9FD5CAD85ADDC44B3137B2465E45CD0 /* PureLayoutDefines.h */,
-				F69CB0E198C07B91D364E244EAE492D5 /* Support Files */,
-			);
-			path = PureLayout;
-			sourceTree = "<group>";
-		};
-		E557350B2D483E06A4388A3428A1B1E8 /* SlideMenuControllerSwift */ = {
-			isa = PBXGroup;
-			children = (
-				EBFA6B40E01FDC17DEB36D2A9D808754 /* Info.plist */,
-				4F5A6994973C67475805F1545AC76073 /* SlideMenuController.swift */,
-				3C23BF7AC452AC48981CA9CDCE18CF6C /* SlideMenuControllerSwift.h */,
-				3066ADFB962937C7DB8381D44AF99C10 /* Support Files */,
-			);
-			path = SlideMenuControllerSwift;
-			sourceTree = "<group>";
-		};
-		F69CB0E198C07B91D364E244EAE492D5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2BD47102E5BF63C581B0414D6B2F29C1 /* Info.plist */,
-				31F94D43C3CB85459E727707856886E0 /* PureLayout.modulemap */,
-				B4D2435727A27491CA10B4A7F7ED0309 /* PureLayout.xcconfig */,
-				095FBC4B64F83CCDD8F913A9C01D04D1 /* PureLayout-dummy.m */,
-				D92CAB0B9BE21A8654608083E0B83B52 /* PureLayout-prefix.pch */,
-				9B102D7E712096AFC151381DC6A6B6E6 /* PureLayout-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PureLayout";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		076FAA78681A3371471C00835C79B978 /* Headers */ = {
+		981C4590D22C819ADC75E1BA9E13B85F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28BD9A15C67339B7ECCA0872FAE4B541 /* ALView+PureLayout.h in Headers */,
-				314B4885816D232C57EC143FDECBC52D /* NSArray+PureLayout.h in Headers */,
-				076122857DE1DF8297397BC3B16EC2C1 /* NSLayoutConstraint+PureLayout.h in Headers */,
-				0843C4F69D708D09FBE149E2BC3870C1 /* PureLayout+Internal.h in Headers */,
-				76A665CC1406B7DE43F2EA669D3A8C1A /* PureLayout-umbrella.h in Headers */,
-				4AD0513A5971C30858722D532ACAC330 /* PureLayout.h in Headers */,
-				5C0FB810C53C6A76644C7609DA94D5A1 /* PureLayoutDefines.h in Headers */,
+				EE0668AF3E4803250A478875EB730235 /* Pods-1000 Cards-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45D45F67267B0AB4C6A13AAF7CF47E54 /* Headers */ = {
+		E8818A8A6C612CAB2B4B0087277A1034 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA405EA358EAFF92B04237668D5A3B78 /* SlideMenuControllerSwift-umbrella.h in Headers */,
-				E8B5752E12E2F3DA9A33A8BFD6E903E0 /* SlideMenuControllerSwift.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A02BF72DEFF764D8FB914D2C0D82B9D5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1740AC41C9EE8EDF6CE02E739ECB56A /* Pods-1000 Cards-umbrella.h in Headers */,
+				F8ECC1EECDF7ED9A014347BC6A63A853 /* ALView+PureLayout.h in Headers */,
+				07BF3D3C7B08DFA985B4F6CB7BFBC107 /* NSArray+PureLayout.h in Headers */,
+				1D62908B0173F5E34EC7226D4E41C6DF /* NSLayoutConstraint+PureLayout.h in Headers */,
+				0EDBBF32757C8383A79D6F8E038C004C /* PureLayout+Internal.h in Headers */,
+				37E9E8CD301ABA3BFD083E46AF4E12B3 /* PureLayout-umbrella.h in Headers */,
+				16D64D00AB86FC22827356F8E90DDCE7 /* PureLayout.h in Headers */,
+				2EC85B2E2182713B643866AD2404B234 /* PureLayoutDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3DC0D8042E5C294B75A12A04FF14A920 /* Pods-1000 Cards */ = {
+		1B32ECF35B7506CB23AB9C476D490959 /* PureLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A08415425BA086DD8DC3D7DB8D9383A3 /* Build configuration list for PBXNativeTarget "Pods-1000 Cards" */;
+			buildConfigurationList = 6FC805C8D50A2456A9C2D7CC75847A7C /* Build configuration list for PBXNativeTarget "PureLayout" */;
 			buildPhases = (
-				E72FBA9CF90994594DEFF480E41F92E3 /* Sources */,
-				6BF76C5F6BE70D8C1AF977FEB6671519 /* Frameworks */,
-				A02BF72DEFF764D8FB914D2C0D82B9D5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				757CC8882F5A5D47945328AF54B90921 /* PBXTargetDependency */,
-				4CC850258CE1A487DB805B0F09B9CA39 /* PBXTargetDependency */,
-			);
-			name = "Pods-1000 Cards";
-			productName = "Pods-1000 Cards";
-			productReference = 83B724DDF11DF1573287FA022108E799 /* Pods_1000_Cards.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7CC73F1D12B525D91BA6863A0E06021C /* PureLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB0D7A6112F2ECFDB976346AE266C0DA /* Build configuration list for PBXNativeTarget "PureLayout" */;
-			buildPhases = (
-				58393F04235BBF5BDE556B5BCEC4247F /* Sources */,
-				BDE846BF63CA4E826E2104AE66B24F41 /* Frameworks */,
-				076FAA78681A3371471C00835C79B978 /* Headers */,
+				E86B861BD99B4D7DD7EDCE5CAD4EC403 /* Sources */,
+				A5E7118053D28C177AE42579C46CD95B /* Frameworks */,
+				E8818A8A6C612CAB2B4B0087277A1034 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -315,24 +229,25 @@
 			);
 			name = PureLayout;
 			productName = PureLayout;
-			productReference = 5AE145BD03155C46D550021727C95EAB /* PureLayout.framework */;
+			productReference = 096B0F41BD9C76E6306E4848DFB4860C /* PureLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BE8B221CADCA4C61B1CFD578002E9746 /* SlideMenuControllerSwift */ = {
+		3AC99E08B45173F6ED933D9551D1BB0E /* Pods-1000 Cards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CF6060CAD4C6A00D592CDAC4588B2D3 /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */;
+			buildConfigurationList = 50BC6F7C5E09011F308BA6914C35280B /* Build configuration list for PBXNativeTarget "Pods-1000 Cards" */;
 			buildPhases = (
-				0DAB94583B3E6591081E5BC38D1F2931 /* Sources */,
-				46A9E629AC813696DCB6560B0877CF39 /* Frameworks */,
-				45D45F67267B0AB4C6A13AAF7CF47E54 /* Headers */,
+				DA60EAE38DF612095000C6D56704AAA9 /* Sources */,
+				DF10DCD8F30E1958ED46ED4125848CF8 /* Frameworks */,
+				981C4590D22C819ADC75E1BA9E13B85F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3A9CB9FEF063870EC9D9B530188ED5EB /* PBXTargetDependency */,
 			);
-			name = SlideMenuControllerSwift;
-			productName = SlideMenuControllerSwift;
-			productReference = C3553A7254763F3E23114AA5B1D20585 /* SlideMenuControllerSwift.framework */;
+			name = "Pods-1000 Cards";
+			productName = "Pods-1000 Cards";
+			productReference = D0FAAEAC064C6B14E20CBAAE7EA09DBE /* Pods_1000_Cards.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -343,14 +258,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					3DC0D8042E5C294B75A12A04FF14A920 = {
-						LastSwiftMigration = 0800;
-					};
-					BE8B221CADCA4C61B1CFD578002E9746 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -360,130 +267,48 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 45FEAA453C615B331C9B9441E0750E2B /* Products */;
+			productRefGroup = 5D71F06F596977F5D3BBA3F0D5892F82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DC0D8042E5C294B75A12A04FF14A920 /* Pods-1000 Cards */,
-				7CC73F1D12B525D91BA6863A0E06021C /* PureLayout */,
-				BE8B221CADCA4C61B1CFD578002E9746 /* SlideMenuControllerSwift */,
+				3AC99E08B45173F6ED933D9551D1BB0E /* Pods-1000 Cards */,
+				1B32ECF35B7506CB23AB9C476D490959 /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0DAB94583B3E6591081E5BC38D1F2931 /* Sources */ = {
+		DA60EAE38DF612095000C6D56704AAA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED45D19506DFD8BDE8F5F8AE22B8890D /* Info.plist in Sources */,
-				C0506A3BA2F59B9FA846ED34F9174C5C /* SlideMenuController.swift in Sources */,
-				E022780BEC1861676E92BE8E703FDBA2 /* SlideMenuControllerSwift-dummy.m in Sources */,
+				1995E13A38F33D0865ED716A12D20D82 /* Pods-1000 Cards-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58393F04235BBF5BDE556B5BCEC4247F /* Sources */ = {
+		E86B861BD99B4D7DD7EDCE5CAD4EC403 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D886AA2224D0710EA94D00132DAA706 /* ALView+PureLayout.m in Sources */,
-				98DCC363CD00E0FFC2B37A965EF0D40A /* NSArray+PureLayout.m in Sources */,
-				4E135443079CAE9CBE0515C12B294149 /* NSLayoutConstraint+PureLayout.m in Sources */,
-				48F2E7F3348051776AADFD53E94DD3D8 /* PureLayout-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E72FBA9CF90994594DEFF480E41F92E3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03DC68A1E9AEDA1C42C962E33555102B /* Pods-1000 Cards-dummy.m in Sources */,
+				8F8705D432C415694A795D334A89BC99 /* ALView+PureLayout.m in Sources */,
+				AA89403E9F177CD7CDC708EFCAA3B10A /* NSArray+PureLayout.m in Sources */,
+				8B0FA09D6A62AC02398B2F0A175C0BBA /* NSLayoutConstraint+PureLayout.m in Sources */,
+				7C3FAB13269EF312A9D4E86AA5A5CBE8 /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4CC850258CE1A487DB805B0F09B9CA39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlideMenuControllerSwift;
-			target = BE8B221CADCA4C61B1CFD578002E9746 /* SlideMenuControllerSwift */;
-			targetProxy = 1ADC6509E91A7CDAF14E3A12C94E82F3 /* PBXContainerItemProxy */;
-		};
-		757CC8882F5A5D47945328AF54B90921 /* PBXTargetDependency */ = {
+		3A9CB9FEF063870EC9D9B530188ED5EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
-			target = 7CC73F1D12B525D91BA6863A0E06021C /* PureLayout */;
-			targetProxy = B9BBB780DAECB9A72899FD352BB7399D /* PBXContainerItemProxy */;
+			target = 1B32ECF35B7506CB23AB9C476D490959 /* PureLayout */;
+			targetProxy = 89031E97835453D7FF0AF3F406B1CBDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2A86C71C7EBD1C6675B8C9A4534BA750 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44237513FD9590259FD8ECC92FA7EFE0 /* SlideMenuControllerSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SlideMenuControllerSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SlideMenuControllerSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2E4EC658BE3F68CC01924324D59E68CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED39B678E6C2BADAF6E8AE1F2018B518 /* Pods-1000 Cards.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-1000 Cards/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-1000 Cards/Pods-1000 Cards.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_1000_Cards;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -564,38 +389,9 @@
 			};
 			name = Debug;
 		};
-		6B3566E4DA25919C72F34A58D2B4C0D2 /* Release */ = {
+		8AA61C235128E8FB2998E58FE92EFAC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4D2435727A27491CA10B4A7F7ED0309 /* PureLayout.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PureLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		99D77321536C70B3BFDB37D3B1130A0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4D2435727A27491CA10B4A7F7ED0309 /* PureLayout.xcconfig */;
+			baseConfigurationReference = 01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -622,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		C28C25438C34AC046291742C484CA335 /* Debug */ = {
+		DFE8E934E8E066517B9DF60C8FE2FA6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 564C0BB7B11AD354521AE75F651AF61F /* Pods-1000 Cards.debug.xcconfig */;
 			buildSettings = {
@@ -649,17 +445,15 @@
 				PRODUCT_NAME = Pods_1000_Cards;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		F07CA96371574B7C039EA1A6A7FA0150 /* Release */ = {
+		ED2B40598DDAC81ECCC8062A52479409 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44237513FD9590259FD8ECC92FA7EFE0 /* SlideMenuControllerSwift.xcconfig */;
+			baseConfigurationReference = 01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -670,17 +464,49 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SlideMenuControllerSwift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SlideMenuControllerSwift;
+				PRODUCT_NAME = PureLayout;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD915B8D49C90D60DA6CFBA2A7F83751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED39B678E6C2BADAF6E8AE1F2018B518 /* Pods-1000 Cards.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-1000 Cards/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-1000 Cards/Pods-1000 Cards.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_1000_Cards;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -699,29 +525,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CF6060CAD4C6A00D592CDAC4588B2D3 /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */ = {
+		50BC6F7C5E09011F308BA6914C35280B /* Build configuration list for PBXNativeTarget "Pods-1000 Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A86C71C7EBD1C6675B8C9A4534BA750 /* Debug */,
-				F07CA96371574B7C039EA1A6A7FA0150 /* Release */,
+				DFE8E934E8E066517B9DF60C8FE2FA6F /* Debug */,
+				FD915B8D49C90D60DA6CFBA2A7F83751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A08415425BA086DD8DC3D7DB8D9383A3 /* Build configuration list for PBXNativeTarget "Pods-1000 Cards" */ = {
+		6FC805C8D50A2456A9C2D7CC75847A7C /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C28C25438C34AC046291742C484CA335 /* Debug */,
-				2E4EC658BE3F68CC01924324D59E68CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB0D7A6112F2ECFDB976346AE266C0DA /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99D77321536C70B3BFDB37D3B1130A0A /* Debug */,
-				6B3566E4DA25919C72F34A58D2B4C0D2 /* Release */,
+				8AA61C235128E8FB2998E58FE92EFAC4 /* Debug */,
+				ED2B40598DDAC81ECCC8062A52479409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

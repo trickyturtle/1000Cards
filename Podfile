@@ -7,6 +7,5 @@ target '1000 Cards' do
 
   # Pods for 1000 Cards
   pod 'PureLayout'
-  pod 'SlideMenuControllerSwift'
 
 end

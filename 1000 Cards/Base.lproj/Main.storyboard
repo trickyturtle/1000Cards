@@ -166,21 +166,21 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" textLabel="Pfc-LV-Edk" detailTextLabel="oTV-an-gcr" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="JNl-M5-ZfD">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="65"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JNl-M5-ZfD" id="DRf-AV-bTM">
-                                            <frame key="frameInset" width="375" height="64.5"/>
+                                            <frame key="frameInset" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pfc-LV-Edk">
-                                                    <frame key="frameInset" minX="15" minY="15" width="33.5" height="20.5"/>
+                                                    <frame key="frameInset" minX="15" minY="14" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oTV-an-gcr">
-                                                    <frame key="frameInset" minX="15" minY="35.5" width="44" height="14.5"/>
+                                                    <frame key="frameInset" minX="15" minY="35" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -670,7 +670,7 @@
         <!--My Library-->
         <scene sceneID="50k-zW-MZt">
             <objects>
-                <viewController title="My Library" id="Cf6-PO-K2g" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Library" id="Cf6-PO-K2g" customClass="MyLibraryViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lG4-0d-uXe"/>
                         <viewControllerLayoutGuide type="bottom" id="e8n-q7-eau"/>
@@ -683,32 +683,39 @@
                                 <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myLibraryCell" id="LvH-FN-YYV">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myLibraryCell" textLabel="t8J-uM-lTd" style="IBUITableViewCellStyleDefault" id="LvH-FN-YYV">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <frame key="frameInset" width="1000" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t8J-uM-lTd">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="5iu-LI-Woa" kind="show" id="fky-yy-sKA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7a-3q-AUm">
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="5iu-LI-Woa" kind="show" id="myv-6P-RS5"/>
+                                    <outlet property="dataSource" destination="Cf6-PO-K2g" id="MDN-kC-F8n"/>
+                                    <outlet property="delegate" destination="Cf6-PO-K2g" id="wuB-BZ-1zk"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e8n-q7-eau" firstAttribute="top" secondItem="H7a-3q-AUm" secondAttribute="bottom" constant="433" id="G9y-FK-Tfc"/>
-                            <constraint firstItem="H7a-3q-AUm" firstAttribute="centerX" secondItem="WJ5-ek-cUZ" secondAttribute="centerX" id="OMZ-R6-jDT"/>
-                            <constraint firstItem="WJ5-ek-cUZ" firstAttribute="bottom" secondItem="e8n-q7-eau" secondAttribute="top" id="SUT-rZ-Wuk"/>
-                            <constraint firstItem="WJ5-ek-cUZ" firstAttribute="top" secondItem="lG4-0d-uXe" secondAttribute="bottom" constant="114" id="flT-2P-w2Q"/>
-                            <constraint firstAttribute="trailing" secondItem="WJ5-ek-cUZ" secondAttribute="trailing" id="gGx-s4-rFT"/>
-                            <constraint firstItem="H7a-3q-AUm" firstAttribute="top" secondItem="lG4-0d-uXe" secondAttribute="bottom" constant="76" id="rvg-re-usz"/>
-                            <constraint firstItem="WJ5-ek-cUZ" firstAttribute="leading" secondItem="bkx-7m-Ym2" secondAttribute="leading" id="wTx-9z-FHQ"/>
+                            <constraint firstItem="WJ5-ek-cUZ" firstAttribute="leading" secondItem="bkx-7m-Ym2" secondAttribute="leading" id="Ish-qO-r4d"/>
+                            <constraint firstAttribute="trailing" secondItem="WJ5-ek-cUZ" secondAttribute="trailing" id="ZL7-PW-cFQ"/>
+                            <constraint firstItem="WJ5-ek-cUZ" firstAttribute="bottom" secondItem="e8n-q7-eau" secondAttribute="top" id="k5d-14-IU9"/>
+                            <constraint firstItem="WJ5-ek-cUZ" firstAttribute="top" secondItem="bkx-7m-Ym2" secondAttribute="top" id="p8F-fh-jbR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Library" id="Efc-RG-lFx">
@@ -739,10 +746,10 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="publicLibraryCell" id="M6t-Ca-9U0">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6t-Ca-9U0" id="XiJ-j4-DRr">
-                                            <frame key="frameInset" width="1000" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -900,6 +907,9 @@
                                         <integer key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dWY-oW-g0V" kind="show" id="btQ-dP-VLu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -949,7 +959,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-li-rfR"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-li-rfR">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write description here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C8f-Ow-nFW">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -977,6 +989,13 @@
                                         <integer key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-nd-TVq">
+                                <frame key="frameInset" minX="73" minY="222" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click To Add Image Here">
+                                    <color key="titleColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1158,4 +1177,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
         <image name="Library-30.png" width="30" height="30"/>
         <image name="Settings-30.png" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="btQ-dP-VLu"/>
+    </inferredMetricsTieBreakers>
 </document>

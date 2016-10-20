@@ -20,6 +20,7 @@
 		F7A143BE1DB6BF9E000F29A8 /* Cards-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */; };
 		F7A143BF1DB6BF9E000F29A8 /* Library-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BC1DB6BF9E000F29A8 /* Library-30.png */; };
 		F7A143C01DB6BF9E000F29A8 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */; };
+		F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */; };
 		F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */; };
 		F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */; };
 		F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */; };
@@ -59,6 +60,7 @@
 		F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cards-30.png"; sourceTree = "<group>"; };
 		F7A143BC1DB6BF9E000F29A8 /* Library-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Library-30.png"; sourceTree = "<group>"; };
 		F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-30.png"; sourceTree = "<group>"; };
+		F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
 		F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGameViewController.swift; sourceTree = "<group>"; };
 		F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				F75D9CA21DAD58FB00421A53 /* LaunchScreen.storyboard */,
 				F75D9CA51DAD58FB00421A53 /* Info.plist */,
 				F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */,
+				F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */,
 			);
 			path = "1000 Cards";
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				F7F430931DB87CEC00910A17 /* GameView.swift in Sources */,
 				F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */,
 				F7F0BC021DB14A4000FDBCD4 /* LoginViewController.swift in Sources */,
+				F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */,
 				F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */,
 				F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */,
 			);

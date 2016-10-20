@@ -45,12 +45,6 @@ class GamesViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    // To conform to UITableViewDataSource, you must implement
-    // 3 methods:
-    //    1.  numberOfSectionsInTableView
-    //    2.  tableView:numberOfRowsInSection
-    //    3.  tableView:cellForRowAtIndexPath
     //set number of sections in the table view to 1
     private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
