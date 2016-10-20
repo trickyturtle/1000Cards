@@ -170,7 +170,7 @@
                                         <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JNl-M5-ZfD" id="DRf-AV-bTM">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -470,99 +470,6 @@
             </objects>
             <point key="canvasLocation" x="1057.5" y="-539"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Whc-Im-nIo">
-            <objects>
-                <viewController storyboardIdentifier="instructionsDescriptions" id="5yW-2H-ejB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5ew-SD-jgt"/>
-                        <viewControllerLayoutGuide type="bottom" id="nRc-Ar-LUT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GAi-dM-Vft">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instructions and Descriptions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-hb-Agf">
-                                <frame key="frameInset" minX="46" minY="74" width="283" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="PGx-yX-cj7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAY-ZB-S8g">
-                                <frame key="frameInset" minX="46" minY="212" width="283" height="84"/>
-                                <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="cKD-Cb-juk"/>
-                                </constraints>
-                                <string key="text">The rules of the game are made as you go. Creating new cards during the game, cards with lasting effects, and rule modification are encouraged.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbW-wX-d0e">
-                                <frame key="frameInset" minX="46" minY="304" width="283" height="117"/>
-                                <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <string key="text">On each player's turn, the player draws a card from the deck and plays a card from their hand. Cards can be played to any player (including the person playing the card), or to the "table" (so that it affects everyone).</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wei-JL-ZlE">
-                                <frame key="frameInset" minX="46" minY="429" width="283" height="101"/>
-                                <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="qOJ-RQ-pW5"/>
-                                </constraints>
-                                <string key="text">Cards with lasting effects, such as awarding points or changing the game's rules, are kept in play to remind players of those effects. Otherwise, a card goes in the discard pile.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="1000 Cards is a party game played with cards in which the deck is created as part of the game. " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLZ-uw-yTm">
-                                <frame key="frameInset" minX="46" minY="137" width="283" height="67"/>
-                                <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="eLZ-uw-yTm" firstAttribute="top" secondItem="2zM-hb-Agf" secondAttribute="bottom" constant="42" id="1jY-sh-ye2"/>
-                            <constraint firstItem="2zM-hb-Agf" firstAttribute="centerX" secondItem="GAi-dM-Vft" secondAttribute="centerX" id="64F-4z-eow"/>
-                            <constraint firstItem="2zM-hb-Agf" firstAttribute="top" secondItem="5ew-SD-jgt" secondAttribute="bottom" constant="54" id="9bM-wD-jgZ"/>
-                            <constraint firstItem="YbW-wX-d0e" firstAttribute="leading" secondItem="wei-JL-ZlE" secondAttribute="leading" id="JES-xo-sj7"/>
-                            <constraint firstItem="bAY-ZB-S8g" firstAttribute="top" secondItem="eLZ-uw-yTm" secondAttribute="bottom" constant="8" symbolic="YES" id="Jtn-ul-Gpr"/>
-                            <constraint firstItem="2zM-hb-Agf" firstAttribute="trailing" secondItem="eLZ-uw-yTm" secondAttribute="trailing" id="cCu-xH-Ywe"/>
-                            <constraint firstItem="eLZ-uw-yTm" firstAttribute="trailing" secondItem="bAY-ZB-S8g" secondAttribute="trailing" id="i36-WV-lTg"/>
-                            <constraint firstItem="YbW-wX-d0e" firstAttribute="top" secondItem="bAY-ZB-S8g" secondAttribute="bottom" constant="8" symbolic="YES" id="jfc-Pa-lrj"/>
-                            <constraint firstItem="bAY-ZB-S8g" firstAttribute="leading" secondItem="YbW-wX-d0e" secondAttribute="leading" id="lo3-Kt-nnh"/>
-                            <constraint firstItem="eLZ-uw-yTm" firstAttribute="leading" secondItem="bAY-ZB-S8g" secondAttribute="leading" id="sNR-o4-cGq"/>
-                            <constraint firstItem="2zM-hb-Agf" firstAttribute="leading" secondItem="eLZ-uw-yTm" secondAttribute="leading" id="u5r-kO-gax"/>
-                            <constraint firstItem="bAY-ZB-S8g" firstAttribute="trailing" secondItem="YbW-wX-d0e" secondAttribute="trailing" id="uVc-pS-qW6"/>
-                            <constraint firstItem="wei-JL-ZlE" firstAttribute="top" secondItem="YbW-wX-d0e" secondAttribute="bottom" constant="8" symbolic="YES" id="zCB-NP-JfP"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jIE-tc-Amb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1792.8" y="-863.1184407796103"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4WP-lJ-HND">
             <objects>
@@ -773,7 +680,7 @@
                                         <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -817,7 +724,7 @@
                                         <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6t-Ca-9U0" id="XiJ-j4-DRr">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
