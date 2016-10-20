@@ -143,16 +143,17 @@
                     <connections>
                         <outlet property="passwordTF" destination="g7Y-lb-hZZ" id="jEj-xK-cgL"/>
                         <outlet property="usernameTF" destination="Gcl-x3-FCz" id="9Ua-mr-JPf"/>
+                        <segue destination="fMT-vE-BYQ" kind="show" identifier="myGamesSegue" id="UTR-TQ-AO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b51-jk-kaz" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057" y="116"/>
         </scene>
-        <!--Games View Controller-->
+        <!--My Games-->
         <scene sceneID="jLV-Vi-9bF">
             <objects>
-                <viewController storyboardIdentifier="gamesViewController" id="fMT-vE-BYQ" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gamesViewController" title="My Games" id="fMT-vE-BYQ" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yvv-dG-vCd"/>
                         <viewControllerLayoutGuide type="bottom" id="OT0-9e-5kT"/>
@@ -166,10 +167,10 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" id="JNl-M5-ZfD">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JNl-M5-ZfD" id="DRf-AV-bTM">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -192,14 +193,14 @@
                             <constraint firstItem="VAm-dQ-Z5f" firstAttribute="top" secondItem="yvv-dG-vCd" secondAttribute="bottom" constant="68" id="SFN-UU-m2C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wKb-cl-xBf"/>
+                    <navigationItem key="navigationItem" title="My Games" id="wKb-cl-xBf"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oi7-0z-OCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="-539.28035982008998"/>
+            <point key="canvasLocation" x="3767" y="-1518"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nVP-uI-VhE">
@@ -215,6 +216,7 @@
                         <segue destination="xgd-bO-kXG" kind="relationship" relationship="viewControllers" id="BeP-Gv-DYO"/>
                         <segue destination="5WS-Jk-CJa" kind="relationship" relationship="viewControllers" id="mxX-Ug-Wri"/>
                         <segue destination="9BQ-z2-Fsy" kind="relationship" relationship="viewControllers" id="GzK-Rc-kUU"/>
+                        <segue destination="9pf-TT-1Fn" kind="relationship" relationship="viewControllers" id="Fzh-jQ-ebV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeJ-nm-Yng" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -571,12 +573,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeA-ZE-YIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5232.8000000000002" y="115.59220389805098"/>
+            <point key="canvasLocation" x="5316" y="-863"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="zMe-a7-aVB">
             <objects>
-                <viewController storyboardIdentifier="DeckView" id="5iu-LI-Woa" customClass="DeckViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeckView" title="Deck" id="5iu-LI-Woa" customClass="DeckViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="va5-De-zF5"/>
                         <viewControllerLayoutGuide type="bottom" id="I0A-eq-kCs"/>
@@ -637,12 +639,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dus-Jv-vuI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4463.1999999999998" y="115.59220389805098"/>
+            <point key="canvasLocation" x="4546" y="-863"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="tlX-SJ-7KK">
             <objects>
-                <viewController id="fQ5-FF-wgk" sceneMemberID="viewController">
+                <viewController title="Settings" id="fQ5-FF-wgk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="swi-qB-VlW"/>
                         <viewControllerLayoutGuide type="bottom" id="9xg-eF-qTn"/>
@@ -652,16 +654,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jg1-mZ-Ki1"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Jg1-mZ-Ki1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9o-ka-rta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="1419.9400299850076"/>
+            <point key="canvasLocation" x="3767" y="441"/>
         </scene>
-        <!--Games View Controller-->
+        <!--My Library-->
         <scene sceneID="50k-zW-MZt">
             <objects>
-                <viewController id="Cf6-PO-K2g" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Library" id="Cf6-PO-K2g" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lG4-0d-uXe"/>
                         <viewControllerLayoutGuide type="bottom" id="e8n-q7-eau"/>
@@ -675,10 +677,10 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myLibraryCell" id="LvH-FN-YYV">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -693,19 +695,19 @@
                             <constraint firstItem="WJ5-ek-cUZ" firstAttribute="top" secondItem="lG4-0d-uXe" secondAttribute="bottom" id="xws-nY-FPY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Efc-RG-lFx"/>
+                    <navigationItem key="navigationItem" title="My Library" id="Efc-RG-lFx"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOv-Hd-cr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="115.59220389805098"/>
+            <point key="canvasLocation" x="3767" y="-863"/>
         </scene>
-        <!--Games View Controller-->
+        <!--Public Library-->
         <scene sceneID="t0e-4V-KRf">
             <objects>
-                <viewController id="Vgc-aU-hKX" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Public Library" id="Vgc-aU-hKX" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GN8-Xj-eie"/>
                         <viewControllerLayoutGuide type="bottom" id="gKs-tb-x40"/>
@@ -719,10 +721,10 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="publicLibraryCell" id="M6t-Ca-9U0">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6t-Ca-9U0" id="XiJ-j4-DRr">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -737,20 +739,20 @@
                             <constraint firstAttribute="trailing" secondItem="euL-pC-J5s" secondAttribute="trailing" id="wwk-S7-vht"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aXK-Po-dVS"/>
+                    <navigationItem key="navigationItem" title="Public Library" id="aXK-Po-dVS"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCD-xW-bkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="766.86656671664173"/>
+            <point key="canvasLocation" x="3767" y="-212"/>
         </scene>
         <!--Games-->
         <scene sceneID="VQS-Z7-GWN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="twe-y0-u5U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Games" image="Cards-25.png" id="JoQ-8a-hfn"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="Cards-30.png" id="JoQ-8a-hfn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Rh-SZ-3Pg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -763,13 +765,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjo-ia-mFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="-539.28035982008998"/>
+            <point key="canvasLocation" x="2828" y="-1518"/>
         </scene>
         <!--My Library-->
         <scene sceneID="XZA-on-A4h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xgd-bO-kXG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Library" image="Library-25.png" id="f8c-p4-2ey"/>
+                    <tabBarItem key="tabBarItem" title="My Library" image="Library-30.png" id="f8c-p4-2ey"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xfc-yH-sJg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -782,13 +784,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGT-U8-cMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="115.59220389805098"/>
+            <point key="canvasLocation" x="2828" y="-863"/>
         </scene>
         <!--Public Library-->
         <scene sceneID="qYe-wQ-tTs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5WS-Jk-CJa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Public Library" image="Library-25.png" id="uzL-IV-uT3"/>
+                    <tabBarItem key="tabBarItem" title="Public Library" image="Library-30.png" id="uzL-IV-uT3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AwD-G5-JLg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -801,13 +803,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwt-FH-zVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="766.86656671664173"/>
+            <point key="canvasLocation" x="2828" y="-212"/>
         </scene>
         <!--Settings-->
         <scene sceneID="iAv-VT-Z5x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9BQ-z2-Fsy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings-25.png" id="jWb-EY-4X2"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings-30.png" id="jWb-EY-4X2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N1X-aq-QNo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -820,12 +822,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLN-h4-NfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="1419.9400299850076"/>
+            <point key="canvasLocation" x="2828" y="441"/>
+        </scene>
+        <!--Messenger-->
+        <scene sceneID="1gV-a7-XNG">
+            <objects>
+                <viewController title="Messenger" id="9pf-TT-1Fn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="koB-U8-dTU"/>
+                        <viewControllerLayoutGuide type="bottom" id="K8Z-3T-0Ei"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9sE-Fr-mjb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messenger" image="Chat Filled-30.png" id="WQR-YU-jgm"/>
+                    <navigationItem key="navigationItem" id="CsW-88-3Zc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ip6-bv-vJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="1093"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Cards-25.png" width="25" height="25"/>
-        <image name="Library-25.png" width="25" height="25"/>
-        <image name="Settings-25.png" width="25" height="25"/>
+        <image name="Cards-30.png" width="30" height="30"/>
+        <image name="Chat Filled-30.png" width="30" height="30"/>
+        <image name="Library-30.png" width="30" height="30"/>
+        <image name="Settings-30.png" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UTR-TQ-AO6"/>
+    </inferredMetricsTieBreakers>
 </document>

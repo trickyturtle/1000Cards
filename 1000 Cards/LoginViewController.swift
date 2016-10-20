@@ -22,12 +22,14 @@ class LoginViewController: UIViewController {
         //Check if user exists and logged in
         /*
          * Uncomment to allow user login
-         *
+         */
         if let user = PFUser.current() {
             if user.isAuthenticated {
-                self.performSegue(withIdentifier: self.homePageSegue, sender: nil)
-            }
-        }*/
+                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.navigationController?.pushViewController(vc as! UIViewController, animated: true)            }
+        }
+        /**/
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,9 +50,12 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
-                 let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
-                 self.navigationController?.setNavigationBarHidden(true, animated: true)
-                 self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+                
+                //remove everything from the navigation stack
+                
+                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
             } else if (error != nil) {
                 //failure
                 let controller = UIAlertController(title: "Login error occured", message: "Please ensure username and password entered correctly.", preferredStyle: .alert)
@@ -60,17 +65,5 @@ class LoginViewController: UIViewController {
         }
         /**/
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
