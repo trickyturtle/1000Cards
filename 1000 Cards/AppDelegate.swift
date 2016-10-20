@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // This sets the UILable font for the entire app
+        // Not being used just yet
+        //UILabel.appearance().font = UIFont(name: "Avenir", size: 15)
+        
         // Override point for customization after application launch.
         // ****************************************************************************
         // Initialize Parse SDK
@@ -37,14 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.isLocalDatastoreEnabled = true
         }
         Parse.initialize(with: configuration)
-        
-        // ****************************************************************************
-        // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
-        // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
-        // Uncomment the line inside ParseStartProject-Bridging-Header and the following line here:
-        // PFFacebookUtils.initializeFacebook()
-        // ****************************************************************************
-        
         PFUser.enableAutomaticUser()
         
         return true

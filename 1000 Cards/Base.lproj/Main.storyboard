@@ -143,7 +143,6 @@
                     <connections>
                         <outlet property="passwordTF" destination="g7Y-lb-hZZ" id="jEj-xK-cgL"/>
                         <outlet property="usernameTF" destination="Gcl-x3-FCz" id="9Ua-mr-JPf"/>
-                        <segue destination="fMT-vE-BYQ" kind="show" identifier="myGamesSegue" id="UTR-TQ-AO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b51-jk-kaz" sceneMemberID="firstResponder"/>
@@ -166,21 +165,21 @@
                                 <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" textLabel="3SB-dI-pWF" detailTextLabel="RTE-gz-O9q" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="JNl-M5-ZfD">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="65"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" textLabel="Pfc-LV-Edk" detailTextLabel="oTV-an-gcr" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="JNl-M5-ZfD">
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JNl-M5-ZfD" id="DRf-AV-bTM">
                                             <frame key="frameInset" width="375" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3SB-dI-pWF">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pfc-LV-Edk">
                                                     <frame key="frameInset" minX="15" minY="15" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RTE-gz-O9q">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oTV-an-gcr">
                                                     <frame key="frameInset" minX="15" minY="35.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -191,7 +190,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="odJ-Im-trZ" kind="show" id="6rE-9d-Rf9"/>
+                                            <segue destination="odJ-Im-trZ" kind="show" id="CVY-wb-9DN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -209,10 +208,19 @@
                             <constraint firstAttribute="trailing" secondItem="qMU-kt-Xbi" secondAttribute="trailing" id="jTu-Gq-blm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Games" id="wKb-cl-xBf"/>
+                    <navigationItem key="navigationItem" title="My Games" id="wKb-cl-xBf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iUr-h6-Fil">
+                            <connections>
+                                <segue destination="isN-a9-SM9" kind="show" id="4l1-5e-rVc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="currentGamesTableView" destination="qMU-kt-Xbi" id="7KO-gm-d7v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oi7-0z-OCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -676,10 +684,10 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myLibraryCell" id="LvH-FN-YYV">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -703,7 +711,9 @@
                             <constraint firstItem="WJ5-ek-cUZ" firstAttribute="leading" secondItem="bkx-7m-Ym2" secondAttribute="leading" id="wTx-9z-FHQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Library" id="Efc-RG-lFx"/>
+                    <navigationItem key="navigationItem" title="My Library" id="Efc-RG-lFx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PbV-Ie-sap"/>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -1025,33 +1035,121 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ltY-eD-9qt">
                                 <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">1000 Cards is a party game played with cards in which the deck is created as part of the game. 
+                                <string key="text">1000 Cards is a party game played with cards in which the deck is created as part of the game. 
 
 The rules of the game are made as you go. Creating new cards during the game, cards with lasting effects, and rule modification are encouraged. 
 
 On each player's turn, the player draws a card from the deck and plays a card from their hand. Cards can be played to any player (including the person playing the card), or to the "table" (so that it affects everyone). 
 
-Cards with lasting effects, such as awarding points or changing the game's rules, are kept in play to remind players of those effects. Otherwise, a card goes in the discard pile.</mutableString>
+Cards with lasting effects, such as awarding points or changing the game's rules, are kept in play to remind players of those effects. Otherwise, a card goes in the discard pile.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ltY-eD-9qt" firstAttribute="trailing" secondItem="N7J-bW-mYE" secondAttribute="trailingMargin" id="1oZ-8G-VOO"/>
+                            <constraint firstItem="Orp-XH-Lnr" firstAttribute="top" secondItem="ltY-eD-9qt" secondAttribute="bottom" constant="73" id="0ZP-lG-UP5"/>
                             <constraint firstItem="6SF-To-yIc" firstAttribute="top" secondItem="Orp-XH-Lnr" secondAttribute="bottom" constant="61" id="4Mt-hW-JsS"/>
+                            <constraint firstItem="ltY-eD-9qt" firstAttribute="top" secondItem="Irh-M5-yOP" secondAttribute="bottom" constant="50" id="4mH-IV-1YZ"/>
                             <constraint firstItem="Orp-XH-Lnr" firstAttribute="leading" secondItem="N7J-bW-mYE" secondAttribute="leadingMargin" constant="66" id="8b3-Gp-5pG"/>
-                            <constraint firstItem="ltY-eD-9qt" firstAttribute="leading" secondItem="N7J-bW-mYE" secondAttribute="leadingMargin" id="F6b-gg-2SN"/>
-                            <constraint firstItem="ltY-eD-9qt" firstAttribute="centerX" secondItem="Orp-XH-Lnr" secondAttribute="centerX" id="gCf-Yj-aJS"/>
-                            <constraint firstItem="Orp-XH-Lnr" firstAttribute="top" secondItem="ltY-eD-9qt" secondAttribute="bottom" constant="73" id="vMg-qm-mK7"/>
-                            <constraint firstItem="ltY-eD-9qt" firstAttribute="centerY" secondItem="N7J-bW-mYE" secondAttribute="centerY" id="yMY-42-HKF"/>
+                            <constraint firstItem="ltY-eD-9qt" firstAttribute="leading" secondItem="N7J-bW-mYE" secondAttribute="leadingMargin" id="Qjq-XC-tIH"/>
+                            <constraint firstItem="ltY-eD-9qt" firstAttribute="trailing" secondItem="N7J-bW-mYE" secondAttribute="trailingMargin" id="V1b-rM-eaq"/>
+                            <constraint firstItem="ltY-eD-9qt" firstAttribute="centerX" secondItem="Orp-XH-Lnr" secondAttribute="centerX" id="Vmh-gf-Rmw"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0f-0f-Eiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.8" y="-863.1184407796103"/>
+        </scene>
+        <!--New Game-->
+        <scene sceneID="fyf-mj-s7R">
+            <objects>
+                <viewController storyboardIdentifier="createNewGame" title="New Game" id="isN-a9-SM9" customClass="CreateNewGameViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYj-ue-G6W"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ojn-eU-WvO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FqF-H0-eCt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOp-aa-txm" userLabel="gameNameTF">
+                                <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMl-ZX-AaH" userLabel="gameDescriptionTF">
+                                <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-Q1-WD7" userLabel="startPlayingButton">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Start Playing!">
+                                    <color key="titleColor" red="0.01176470588" green="0.1647058824" blue="0.32156862749999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonStartPlaying:" destination="isN-a9-SM9" eventType="touchUpInside" id="2Ek-hg-rOt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Og-Wc-Hk3" userLabel="startPlayingButton">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Invite Friends">
+                                    <color key="titleColor" red="0.01176470588" green="0.1647058824" blue="0.32156862749999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonStartPlaying:" destination="isN-a9-SM9" eventType="touchUpInside" id="CL8-Ek-NaM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39313054079999998" green="0.55111742019999999" blue="0.66877615450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nMl-ZX-AaH" firstAttribute="trailing" secondItem="5Og-Wc-Hk3" secondAttribute="trailing" id="1rY-za-Uoa"/>
+                            <constraint firstItem="nMl-ZX-AaH" firstAttribute="top" secondItem="AOp-aa-txm" secondAttribute="bottom" constant="39" id="2Mb-FT-42R"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="trailing" secondItem="nMl-ZX-AaH" secondAttribute="trailing" id="9ev-xe-PkL"/>
+                            <constraint firstItem="5Og-Wc-Hk3" firstAttribute="leading" secondItem="Kgx-Q1-WD7" secondAttribute="leading" id="Fvc-F4-9m2"/>
+                            <constraint firstItem="Kgx-Q1-WD7" firstAttribute="top" secondItem="5Og-Wc-Hk3" secondAttribute="bottom" constant="43" id="QQ7-ID-uki"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="leading" secondItem="FqF-H0-eCt" secondAttribute="leadingMargin" constant="66" id="RCX-gp-xvF"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="centerX" secondItem="FqF-H0-eCt" secondAttribute="centerX" id="S0R-7f-YGG"/>
+                            <constraint firstItem="nMl-ZX-AaH" firstAttribute="leading" secondItem="5Og-Wc-Hk3" secondAttribute="leading" id="WRE-Uc-9ej"/>
+                            <constraint firstItem="5Og-Wc-Hk3" firstAttribute="centerY" secondItem="FqF-H0-eCt" secondAttribute="centerY" id="Z9W-TG-FLF"/>
+                            <constraint firstItem="5Og-Wc-Hk3" firstAttribute="trailing" secondItem="Kgx-Q1-WD7" secondAttribute="trailing" id="Z9W-xB-2FW"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="top" secondItem="cYj-ue-G6W" secondAttribute="bottom" constant="70" id="aYl-24-W3F"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="leading" secondItem="nMl-ZX-AaH" secondAttribute="leading" id="dAC-GU-FnQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameDescriptionTF" destination="nMl-ZX-AaH" id="5Ma-E9-jqi"/>
+                        <outlet property="gameNameTF" destination="AOp-aa-txm" id="a3n-OH-xmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXj-W2-9Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3766" y="-2176"/>
         </scene>
     </scenes>
     <resources>
@@ -1060,7 +1158,4 @@ Cards with lasting effects, such as awarding points or changing the game's rules
         <image name="Library-30.png" width="30" height="30"/>
         <image name="Settings-30.png" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="UTR-TQ-AO6"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -20,6 +20,7 @@
 		F7A143BE1DB6BF9E000F29A8 /* Cards-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */; };
 		F7A143BF1DB6BF9E000F29A8 /* Library-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BC1DB6BF9E000F29A8 /* Library-30.png */; };
 		F7A143C01DB6BF9E000F29A8 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */; };
+		F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */; };
 		F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */; };
 		F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */; };
 		F7F0BC011DB14A4000FDBCD4 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */; };
@@ -58,6 +59,7 @@
 		F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cards-30.png"; sourceTree = "<group>"; };
 		F7A143BC1DB6BF9E000F29A8 /* Library-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Library-30.png"; sourceTree = "<group>"; };
 		F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-30.png"; sourceTree = "<group>"; };
+		F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGameViewController.swift; sourceTree = "<group>"; };
 		F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		F75D9C951DAD58FB00421A53 /* 1000 Cards */ = {
 			isa = PBXGroup;
 			children = (
+				F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */,
 				F7F0BC031DB14A8100FDBCD4 /* 1000 Cards-Bridging-Header.h */,
 				F75D9C961DAD58FB00421A53 /* AppDelegate.swift */,
 				F75D9C981DAD58FB00421A53 /* DeckViewController.swift */,
@@ -339,6 +342,7 @@
 				F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */,
 				F7F0BC011DB14A4000FDBCD4 /* GamesViewController.swift in Sources */,
 				F75D9C991DAD58FB00421A53 /* DeckViewController.swift in Sources */,
+				F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */,
 				F7F0BC061DB14A8100FDBCD4 /* iCarousel.m in Sources */,
 				F7F430931DB87CEC00910A17 /* GameView.swift in Sources */,
 				F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */,
