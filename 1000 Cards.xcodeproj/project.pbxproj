@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E93C5151F95747A58BF70CD4 /* Pods_1000_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */; };
-		F734FFEF1DB5614E00CA6DC5 /* Cards-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFEE1DB5614E00CA6DC5 /* Cards-25.png */; };
-		F734FFF11DB561A900CA6DC5 /* Library-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF01DB561A900CA6DC5 /* Library-25.png */; };
-		F734FFF31DB56FE500CA6DC5 /* Settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF21DB56FE500CA6DC5 /* Settings-25.png */; };
 		F734FFF81DB584EA00CA6DC5 /* cardLogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */; };
 		F734FFFA1DB5864B00CA6DC5 /* cardLogoBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */; };
 		F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C961DAD58FB00421A53 /* AppDelegate.swift */; };
@@ -19,6 +16,10 @@
 		F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */; };
 		F75D9CA11DAD58FB00421A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75D9CA01DAD58FB00421A53 /* Assets.xcassets */; };
 		F75D9CA41DAD58FB00421A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75D9CA21DAD58FB00421A53 /* LaunchScreen.storyboard */; };
+		F7A143BA1DB6BECD000F29A8 /* Chat Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143B91DB6BECD000F29A8 /* Chat Filled-30.png */; };
+		F7A143BE1DB6BF9E000F29A8 /* Cards-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */; };
+		F7A143BF1DB6BF9E000F29A8 /* Library-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BC1DB6BF9E000F29A8 /* Library-30.png */; };
+		F7A143C01DB6BF9E000F29A8 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */; };
 		F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */; };
 		F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */; };
 		F7F0BC011DB14A4000FDBCD4 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */; };
@@ -42,9 +43,6 @@
 /* Begin PBXFileReference section */
 		6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97662E17797DA39D47CCD87 /* Pods-1000 Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.release.xcconfig"; sourceTree = "<group>"; };
-		F734FFEE1DB5614E00CA6DC5 /* Cards-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cards-25.png"; sourceTree = "<group>"; };
-		F734FFF01DB561A900CA6DC5 /* Library-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Library-25.png"; sourceTree = "<group>"; };
-		F734FFF21DB56FE500CA6DC5 /* Settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-25.png"; sourceTree = "<group>"; };
 		F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoWhite.png; sourceTree = "<group>"; };
 		F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoBlue.png; sourceTree = "<group>"; };
 		F75D9C931DAD58FB00421A53 /* 1000 Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1000 Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +53,10 @@
 		F75D9CA01DAD58FB00421A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75D9CA31DAD58FB00421A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F75D9CA51DAD58FB00421A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A143B91DB6BECD000F29A8 /* Chat Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chat Filled-30.png"; sourceTree = "<group>"; };
+		F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cards-30.png"; sourceTree = "<group>"; };
+		F7A143BC1DB6BF9E000F29A8 /* Library-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Library-30.png"; sourceTree = "<group>"; };
+		F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-30.png"; sourceTree = "<group>"; };
 		F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -114,9 +116,10 @@
 		F734FFE31DB559B800CA6DC5 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				F734FFF21DB56FE500CA6DC5 /* Settings-25.png */,
-				F734FFF01DB561A900CA6DC5 /* Library-25.png */,
-				F734FFEE1DB5614E00CA6DC5 /* Cards-25.png */,
+				F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */,
+				F7A143BC1DB6BF9E000F29A8 /* Library-30.png */,
+				F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */,
+				F7A143B91DB6BECD000F29A8 /* Chat Filled-30.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -263,14 +266,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F734FFFA1DB5864B00CA6DC5 /* cardLogoBlue.png in Resources */,
+				F7A143BF1DB6BF9E000F29A8 /* Library-30.png in Resources */,
 				F7F0BC221DB15BDE00FDBCD4 /* damnapes.jpg in Resources */,
 				F75D9CA41DAD58FB00421A53 /* LaunchScreen.storyboard in Resources */,
+				F7A143BA1DB6BECD000F29A8 /* Chat Filled-30.png in Resources */,
+				F7A143BE1DB6BF9E000F29A8 /* Cards-30.png in Resources */,
 				F75D9CA11DAD58FB00421A53 /* Assets.xcassets in Resources */,
-				F734FFF11DB561A900CA6DC5 /* Library-25.png in Resources */,
+				F7A143C01DB6BF9E000F29A8 /* Settings-30.png in Resources */,
 				F734FFF81DB584EA00CA6DC5 /* cardLogoWhite.png in Resources */,
 				F75D9C9C1DAD58FB00421A53 /* Main.storyboard in Resources */,
-				F734FFEF1DB5614E00CA6DC5 /* Cards-25.png in Resources */,
-				F734FFF31DB56FE500CA6DC5 /* Settings-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
