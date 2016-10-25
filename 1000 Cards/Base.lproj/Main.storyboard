@@ -883,6 +883,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-PN-gGE">
                                 <segments>
+                                    <segment title="Game"/>
                                     <segment title="Hand"/>
                                     <segment title="Discard"/>
                                     <segment title="In Play"/>
