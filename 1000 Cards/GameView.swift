@@ -11,6 +11,8 @@ import UIKit
 class GameView: UIViewController {
     @IBOutlet weak var containerViewGame: UIView!
     @IBOutlet weak var containerViewHand: UIView!
+    @IBOutlet weak var containerViewDiscard: UIView!
+    @IBOutlet weak var containerViewInPlay: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +23,29 @@ class GameView: UIViewController {
             UIView.animate(withDuration: 0.5, animations: {
                 self.containerViewGame.alpha = 1
                 self.containerViewHand.alpha = 0
+                self.containerViewDiscard.alpha = 0
+                self.containerViewInPlay.alpha = 0
             })
-        } else {
+        } else if sender.selectedSegmentIndex == 1 {
             UIView.animate(withDuration: 0.5, animations: {
                 self.containerViewGame.alpha = 0
                 self.containerViewHand.alpha = 1
+                self.containerViewDiscard.alpha = 0
+                self.containerViewInPlay.alpha = 0
+            })
+        } else if sender.selectedSegmentIndex == 2 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.containerViewGame.alpha = 0
+                self.containerViewHand.alpha = 0
+                self.containerViewDiscard.alpha = 1
+                self.containerViewInPlay.alpha = 0
+            })
+        } else if sender.selectedSegmentIndex == 3 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.containerViewGame.alpha = 0
+                self.containerViewHand.alpha = 0
+                self.containerViewDiscard.alpha = 0
+                self.containerViewInPlay.alpha = 1
             })
         }
     }

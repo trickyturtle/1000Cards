@@ -1,5 +1,5 @@
 //
-//  HandViewController.swift
+//  InPlayViewController.swift
 //  1000 Cards
 //
 //  Created by Brian Shiau on 10/31/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
+class InPlayViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
     var items: [Int] = []
     @IBOutlet var carousel: iCarousel!
@@ -86,5 +86,6 @@ class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelega
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "cardViewController")
         self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
-    
+        
 }
+

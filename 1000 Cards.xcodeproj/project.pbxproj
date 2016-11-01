@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
+		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
+		D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */; };
+		D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */; };
 		E93C5151F95747A58BF70CD4 /* Pods_1000_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */; };
 		F734FFF81DB584EA00CA6DC5 /* cardLogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */; };
 		F734FFFA1DB5864B00CA6DC5 /* cardLogoBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */; };
@@ -48,6 +51,9 @@
 		6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97662E17797DA39D47CCD87 /* Pods-1000 Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.release.xcconfig"; sourceTree = "<group>"; };
 		D38AFF3E1DC838990019F9B7 /* HandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandViewController.swift; sourceTree = "<group>"; };
+		D38AFF401DC846A40019F9B7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardViewController.swift; sourceTree = "<group>"; };
+		D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InPlayViewController.swift; sourceTree = "<group>"; };
 		F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoWhite.png; sourceTree = "<group>"; };
 		F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoBlue.png; sourceTree = "<group>"; };
 		F75D9C931DAD58FB00421A53 /* 1000 Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1000 Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,9 @@
 				F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */,
 				F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */,
 				D38AFF3E1DC838990019F9B7 /* HandViewController.swift */,
+				D38AFF401DC846A40019F9B7 /* GameViewController.swift */,
+				D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */,
+				D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */,
 				F7F430921DB87CEC00910A17 /* GameView.swift */,
 				F75D9C9A1DAD58FB00421A53 /* Main.storyboard */,
 				F75D9CA01DAD58FB00421A53 /* Assets.xcassets */,
@@ -346,12 +355,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */,
+				D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */,
 				D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */,
 				F7F0BC011DB14A4000FDBCD4 /* GamesViewController.swift in Sources */,
 				F75D9C991DAD58FB00421A53 /* DeckViewController.swift in Sources */,
+				D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */,
 				F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */,
 				F7F0BC061DB14A8100FDBCD4 /* iCarousel.m in Sources */,
 				F7F430931DB87CEC00910A17 /* GameView.swift in Sources */,
+				D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */,
 				F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */,
 				F7F0BC021DB14A4000FDBCD4 /* LoginViewController.swift in Sources */,
 				F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */,

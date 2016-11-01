@@ -1,5 +1,5 @@
 //
-//  HandViewController.swift
+//  DiscardViewController.swift
 //  1000 Cards
 //
 //  Created by Brian Shiau on 10/31/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
+class DiscardViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
     var items: [Int] = []
     @IBOutlet var carousel: iCarousel!
@@ -88,3 +88,4 @@ class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelega
     }
     
 }
+

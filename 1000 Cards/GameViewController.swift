@@ -1,5 +1,5 @@
 //
-//  HandViewController.swift
+//  GameViewController.swift
 //  1000 Cards
 //
 //  Created by Brian Shiau on 10/31/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
+class GameViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
     var items: [Int] = []
     @IBOutlet var carousel: iCarousel!
