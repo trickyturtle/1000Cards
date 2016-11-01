@@ -903,12 +903,12 @@
                                     <action selector="showComponentWithSender:" destination="odJ-Im-trZ" eventType="valueChanged" id="TYj-GL-hnD"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-TD-sie">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-TD-sie">
                                 <connections>
                                     <segue destination="cuq-Gq-nr0" kind="embed" id="Po7-TT-2Rs"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0k-6S-p1Y">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0k-6S-p1Y">
                                 <connections>
                                     <segue destination="6rU-Mz-KIo" kind="embed" id="fQs-z8-CYo"/>
                                 </connections>
@@ -1361,7 +1361,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
         <scene sceneID="Lge-xE-koX">
             <objects>
                 <viewController id="cuq-Gq-nr0" userLabel="Discard VC" customClass="DiscardViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="xRO-ct-2P8">
+                    <view key="view" contentMode="scaleToFill" id="xRO-ct-2P8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1373,7 +1373,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CfD-h8-bHy" firstAttribute="leading" secondItem="xRO-ct-2P8" secondAttribute="leading" id="6y9-n5-U6f"/>
                             <constraint firstItem="CfD-h8-bHy" firstAttribute="top" secondItem="xRO-ct-2P8" secondAttribute="top" id="96C-e5-cK3"/>
@@ -1393,7 +1393,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
         <scene sceneID="pne-5T-FcE">
             <objects>
                 <viewController id="6rU-Mz-KIo" userLabel="In Play VC" customClass="InPlayViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="gbG-c5-ZgI">
+                    <view key="view" contentMode="scaleToFill" id="gbG-c5-ZgI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1405,7 +1405,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZEI-76-3H5" firstAttribute="leading" secondItem="gbG-c5-ZgI" secondAttribute="leading" id="41l-r2-eeX"/>
                             <constraint firstAttribute="trailing" secondItem="ZEI-76-3H5" secondAttribute="trailing" id="Fby-kC-FeA"/>
