@@ -166,21 +166,21 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" textLabel="Pfc-LV-Edk" detailTextLabel="oTV-an-gcr" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="JNl-M5-ZfD">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="65"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JNl-M5-ZfD" id="DRf-AV-bTM">
-                                            <frame key="frameInset" width="1000" height="64.5"/>
+                                            <frame key="frameInset" width="375" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pfc-LV-Edk">
-                                                    <frame key="frameInset" minX="164" minY="15" width="33.5" height="20.5"/>
+                                                    <frame key="frameInset" minX="15" minY="15" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oTV-an-gcr">
-                                                    <frame key="frameInset" minX="164" minY="35.5" width="44" height="14.5"/>
+                                                    <frame key="frameInset" minX="15" minY="35.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -577,7 +577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeA-ZE-YIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6039" y="-1520"/>
+            <point key="canvasLocation" x="6492" y="-1520"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="zMe-a7-aVB">
@@ -684,14 +684,14 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myLibraryCell" textLabel="t8J-uM-lTd" style="IBUITableViewCellStyleDefault" id="LvH-FN-YYV">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <frame key="frameInset" width="1000" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t8J-uM-lTd">
-                                                    <frame key="frameInset" minX="164" width="672" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -869,7 +869,7 @@
             </objects>
             <point key="canvasLocation" x="2828" y="1093"/>
         </scene>
-        <!--Data Source-->
+        <!--Game-->
         <scene sceneID="ZAY-Ug-eJX">
             <objects>
                 <viewController storyboardIdentifier="gameView" title="Game" id="odJ-Im-trZ" customClass="GameView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
@@ -881,6 +881,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-wc-5AE">
+                                <connections>
+                                    <segue destination="hdV-dZ-fS2" kind="embed" id="uR7-01-CBt"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-ab-H9Y" userLabel="Container View Game">
+                                <connections>
+                                    <segue destination="qCT-Vv-fgc" kind="embed" id="MK6-5g-paZ"/>
+                                </connections>
+                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-PN-gGE">
                                 <segments>
                                     <segment title="Game"/>
@@ -889,46 +899,29 @@
                                     <segment title="In Play"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="showComponentWithSender:" destination="odJ-Im-trZ" eventType="valueChanged" id="TYj-GL-hnD"/>
+                                </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2f-gj-qAv" customClass="iCarousel">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="odJ-Im-trZ" id="q5t-Th-dVg"/>
-                                    <outlet property="delegate" destination="odJ-Im-trZ" id="ZXw-xa-R3F"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-SF-4tw" userLabel="Button">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Create New Card">
-                                    <color key="titleColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="dWY-oW-g0V" kind="show" id="btQ-dP-VLu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leadingMargin" id="2BF-ut-BtE"/>
-                            <constraint firstItem="O2f-gj-qAv" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leading" id="6s6-Wl-Vb1"/>
-                            <constraint firstItem="10q-DB-PIW" firstAttribute="top" secondItem="lK9-PN-gGE" secondAttribute="bottom" constant="52" id="7VS-aY-7pB"/>
-                            <constraint firstItem="DhC-SF-4tw" firstAttribute="top" secondItem="O2f-gj-qAv" secondAttribute="bottom" constant="35" id="LSH-Y8-Igk"/>
-                            <constraint firstItem="O2f-gj-qAv" firstAttribute="top" secondItem="9d1-Ww-6cs" secondAttribute="bottom" id="QPp-uW-T85"/>
-                            <constraint firstItem="DhC-SF-4tw" firstAttribute="centerX" secondItem="lK9-PN-gGE" secondAttribute="centerX" id="cQq-2b-hA4"/>
-                            <constraint firstItem="DhC-SF-4tw" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leadingMargin" constant="66" id="fQY-q5-m1S"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="top" secondItem="DhC-SF-4tw" secondAttribute="bottom" constant="35" id="kfO-6q-7WX"/>
-                            <constraint firstItem="O2f-gj-qAv" firstAttribute="centerX" secondItem="DhC-SF-4tw" secondAttribute="centerX" id="rVc-ZK-BHo"/>
-                            <constraint firstAttribute="trailing" secondItem="O2f-gj-qAv" secondAttribute="trailing" id="rZV-wp-MI9"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leading" id="DH0-qY-rG9"/>
+                            <constraint firstItem="10q-DB-PIW" firstAttribute="top" secondItem="lK9-PN-gGE" secondAttribute="bottom" constant="46" id="FWg-8G-pCK"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="top" secondItem="pn0-wc-5AE" secondAttribute="top" id="V2d-mV-U5F"/>
+                            <constraint firstAttribute="trailing" secondItem="pn0-wc-5AE" secondAttribute="trailing" id="VUs-ac-kAg"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="centerX" secondItem="pn0-wc-5AE" secondAttribute="centerX" id="WKY-eI-gwZ"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leadingMargin" id="Zeu-aw-Hou"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="pn0-wc-5AE" secondAttribute="trailing" id="aPF-Jg-WbP"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="top" secondItem="9d1-Ww-6cs" secondAttribute="bottom" id="anV-Tp-U1r"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="bottom" secondItem="pn0-wc-5AE" secondAttribute="bottom" id="byK-E2-LxL"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="leading" secondItem="pn0-wc-5AE" secondAttribute="leading" id="hN1-P9-FyH"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="top" secondItem="wtj-ab-H9Y" secondAttribute="bottom" constant="29" id="i1i-ff-lji"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="carousel" destination="O2f-gj-qAv" id="f4S-F4-xAh"/>
+                        <outlet property="containerViewGame" destination="wtj-ab-H9Y" id="mJn-PV-kGX"/>
+                        <outlet property="containerViewHand" destination="pn0-wc-5AE" id="xYv-Mx-YBE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKg-Vy-9rP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1171,6 +1164,98 @@ Cards with lasting effects, such as awarding points or changing the game's rules
             </objects>
             <point key="canvasLocation" x="3766" y="-2176"/>
         </scene>
+        <!--Hand View Controller-->
+        <scene sceneID="SJY-cr-22a">
+            <objects>
+                <viewController id="hdV-dZ-fS2" userLabel="Hand View Controller" customClass="HandViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAX-Tx-aUt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="409-AS-Te1">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUX-Hz-pNl" customClass="iCarousel">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="hdV-dZ-fS2" id="PJB-fS-3bK"/>
+                                            <outlet property="delegate" destination="hdV-dZ-fS2" id="uy3-jJ-p6c"/>
+                                        </connections>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9e-SG-nhv" userLabel="Button">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="Create New Card">
+                                            <color key="titleColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryb-Wt-QRi" userLabel="Button">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="Play Card">
+                                            <color key="titleColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAj-pV-FIt"/>
+                                </subviews>
+                                <color key="backgroundColor" red="0.39423289895057678" green="0.55108559131622314" blue="0.67191207408905029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="top" secondItem="409-AS-Te1" secondAttribute="top" constant="64" id="2jh-QD-MjQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ryb-Wt-QRi" secondAttribute="bottom" constant="180" id="3e1-eu-j3j"/>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="trailing" secondItem="fUX-Hz-pNl" secondAttribute="trailing" id="Dfy-ID-X72"/>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="leading" secondItem="fUX-Hz-pNl" secondAttribute="leading" id="EZo-dV-Y4g"/>
+                                    <constraint firstItem="ryb-Wt-QRi" firstAttribute="leading" secondItem="U9e-SG-nhv" secondAttribute="leading" id="HYQ-oT-Tea"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAj-pV-FIt" secondAttribute="trailing" id="JlI-DR-7lv"/>
+                                    <constraint firstItem="U9e-SG-nhv" firstAttribute="top" secondItem="ryb-Wt-QRi" secondAttribute="bottom" constant="28" id="UDt-Ac-bgZ"/>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="centerX" secondItem="U9e-SG-nhv" secondAttribute="centerX" id="VuF-M2-gTo"/>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="top" secondItem="fUX-Hz-pNl" secondAttribute="top" id="aBr-mQ-Rhz"/>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="centerX" secondItem="ryb-Wt-QRi" secondAttribute="centerX" id="pVL-UP-JBn"/>
+                                    <constraint firstItem="U9e-SG-nhv" firstAttribute="top" secondItem="fUX-Hz-pNl" secondAttribute="bottom" constant="35" id="rx2-za-Li7"/>
+                                    <constraint firstItem="ryb-Wt-QRi" firstAttribute="leading" secondItem="409-AS-Te1" secondAttribute="leading" constant="82" id="tS7-fZ-w8z"/>
+                                    <constraint firstAttribute="bottom" secondItem="nAj-pV-FIt" secondAttribute="bottom" constant="152" id="tvR-lO-KrD"/>
+                                    <constraint firstItem="nAj-pV-FIt" firstAttribute="leading" secondItem="409-AS-Te1" secondAttribute="leading" id="zPC-IP-MjC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="409-AS-Te1" firstAttribute="leading" secondItem="DAX-Tx-aUt" secondAttribute="leading" id="JPT-Vr-p1O"/>
+                            <constraint firstItem="409-AS-Te1" firstAttribute="centerY" secondItem="DAX-Tx-aUt" secondAttribute="centerY" id="T6n-EW-Zpg"/>
+                            <constraint firstItem="409-AS-Te1" firstAttribute="top" secondItem="DAX-Tx-aUt" secondAttribute="top" constant="-108" id="reb-Oy-j6x"/>
+                            <constraint firstAttribute="trailing" secondItem="409-AS-Te1" secondAttribute="trailing" id="wWA-Eg-vbv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="fUX-Hz-pNl" id="4jp-u9-lro"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPm-CB-ygP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5284" y="-2434"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="kLU-DR-bsL">
+            <objects>
+                <viewController id="qCT-Vv-fgc" userLabel="Game View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4G-uP-oTu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.39423289895057678" green="0.55108559131622314" blue="0.67191207408905029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BT9-Oi-osv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5284" y="-1944"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cards-30.png" width="30" height="30"/>
@@ -1178,7 +1263,4 @@ Cards with lasting effects, such as awarding points or changing the game's rules
         <image name="Library-30.png" width="30" height="30"/>
         <image name="Settings-30.png" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="btQ-dP-VLu"/>
-    </inferredMetricsTieBreakers>
 </document>
