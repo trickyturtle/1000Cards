@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Card" syncable="YES">
+        <attribute name="cardDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Deck" syncable="YES">
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+    </entity>
+    <entity name="Game" syncable="YES">
+        <attribute name="p1Points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="p2Points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="p3Points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="p4Points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="discard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="draw" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="inHand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="inPlay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="players" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
+    </entity>
+    <entity name="Player" syncable="YES">
+        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Card" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Game" positionX="-54" positionY="-9" width="128" height="180"/>
+        <element name="Deck" positionX="-36" positionY="9" width="128" height="60"/>
+        <element name="Player" positionX="-18" positionY="36" width="128" height="60"/>
+    </elements>
 </model>

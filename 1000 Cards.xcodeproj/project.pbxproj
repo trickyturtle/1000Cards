@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41535A281DCAF0FC00889E44 /* CreateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41535A271DCAF0FC00889E44 /* CreateCardView.swift */; };
+		41535A2A1DCB1A3600889E44 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41535A291DCB1A3600889E44 /* CardView.swift */; };
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
 		D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */; };
@@ -48,8 +50,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21569284A8ECEE342B28C3AB /* Pods-1000 Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.release.xcconfig"; sourceTree = "<group>"; };
+		41535A271DCAF0FC00889E44 /* CreateCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardView.swift; sourceTree = "<group>"; };
+		41535A291DCB1A3600889E44 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A97662E17797DA39D47CCD87 /* Pods-1000 Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.release.xcconfig"; sourceTree = "<group>"; };
+		8C15269652FAE8F226CB32AD /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		D38AFF3E1DC838990019F9B7 /* HandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandViewController.swift; sourceTree = "<group>"; };
 		D38AFF401DC846A40019F9B7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +96,6 @@
 		F7F0BC161DB14C9B00FDBCD4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F7F0BC211DB15BDE00FDBCD4 /* damnapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = damnapes.jpg; sourceTree = "<group>"; };
 		F7F430921DB87CEC00910A17 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		FC40766B2DA02DBABDBA0D30 /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +125,8 @@
 		F60E1F254E423701C3D58964 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FC40766B2DA02DBABDBA0D30 /* Pods-1000 Cards.debug.xcconfig */,
-				A97662E17797DA39D47CCD87 /* Pods-1000 Cards.release.xcconfig */,
+				8C15269652FAE8F226CB32AD /* Pods-1000 Cards.debug.xcconfig */,
+				21569284A8ECEE342B28C3AB /* Pods-1000 Cards.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -178,7 +182,9 @@
 				F75D9C981DAD58FB00421A53 /* DeckViewController.swift */,
 				F7F0BBFD1DB14A4000FDBCD4 /* LoginViewController.swift */,
 				F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */,
+				41535A291DCB1A3600889E44 /* CardView.swift */,
 				F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */,
+				41535A271DCAF0FC00889E44 /* CreateCardView.swift */,
 				F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */,
 				D38AFF3E1DC838990019F9B7 /* HandViewController.swift */,
 				D38AFF401DC846A40019F9B7 /* GameViewController.swift */,
@@ -344,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -362,12 +368,14 @@
 				D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */,
 				F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */,
 				F7F0BC061DB14A8100FDBCD4 /* iCarousel.m in Sources */,
+				41535A281DCAF0FC00889E44 /* CreateCardView.swift in Sources */,
 				F7F430931DB87CEC00910A17 /* GameView.swift in Sources */,
 				D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */,
 				F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */,
 				F7F0BC021DB14A4000FDBCD4 /* LoginViewController.swift in Sources */,
 				F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */,
 				F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */,
+				41535A2A1DCB1A3600889E44 /* CardView.swift in Sources */,
 				F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,9 +494,9 @@
 		};
 		F75D9CA91DAD58FB00421A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC40766B2DA02DBABDBA0D30 /* Pods-1000 Cards.debug.xcconfig */;
+			baseConfigurationReference = 8C15269652FAE8F226CB32AD /* Pods-1000 Cards.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -507,9 +515,9 @@
 		};
 		F75D9CAA1DAD58FB00421A53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A97662E17797DA39D47CCD87 /* Pods-1000 Cards.release.xcconfig */;
+			baseConfigurationReference = 21569284A8ECEE342B28C3AB /* Pods-1000 Cards.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
