@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41535A281DCAF0FC00889E44 /* CreateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41535A271DCAF0FC00889E44 /* CreateCardView.swift */; };
 		41535A2A1DCB1A3600889E44 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41535A291DCB1A3600889E44 /* CardView.swift */; };
+		41D1D8B51DCBEB5E00287CC1 /* DeckInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */; };
 		D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35EE0ED1DCBC55700C07767 /* Game.swift */; };
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
@@ -54,6 +55,7 @@
 		21569284A8ECEE342B28C3AB /* Pods-1000 Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.release.xcconfig"; sourceTree = "<group>"; };
 		41535A271DCAF0FC00889E44 /* CreateCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardView.swift; sourceTree = "<group>"; };
 		41535A291DCB1A3600889E44 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckInfoView.swift; sourceTree = "<group>"; };
 		6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C15269652FAE8F226CB32AD /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		D35EE0ED1DCBC55700C07767 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				F75D9C981DAD58FB00421A53 /* DeckViewController.swift */,
 				F7F0BBFD1DB14A4000FDBCD4 /* LoginViewController.swift */,
 				F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */,
+				41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */,
 				41535A291DCB1A3600889E44 /* CardView.swift */,
 				F7F0BBFB1DB14A4000FDBCD4 /* ForgotPasswordViewController.swift */,
 				41535A271DCAF0FC00889E44 /* CreateCardView.swift */,
@@ -374,6 +377,7 @@
 				F7F0BC061DB14A8100FDBCD4 /* iCarousel.m in Sources */,
 				41535A281DCAF0FC00889E44 /* CreateCardView.swift in Sources */,
 				F7F430931DB87CEC00910A17 /* GameView.swift in Sources */,
+				41D1D8B51DCBEB5E00287CC1 /* DeckInfoView.swift in Sources */,
 				D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */,
 				F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */,
 				F7F0BC021DB14A4000FDBCD4 /* LoginViewController.swift in Sources */,

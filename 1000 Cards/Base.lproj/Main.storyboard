@@ -596,7 +596,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6x-ml-1ue" customClass="iCarousel">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6x-ml-1ue" customClass="iCarousel">
+                                <frame key="frameInset" minY="72" width="375" height="397"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5iu-LI-Woa" id="n1e-JN-jNJ"/>
@@ -630,6 +631,23 @@
                                     <segue destination="dWY-oW-g0V" kind="show" id="FCI-CD-CNi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRR-lq-xaR" userLabel="Button">
+                                <frame key="frameInset" minX="82" minY="495" width="211" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Deck Info">
+                                    <color key="titleColor" red="0.013609021900000001" green="0.16518847640000001" blue="0.31968146559999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="98v-KN-Pds" kind="show" id="i4b-Mz-3qD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -651,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dus-Jv-vuI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4546" y="-863"/>
+            <point key="canvasLocation" x="4544.8000000000002" y="-863.1184407796103"/>
         </scene>
         <!--Settings-->
         <scene sceneID="tlX-SJ-7KK">
@@ -724,7 +742,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Library" id="Efc-RG-lFx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PbV-Ie-sap"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PbV-Ie-sap">
+                            <connections>
+                                <action selector="createNewDeck:" destination="Cf6-PO-K2g" id="15F-hI-lvN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
@@ -754,7 +776,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6t-Ca-9U0" id="XiJ-j4-DRr">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1449,6 +1471,106 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZq-GW-nlC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5284" y="-1424"/>
+        </scene>
+        <!--Deck Info-->
+        <scene sceneID="vfG-DZ-lLp">
+            <objects>
+                <viewController storyboardIdentifier="deckInfo" title="Deck Info" id="98v-KN-Pds" customClass="DeckInfoView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u2x-ad-LRm"/>
+                        <viewControllerLayoutGuide type="bottom" id="frk-ns-nFI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SGJ-MR-QoS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title of card" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-iu-70T">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-AW-Abf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="7dV-OA-JY3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Om4-j9-oqG">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write description here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-Ac-sWe">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="ijd-uj-hmq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1E-kH-vrZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="w7a-gI-ohW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iJ-0G-NP1" userLabel="Button">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Save Info">
+                                    <color key="titleColor" red="0.013609021900000001" green="0.16518847640000001" blue="0.31968146559999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createCardButton:" destination="98v-KN-Pds" eventType="touchUpInside" id="Rnj-eQ-5au"/>
+                                    <action selector="updateDeckInfo:" destination="98v-KN-Pds" eventType="touchUpInside" id="LDJ-gr-Iq2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-rh-mCI">
+                                <frame key="frameInset" minX="73" minY="222" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click To Add Image Here">
+                                    <color key="titleColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Om4-j9-oqG" firstAttribute="leading" secondItem="A1E-kH-vrZ" secondAttribute="leading" id="1WT-qU-ctP"/>
+                            <constraint firstItem="YEh-iu-70T" firstAttribute="leading" secondItem="fbs-AW-Abf" secondAttribute="trailing" constant="8" symbolic="YES" id="1k7-2H-7QG"/>
+                            <constraint firstItem="fbs-AW-Abf" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" constant="12" id="1kQ-ZC-xcZ"/>
+                            <constraint firstItem="DuS-Ac-sWe" firstAttribute="top" secondItem="A1E-kH-vrZ" secondAttribute="bottom" constant="8" symbolic="YES" id="6tg-qr-XEV"/>
+                            <constraint firstItem="DuS-Ac-sWe" firstAttribute="centerX" secondItem="9iJ-0G-NP1" secondAttribute="centerX" id="K4N-TK-OCh"/>
+                            <constraint firstItem="fbs-AW-Abf" firstAttribute="top" secondItem="u2x-ad-LRm" secondAttribute="bottom" constant="8" symbolic="YES" id="Lo1-MC-o1X"/>
+                            <constraint firstItem="A1E-kH-vrZ" firstAttribute="leading" secondItem="DuS-Ac-sWe" secondAttribute="leading" id="OBD-PW-rnc"/>
+                            <constraint firstItem="Om4-j9-oqG" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" id="RnV-LC-E6J"/>
+                            <constraint firstItem="YEh-iu-70T" firstAttribute="trailing" secondItem="SGJ-MR-QoS" secondAttribute="trailingMargin" id="TkF-3b-lNy"/>
+                            <constraint firstItem="Om4-j9-oqG" firstAttribute="top" secondItem="YEh-iu-70T" secondAttribute="bottom" constant="8" symbolic="YES" id="U0f-BE-hqI"/>
+                            <constraint firstItem="9iJ-0G-NP1" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" constant="66" id="U2m-Dy-fTz"/>
+                            <constraint firstItem="frk-ns-nFI" firstAttribute="top" secondItem="9iJ-0G-NP1" secondAttribute="bottom" constant="8" symbolic="YES" id="gjV-2F-mhJ"/>
+                            <constraint firstItem="9iJ-0G-NP1" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="8" symbolic="YES" id="nQR-sC-fOp"/>
+                            <constraint firstItem="YEh-iu-70T" firstAttribute="trailing" secondItem="Om4-j9-oqG" secondAttribute="trailing" id="r2d-zO-T6E"/>
+                            <constraint firstItem="Om4-j9-oqG" firstAttribute="trailing" secondItem="DuS-Ac-sWe" secondAttribute="trailing" id="rGE-hz-r3Y"/>
+                            <constraint firstItem="A1E-kH-vrZ" firstAttribute="top" secondItem="Om4-j9-oqG" secondAttribute="bottom" constant="8" symbolic="YES" id="w3e-cJ-AkI"/>
+                            <constraint firstItem="fbs-AW-Abf" firstAttribute="top" secondItem="YEh-iu-70T" secondAttribute="top" id="y9c-r3-hjF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deckImage" destination="Om4-j9-oqG" id="zld-wG-s0O"/>
+                        <outlet property="descriptionTF" destination="DuS-Ac-sWe" id="awb-BD-AL6"/>
+                        <outlet property="newCardImageView" destination="Om4-j9-oqG" id="y55-j9-vHz"/>
+                        <outlet property="titleTF" destination="YEh-iu-70T" id="teZ-Xy-uwE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6R-hD-gqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5326" y="-103"/>
         </scene>
     </scenes>
     <resources>

@@ -11,6 +11,8 @@ import UIKit
 class MyLibraryViewController: UIViewController, UITableViewDataSource {
 
     var sampleLibrary = ["Sample Deck"]
+    @IBAction func createNewDeck(_ sender: AnyObject) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
