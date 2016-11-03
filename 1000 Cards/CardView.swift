@@ -11,7 +11,7 @@ import UIKit
 
 class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    //var card = Card()
+    var card = PFObject(className: "Card")
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cardDescription: UITextView!
@@ -19,10 +19,10 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //titleLabel.text = card.title
-        //imageView.image = card.image
-        //cardDescription = card.cardDescription
+
+        titleLabel.text = card.object(forKey: "title") as! String?
+        imageView.image = card.object(forKey: "image") as! UIImage?
+        cardDescription.text = card.object(forKey: "description") as! String?
     }
     
 

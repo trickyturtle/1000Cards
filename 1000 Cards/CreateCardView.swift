@@ -36,8 +36,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         else{
             let newCard = PFObject(className: "Card")
             newCard.add(titleTF.text, forKey: "title")
-            newCard.add(descriptionTF.text, forKey: "cardDescription")
-            newCard.add(newCardImageView.image, forKey: "img")
+            newCard.add(descriptionTF.text, forKey: "description")
+            newCard.add(newCardImageView.image, forKey: "image")
             newCard.saveInBackground()
         }
 
