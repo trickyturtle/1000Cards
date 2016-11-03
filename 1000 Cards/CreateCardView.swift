@@ -15,6 +15,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descriptionTF: UITextView!
     @IBOutlet weak var newCardImageView: UIImageView!
+    var deck = PFObject(className: "Deck")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             newCard.add(descriptionTF.text, forKey: "description")
             newCard.add(newCardImageView.image, forKey: "image")
             newCard.saveInBackground()
+            deck.add(newCard, forKey: "card")
+            deck.saveInBackground()
         }
 
     }
