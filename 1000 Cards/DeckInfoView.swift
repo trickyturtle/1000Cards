@@ -23,9 +23,9 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         }
         else{
             let newDeck = PFObject(className: "Card")
-            newDeck.add(titleTF.text, forKey: "title")
+            newDeck.add(titleTF.text!, forKey: "title")
             newDeck.add(descriptionTF.text, forKey: "description")
-            newDeck.add(deckImage.image, forKey: "image")
+            newDeck.add(deckImage.image!, forKey: "image")
             newDeck.saveInBackground()
         }
     }

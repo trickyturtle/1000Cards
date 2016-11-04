@@ -28,15 +28,18 @@ class GamesViewController: UIViewController, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         let gameQuery = PFQuery(className: "Game")
         gameQuery.order(byDescending: "createdAt")
-        do {
-            currentGameNames = try gameQuery.findObjects()
-            if (currentGamesTableView != nil) {
-                self.currentGamesTableView.reloadData()
+        DispatchQueue.global().async {
+            do {
+                self.currentGameNames = try gameQuery.findObjects()
+                if (self.currentGamesTableView != nil) {
+                    DispatchQueue.main.async {
+                        self.currentGamesTableView.reloadData()}
+                }
+            } catch {
+                print("\n***************ERROR***************")
+                print(error)
+                print("***************ERROR***************\n")
             }
-        } catch {
-            print("\n***************ERROR***************")
-            print(error)
-            print("***************ERROR***************\n")
         }
     }
     

@@ -43,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
         PFUser.enableAutomaticUser()
         
+        
+        
         return true
     }
 

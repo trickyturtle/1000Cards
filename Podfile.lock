@@ -1,12 +1,15 @@
 PODS:
   - PureLayout (3.0.2)
+  - SlackTextViewController (1.9.5)
 
 DEPENDENCIES:
   - PureLayout
+  - SlackTextViewController
 
 SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
 
-PODFILE CHECKSUM: fd0fb2784398db48ec212e7ae9589b42013acb38
+PODFILE CHECKSUM: 4c715272c24371f0f4745034423a729fd68437d5
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.0.1
