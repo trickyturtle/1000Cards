@@ -36,17 +36,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: AnyObject) {
-        /********************** COMMENT OUT TO ALLOW LOGIN ***********************/
+        /********************** UNCOMMENT TO DISABLE LOGIN ***********************
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
-        /********************************************************************/
+        ********************************************************************/
         
         /***************************************************************************
-         *  This is commented out to allow you to use the application without a login
+         *  This was commented out to allow you to use the application without a login
          *  If you would like, you may create an account by going to Create Account.
-         *  User account info is not utilized at this point in development other than for 
-         *  allowing login.
+         ****************************************************************************/
         PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
@@ -63,7 +62,7 @@ class LoginViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
             }
         }
-        ********************************************************************************/
+        /********************************************************************************/
     }
 
 }

@@ -31,13 +31,13 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func createAccountButton(_ sender: AnyObject) {
         
-        /********************** COMMENT OUT TO ALLOW CREATE ACCOUNT ***********************/
+        /********************** UNCOMMENT TO DISABLE CREATE ACCOUNT ***********************
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
         var vcArray = self.navigationController?.viewControllers
         vcArray?.removeAll()
         vcArray?.append(vc as! UIViewController)
         self.navigationController?.viewControllers = vcArray!
-        /********************************************************************/
+        ********************************************************************/
 
         
         
