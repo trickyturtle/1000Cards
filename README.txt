@@ -5,20 +5,18 @@ Beta Release
 
 Contributions:
 
-David Alexander: (25%)
+David Alexander: (Release 30%, Overall 27%)
 	• Create New Card
 	• Create New Deck
 
-Isaac Garza: (25%)
+Isaac Garza: (Release 15%, Overall 27%)
 	• Settings functionality
 	• Forgot Password
 
+Katherine Heyne: (Release 25%, Overall 24.5%)
+	• Invite Players Screen
 
-Katherine Heyne: (25%)
-	• 
-	•
-
-Brian Shiau: (25%)
+Brian Shiau: (Release 30%, Overall 21.5%)
 	• Game View: How the Game is presented and its navigation
 
 Comments:
