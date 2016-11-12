@@ -59,12 +59,6 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         }
     }
     
-//    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-//        let imgInfo: NSDictionary = info as NSDictionary
-//        let img: UIImage = imgInfo.object(forKey: UIImagePickerControllerOriginalImage) as! UIImage
-//        newCardImageView.image = img
-//        self.dismiss(animated: true, completion: nil)
-//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
