@@ -28,7 +28,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         newCardImageView.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         newCardImageView.isUserInteractionEnabled = true
-        newCardImageView.image = UIImage(named: "defaultImage.jpg")
+        //newCardImageView.image = UIImage(named: "defaultImage.jpg")
+
     }
 
     @IBAction func createCardButton(_ sender: AnyObject) {
@@ -49,20 +50,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
 
     }
     
-//    func imageTapped(gesture: UIGestureRecognizer) {
+
     func imageTapped() {
-        // if the tapped view is a UIImageView then set it to imageview
-//        if let imageView = gesture.view as? UIImageView {
-//
-//            //Here you can initiate your new ViewController
-//            
-//        }
-//        let image = UIImagePickerController()
-//        image.delegate = self
-//        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-//        self.present(image, animated: true, completion: nil)
-        
-        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
             imagePicker.allowsEditing = true
