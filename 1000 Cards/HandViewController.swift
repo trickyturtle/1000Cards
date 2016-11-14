@@ -12,6 +12,7 @@ import UIKit
 class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
     var items: [Int] = []
+    var cardData = PFObject(className: "Card")
     @IBOutlet var carousel: iCarousel!
     
     override func awakeFromNib()
@@ -84,7 +85,34 @@ class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelega
     
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "cardViewController")
+        cardData = items[index] as! PFObject
         self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
     
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+        if  segue.identifier == "cardViewController",
+            let destination = segue.destination as? CardView
+        {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            
+            //let fetchRequest = NSFetchRequest(entityName: "Card")
+            //var fetchedResults:[NSManagedObject]
+//            
+//            do {
+//                try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+//                
+//            }catch {
+//                // If an error occurs
+//                let nserror = error as NSError
+//                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+//                abort()
+//            }
+        
+            destination.card = cardData
+        }
+    }
+    
+
 }
