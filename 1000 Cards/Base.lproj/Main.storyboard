@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ykc-0a-fq9">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ykc-0a-fq9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -160,7 +160,7 @@
         <!--My Games-->
         <scene sceneID="jLV-Vi-9bF">
             <objects>
-                <viewController storyboardIdentifier="gamesViewController" title="My Games" id="fMT-vE-BYQ" customClass="GamesViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gamesViewController" title="My Games" id="fMT-vE-BYQ" customClass="GameTableViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yvv-dG-vCd"/>
                         <viewControllerLayoutGuide type="bottom" id="OT0-9e-5kT"/>
@@ -198,9 +198,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="odJ-Im-trZ" kind="show" id="CVY-wb-9DN"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -504,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4z-w0-KMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6492" y="-2176"/>
+            <point key="canvasLocation" x="6145" y="-2176"/>
         </scene>
         <!--Card View-->
         <scene sceneID="XML-kr-Imd">
@@ -576,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeA-ZE-YIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6492" y="-1520"/>
+            <point key="canvasLocation" x="6145" y="-1520"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="zMe-a7-aVB">
@@ -1103,7 +1100,7 @@ new email address</string>
         <!--Game-->
         <scene sceneID="ZAY-Ug-eJX">
             <objects>
-                <viewController storyboardIdentifier="gameView" title="Game" id="odJ-Im-trZ" customClass="GameView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameContainerView" title="Game" id="odJ-Im-trZ" customClass="GameContainerView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9d1-Ww-6cs"/>
                         <viewControllerLayoutGuide type="bottom" id="10q-DB-PIW"/>
@@ -1113,13 +1110,31 @@ new email address</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-ab-H9Y" userLabel="Container View Game">
-                                <rect key="frame" x="0.0" y="100" width="375" height="523"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
                                     <segue destination="qCT-Vv-fgc" kind="embed" id="MK6-5g-paZ"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-TD-sie">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <connections>
+                                    <segue destination="cuq-Gq-nr0" kind="embed" id="Po7-TT-2Rs"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0k-6S-p1Y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <connections>
+                                    <segue destination="6rU-Mz-KIo" kind="embed" id="fQs-z8-CYo"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-wc-5AE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <connections>
+                                    <segue destination="hdV-dZ-fS2" kind="embed" id="uR7-01-CBt"/>
+                                </connections>
+                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-PN-gGE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="29"/>
                                 <segments>
                                     <segment title="Game"/>
                                     <segment title="Hand"/>
@@ -1131,46 +1146,28 @@ new email address</string>
                                     <action selector="showComponentWithSender:" destination="odJ-Im-trZ" eventType="valueChanged" id="TYj-GL-hnD"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-TD-sie">
-                                <rect key="frame" x="0.0" y="100" width="375" height="523"/>
-                                <connections>
-                                    <segue destination="cuq-Gq-nr0" kind="embed" id="Po7-TT-2Rs"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0k-6S-p1Y">
-                                <rect key="frame" x="0.0" y="100" width="375" height="523"/>
-                                <connections>
-                                    <segue destination="6rU-Mz-KIo" kind="embed" id="fQs-z8-CYo"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-wc-5AE">
-                                <rect key="frame" x="0.0" y="100" width="375" height="523"/>
-                                <connections>
-                                    <segue destination="hdV-dZ-fS2" kind="embed" id="uR7-01-CBt"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pn0-wc-5AE" firstAttribute="top" secondItem="V0k-6S-p1Y" secondAttribute="top" id="1lE-bj-vhs"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="wtj-ab-H9Y" secondAttribute="top" id="3po-KD-PgU"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="leading" secondItem="V0k-6S-p1Y" secondAttribute="leading" id="4sk-25-4LZ"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="trailing" secondItem="pn0-wc-5AE" secondAttribute="trailing" id="ACq-Uw-dSk"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="Gek-5I-quE"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="leading" secondItem="wtj-ab-H9Y" secondAttribute="leading" id="J9W-Xh-LPn"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="JPE-9b-ubU"/>
-                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="top" secondItem="wtj-ab-H9Y" secondAttribute="top" id="LBf-uM-jeL"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="3aU-TD-sie" secondAttribute="leading" id="MXu-X5-yCD"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="trailing" secondItem="V0k-6S-p1Y" secondAttribute="trailing" id="PQw-zX-z3X"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="leading" secondItem="pn0-wc-5AE" secondAttribute="leading" id="RZy-zT-oLK"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leading" id="cdA-pM-d2B"/>
-                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="fxg-Co-Mhi"/>
-                            <constraint firstAttribute="trailing" secondItem="lK9-PN-gGE" secondAttribute="trailing" id="h81-em-ggT"/>
-                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="top" secondItem="lK9-PN-gGE" secondAttribute="bottom" constant="8" symbolic="YES" id="hdo-Se-9Ts"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="top" secondItem="9d1-Ww-6cs" secondAttribute="bottom" id="i6l-RI-e7L"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="V0k-6S-p1Y" secondAttribute="trailing" id="sYD-8x-jbr"/>
-                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="vCb-oM-92u"/>
-                            <constraint firstItem="pn0-wc-5AE" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="x9H-hn-t7x"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="4hf-PI-ePt"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="leading" secondItem="V0k-6S-p1Y" secondAttribute="leading" id="6qw-yv-wqL"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="7QU-yX-Us1"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="7gq-SR-3uL"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="V0k-6S-p1Y" secondAttribute="trailing" id="Nr7-fB-DWi"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="QoI-pP-zs2"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leading" id="RUC-ld-KIU"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="pn0-wc-5AE" secondAttribute="top" id="T1b-2Y-xdn"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="leading" secondItem="wtj-ab-H9Y" secondAttribute="leading" id="chM-Lx-EAn"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="eFj-v2-48N"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="leading" secondItem="3aU-TD-sie" secondAttribute="leading" id="j6d-py-tKV"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="trailing" secondItem="pn0-wc-5AE" secondAttribute="trailing" id="mrY-5c-6sx"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="top" secondItem="wtj-ab-H9Y" secondAttribute="top" id="mza-E4-uOn"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="n8u-bk-h1S"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="top" secondItem="9d1-Ww-6cs" secondAttribute="bottom" constant="8" symbolic="YES" id="tUI-v3-sVG"/>
+                            <constraint firstAttribute="trailing" secondItem="lK9-PN-gGE" secondAttribute="trailing" id="uO6-JL-C6y"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="V0k-6S-p1Y" secondAttribute="top" id="v0T-LX-HPd"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="lK9-PN-gGE" secondAttribute="bottom" constant="8" symbolic="YES" id="xCA-Jd-qRO"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="V0k-6S-p1Y" secondAttribute="leading" id="xsQ-Up-Qhj"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1178,7 +1175,7 @@ new email address</string>
                         <barButtonItem key="rightBarButtonItem" image="Chat Filled-30.png" id="eUD-5T-4Wd" userLabel="messengerButton">
                             <color key="tintColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="qyL-vC-Nzx" kind="show" id="TaR-O5-Hzm"/>
+                                <segue destination="qyL-vC-Nzx" kind="show" identifier="messageBoardSegue" id="TaR-O5-Hzm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1361,6 +1358,37 @@ Cards with lasting effects, such as awarding points or changing the game's rules
             </objects>
             <point key="canvasLocation" x="1792.8" y="-863.1184407796103"/>
         </scene>
+        <!--Invite-->
+        <scene sceneID="hr9-N2-VVH">
+            <objects>
+                <tableViewController title="Invite" id="U6m-R3-ait" customClass="InviteTableViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHT-Su-XCp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZhN-DW-GAG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZhN-DW-GAG" id="erT-zn-6sd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="U6m-R3-ait" id="ahK-Zr-SXi"/>
+                            <outlet property="delegate" destination="U6m-R3-ait" id="BHT-bY-JW2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Invite" id="9fe-xM-aSX">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="PP8-xo-ihb"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6L-8f-Zi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3766" y="-2846"/>
+        </scene>
         <!--New Game-->
         <scene sceneID="fyf-mj-s7R">
             <objects>
@@ -1374,18 +1402,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOp-aa-txm" userLabel="gameNameTF">
-                                <rect key="frame" x="82" y="134" width="211" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMl-ZX-AaH" userLabel="gameDescriptionTF">
-                                <rect key="frame" x="82" y="203" width="211" height="30"/>
+                                <rect key="frame" x="82" y="338" width="211" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.76744058100000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1396,10 +1413,10 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-Q1-WD7" userLabel="startPlayingButton">
-                                <rect key="frame" x="82" y="393" width="211" height="33"/>
+                                <rect key="frame" x="82" y="376" width="211" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Start Playing!">
+                                <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.01176470588" green="0.1647058824" blue="0.32156862749999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1408,50 +1425,37 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onButtonStartPlaying:" destination="isN-a9-SM9" eventType="touchUpInside" id="2Ek-hg-rOt"/>
+                                    <segue destination="U6m-R3-ait" kind="show" id="zkY-bq-aVu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Og-Wc-Hk3" userLabel="startPlayingButton">
-                                <rect key="frame" x="82" y="317" width="211" height="33"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Invite Friends">
-                                    <color key="titleColor" red="0.01176470588" green="0.1647058824" blue="0.32156862749999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onButtonStartPlaying:" destination="isN-a9-SM9" eventType="touchUpInside" id="CL8-Ek-NaM"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's the name of the game?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDT-PX-QEb">
+                                <rect key="frame" x="71" y="257" width="233" height="73"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.39313054079999998" green="0.55111742019999999" blue="0.66877615450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nMl-ZX-AaH" firstAttribute="trailing" secondItem="5Og-Wc-Hk3" secondAttribute="trailing" id="1rY-za-Uoa"/>
-                            <constraint firstItem="nMl-ZX-AaH" firstAttribute="top" secondItem="AOp-aa-txm" secondAttribute="bottom" constant="39" id="2Mb-FT-42R"/>
-                            <constraint firstItem="AOp-aa-txm" firstAttribute="trailing" secondItem="nMl-ZX-AaH" secondAttribute="trailing" id="9ev-xe-PkL"/>
-                            <constraint firstItem="5Og-Wc-Hk3" firstAttribute="leading" secondItem="Kgx-Q1-WD7" secondAttribute="leading" id="Fvc-F4-9m2"/>
-                            <constraint firstItem="Kgx-Q1-WD7" firstAttribute="top" secondItem="5Og-Wc-Hk3" secondAttribute="bottom" constant="43" id="QQ7-ID-uki"/>
-                            <constraint firstItem="AOp-aa-txm" firstAttribute="leading" secondItem="FqF-H0-eCt" secondAttribute="leadingMargin" constant="66" id="RCX-gp-xvF"/>
-                            <constraint firstItem="AOp-aa-txm" firstAttribute="centerX" secondItem="FqF-H0-eCt" secondAttribute="centerX" id="S0R-7f-YGG"/>
-                            <constraint firstItem="nMl-ZX-AaH" firstAttribute="leading" secondItem="5Og-Wc-Hk3" secondAttribute="leading" id="WRE-Uc-9ej"/>
-                            <constraint firstItem="5Og-Wc-Hk3" firstAttribute="centerY" secondItem="FqF-H0-eCt" secondAttribute="centerY" id="Z9W-TG-FLF"/>
-                            <constraint firstItem="5Og-Wc-Hk3" firstAttribute="trailing" secondItem="Kgx-Q1-WD7" secondAttribute="trailing" id="Z9W-xB-2FW"/>
-                            <constraint firstItem="AOp-aa-txm" firstAttribute="top" secondItem="cYj-ue-G6W" secondAttribute="bottom" constant="70" id="aYl-24-W3F"/>
-                            <constraint firstItem="AOp-aa-txm" firstAttribute="leading" secondItem="nMl-ZX-AaH" secondAttribute="leading" id="dAC-GU-FnQ"/>
+                            <constraint firstItem="Ojn-eU-WvO" firstAttribute="top" secondItem="Kgx-Q1-WD7" secondAttribute="bottom" constant="209" id="1GY-po-q5m"/>
+                            <constraint firstItem="YDT-PX-QEb" firstAttribute="top" secondItem="cYj-ue-G6W" secondAttribute="bottom" constant="193" id="FqK-D1-Z4Y"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="top" secondItem="YDT-PX-QEb" secondAttribute="bottom" constant="8" symbolic="YES" id="MZj-pR-JjK"/>
+                            <constraint firstItem="YDT-PX-QEb" firstAttribute="centerX" secondItem="FqF-H0-eCt" secondAttribute="centerX" id="RPb-Q4-9To"/>
+                            <constraint firstItem="YDT-PX-QEb" firstAttribute="leading" secondItem="FqF-H0-eCt" secondAttribute="leadingMargin" constant="55" id="VrK-MW-B5t"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="leading" secondItem="FqF-H0-eCt" secondAttribute="leadingMargin" constant="66" id="YJW-1u-GJu"/>
+                            <constraint firstItem="Kgx-Q1-WD7" firstAttribute="top" secondItem="AOp-aa-txm" secondAttribute="bottom" constant="8" symbolic="YES" id="cwc-W5-vgB"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="trailing" secondItem="Kgx-Q1-WD7" secondAttribute="trailing" id="r4x-Bf-12k"/>
+                            <constraint firstItem="AOp-aa-txm" firstAttribute="leading" secondItem="Kgx-Q1-WD7" secondAttribute="leading" id="rEV-Vz-8G7"/>
+                            <constraint firstItem="YDT-PX-QEb" firstAttribute="centerX" secondItem="AOp-aa-txm" secondAttribute="centerX" id="zV5-3Q-ToJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gameDescriptionTF" destination="nMl-ZX-AaH" id="5Ma-E9-jqi"/>
                         <outlet property="gameNameTF" destination="AOp-aa-txm" id="a3n-OH-xmm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXj-W2-9Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3766" y="-2176"/>
+            <point key="canvasLocation" x="3765.5999999999999" y="-2176.4617691154426"/>
         </scene>
         <!--Hand View Controller-->
         <scene sceneID="SJY-cr-22a">
@@ -1462,14 +1466,14 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <viewControllerLayoutGuide type="bottom" id="5EF-hk-cQo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DAX-Tx-aUt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="409-AS-Te1">
-                                <rect key="frame" x="0.0" y="-108" width="375" height="739"/>
+                                <rect key="frame" x="0.0" y="-108" width="375" height="775"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUX-Hz-pNl" customClass="iCarousel">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="488"/>
+                                        <rect key="frame" x="0.0" y="64" width="375" height="524"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dataSource" destination="hdV-dZ-fS2" id="PJB-fS-3bK"/>
@@ -1477,7 +1481,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                         </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9e-SG-nhv" userLabel="Button">
-                                        <rect key="frame" x="82" y="587" width="211" height="33"/>
+                                        <rect key="frame" x="82" y="623" width="211" height="33"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="Create New Card">
@@ -1490,7 +1494,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryb-Wt-QRi" userLabel="Button">
-                                        <rect key="frame" x="82" y="526" width="211" height="33"/>
+                                        <rect key="frame" x="82" y="562" width="211" height="33"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="Play Card">
@@ -1503,7 +1507,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAj-pV-FIt">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="523"/>
+                                        <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                     </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.39423289895057678" green="0.55108559131622314" blue="0.67191207408905029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1539,7 +1543,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPm-CB-ygP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="-2443"/>
+            <point key="canvasLocation" x="5284" y="-2845"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="kLU-DR-bsL">
@@ -1550,59 +1554,59 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <viewControllerLayoutGuide type="bottom" id="76u-Zr-CbH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c4G-uP-oTu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg0-WX-F5A">
-                                <rect key="frame" x="16" y="474" width="59" height="20.5"/>
+                                <rect key="frame" x="16" y="510" width="59" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joD-5W-a4q">
-                                <rect key="frame" x="107" y="474" width="61.5" height="20.5"/>
+                                <rect key="frame" x="107" y="510" width="61.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr2-bd-SK8">
-                                <rect key="frame" x="205" y="474" width="62" height="20.5"/>
+                                <rect key="frame" x="205" y="510" width="62" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ec-ja-3h7">
-                                <rect key="frame" x="297" y="474" width="62" height="20.5"/>
+                                <rect key="frame" x="297" y="510" width="62" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3l-7y-o20">
-                                <rect key="frame" x="31.5" y="502.5" width="28.5" height="20.5"/>
+                                <rect key="frame" x="31.5" y="538.5" width="28.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-dW-0Eq">
-                                <rect key="frame" x="122.5" y="502.5" width="31" height="20.5"/>
+                                <rect key="frame" x="122.5" y="538.5" width="31" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="970-cF-3qc">
-                                <rect key="frame" x="216.5" y="501.5" width="39" height="20.5"/>
+                                <rect key="frame" x="216.5" y="537.5" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-600" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-2V-hTH">
-                                <rect key="frame" x="308.5" y="501.5" width="39" height="20.5"/>
+                                <rect key="frame" x="308.5" y="537.5" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPF-mj-SK0" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="-45" width="375" height="489"/>
+                                <rect key="frame" x="0.0" y="-45" width="375" height="525"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="qCT-Vv-fgc" id="8Cu-jm-QOx"/>
@@ -1610,7 +1614,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 played &quot;Damn Dirty Apes&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXT-vT-nX7">
-                                <rect key="frame" x="56.5" y="424.5" width="262" height="20.5"/>
+                                <rect key="frame" x="56.5" y="460.5" width="262" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1648,7 +1652,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BT9-Oi-osv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="-3002"/>
+            <point key="canvasLocation" x="5284" y="-3395"/>
         </scene>
         <!--Discard VC-->
         <scene sceneID="Lge-xE-koX">
@@ -1659,11 +1663,11 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <viewControllerLayoutGuide type="bottom" id="aAc-gK-cV8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xRO-ct-2P8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfD-h8-bHy" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="cuq-Gq-nr0" id="vrZ-eH-gI4"/>
@@ -1685,7 +1689,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvh-Ub-HDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="-1933"/>
+            <point key="canvasLocation" x="5284" y="-2176"/>
         </scene>
         <!--In Play VC-->
         <scene sceneID="pne-5T-FcE">
@@ -1696,11 +1700,11 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <viewControllerLayoutGuide type="bottom" id="gEr-Fb-uEf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gbG-c5-ZgI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEI-76-3H5" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6rU-Mz-KIo" id="pKf-f8-6fl"/>
@@ -1722,7 +1726,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZq-GW-nlC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="-1433"/>
+            <point key="canvasLocation" x="5284" y="-1519"/>
         </scene>
         <!--Deck Info-->
         <scene sceneID="vfG-DZ-lLp">
@@ -1970,6 +1974,40 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8y-tJ-FWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4544.8000000000002" y="1790.5547226386807"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="anW-Ae-nhM">
+            <objects>
+                <viewController id="cKv-jX-eED" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xoW-k5-nZA"/>
+                        <viewControllerLayoutGuide type="bottom" id="bGh-LZ-7qP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bee-Aq-Yb2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9Y-MS-IqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JdD-Ye-OaI">
+            <objects>
+                <viewController id="F2p-zm-mwb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="scJ-GD-aSI"/>
+                        <viewControllerLayoutGuide type="bottom" id="F8i-1v-fbF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="feH-zr-JHP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6D-d5-i5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

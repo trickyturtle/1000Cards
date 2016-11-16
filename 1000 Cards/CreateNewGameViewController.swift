@@ -25,8 +25,9 @@ class CreateNewGameViewController: UIViewController {
             newGame.saveInBackground(block: { succeed, error in
                 if (succeed) {
                     //create game was successful
-                    let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "gameView")
-                    self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+                    let vc : GameContainerView = self.storyboard!.instantiateViewController(withIdentifier: "gameContainerView") as! GameContainerView
+                    vc.game = newGame
+                    self.navigationController?.pushViewController(vc as UIViewController, animated: true)
                 } else if let error = error {
                     //Error has occurred
                     print("\n***************ERROR***************")
@@ -47,7 +48,6 @@ class CreateNewGameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -57,5 +57,4 @@ class CreateNewGameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

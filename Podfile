@@ -8,5 +8,8 @@ target '1000 Cards' do
   # Pods for 1000 Cards
   pod 'PureLayout'
   pod 'SlackTextViewController'
+  
+  pod 'JSQMessagesViewController'
+  pod 'Alamofire', '~> 4.0'
 
 end

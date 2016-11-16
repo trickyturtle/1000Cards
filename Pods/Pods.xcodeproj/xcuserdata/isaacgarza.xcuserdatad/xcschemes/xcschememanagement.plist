@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-1000 Cards.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,32 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>039D312013D7FAA66044EA97BE134554</key>
+		<key>1ED4DFAAD25E1999D0244868457A351E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D248C1211E5FAAAC3E7CC01FC06E93A</key>
+		<key>26C624CFEC537BD482EAC6A7B8A93A4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C1F3ECBB3995ECCBCF7E2B7C3EAC842</key>
+		<key>310D50A0D6C7CAB351BD8B35BC9FF008</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CD8985C4BF4EC0B2E4DE3328536981C</key>
+		<key>59CDDB315DD2B098E0CD9ED56B026F4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D566BF1F878B85994D8603A140BF08B4</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDCC8CD30D993CA2E513F8ECD976F05F</key>
+		<key>C2EB3B8481F277C3CD8FEDBBCFFD4322</key>
 		<dict>
 			<key>primary</key>
 			<true/>
