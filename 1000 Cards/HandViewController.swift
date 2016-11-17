@@ -11,7 +11,7 @@ import UIKit
 
 class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
-    var items: [Int] = []
+    var cards = [UIImage]();
     var cardData = PFObject(className: "Card")
     @IBOutlet var carousel: iCarousel!
     
