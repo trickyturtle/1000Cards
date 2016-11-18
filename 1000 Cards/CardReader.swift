@@ -50,12 +50,12 @@ class CardReader{
     
     
     
-    func convertDataToImage(data: Data) ->UIImage{
+    static func convertDataToImage(data: Data) ->UIImage{
         let image : UIImage = UIImage(data: data)!
         return image
     }
     
-    func saveImageToDocumentDirectory(image: UIImage, parseID: String){
+    static func saveImageToDocumentDirectory(image: UIImage, parseID: String){
         let fileManager = FileManager.default
         let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(parseID)")
         //let image = UIImage(named: "apple.jpg")
@@ -65,20 +65,20 @@ class CardReader{
     }
     
     //returns DD as URL
-    func getDocumentsDirectory() -> URL {
+    static func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
     
     //returns DD as String
-    func getDirectoryPath() -> String {
+    static func getDirectoryPath() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
     
-    func getImage(parseID: String)->UIImage?{
+    static func getImage(parseID: String)->UIImage?{
         let fileManager = FileManager.default
         let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent("\(parseID)")
         if fileManager.fileExists(atPath: imagePAth){
