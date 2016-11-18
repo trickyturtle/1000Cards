@@ -15,6 +15,7 @@
 		41FA812D1DDE7AA5008F2F69 /* CardReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA812C1DDE7AA5008F2F69 /* CardReader.swift */; };
 		41FA812F1DDEAE81008F2F69 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA812E1DDEAE81008F2F69 /* GameAction.swift */; };
 		41FA81311DDEBEFE008F2F69 /* UIView+SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA81301DDEBEFE008F2F69 /* UIView+SaveView.swift */; };
+		41FA81331DDFB849008F2F69 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA81321DDFB849008F2F69 /* CardListView.swift */; };
 		D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35EE0ED1DCBC55700C07767 /* Game.swift */; };
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
@@ -71,6 +72,7 @@
 		41FA812C1DDE7AA5008F2F69 /* CardReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardReader.swift; sourceTree = "<group>"; };
 		41FA812E1DDEAE81008F2F69 /* GameAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
 		41FA81301DDEBEFE008F2F69 /* UIView+SaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SaveView.swift"; sourceTree = "<group>"; };
+		41FA81321DDFB849008F2F69 /* CardListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C15269652FAE8F226CB32AD /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		D35EE0ED1DCBC55700C07767 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				41FA812A1DDD1E29008F2F69 /* Array+ImageData.swift */,
 				F7F0BBFC1DB14A4000FDBCD4 /* GamesViewController.swift */,
 				D38AFF3E1DC838990019F9B7 /* HandViewController.swift */,
+				41FA81321DDFB849008F2F69 /* CardListView.swift */,
 				41FA812C1DDE7AA5008F2F69 /* CardReader.swift */,
 				D38AFF401DC846A40019F9B7 /* GameViewController.swift */,
 				41FA81301DDEBEFE008F2F69 /* UIView+SaveView.swift */,
@@ -424,6 +427,7 @@
 				41FA812D1DDE7AA5008F2F69 /* CardReader.swift in Sources */,
 				F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */,
 				41FA812B1DDD1E29008F2F69 /* Array+ImageData.swift in Sources */,
+				41FA81331DDFB849008F2F69 /* CardListView.swift in Sources */,
 				41FA81311DDEBEFE008F2F69 /* UIView+SaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
