@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 
+var cards = [UIImage]()
 class HandViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
 {
-    var cards = [UIImage]();
+
+
+    
     var cardData = PFObject(className: "Card")
     @IBOutlet var carousel: iCarousel!
     
