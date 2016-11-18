@@ -13,6 +13,8 @@
 		41FA81291DD7C458008F2F69 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FA81281DD7C458008F2F69 /* defaultImage.jpg */; };
 		41FA812B1DDD1E29008F2F69 /* Array+ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA812A1DDD1E29008F2F69 /* Array+ImageData.swift */; };
 		41FA812D1DDE7AA5008F2F69 /* CardReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA812C1DDE7AA5008F2F69 /* CardReader.swift */; };
+		41FA812F1DDEAE81008F2F69 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA812E1DDEAE81008F2F69 /* GameAction.swift */; };
+		41FA81311DDEBEFE008F2F69 /* UIView+SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA81301DDEBEFE008F2F69 /* UIView+SaveView.swift */; };
 		D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35EE0ED1DCBC55700C07767 /* Game.swift */; };
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
@@ -67,6 +69,8 @@
 		41FA81281DD7C458008F2F69 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = SOURCE_ROOT; };
 		41FA812A1DDD1E29008F2F69 /* Array+ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ImageData.swift"; sourceTree = "<group>"; };
 		41FA812C1DDE7AA5008F2F69 /* CardReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardReader.swift; sourceTree = "<group>"; };
+		41FA812E1DDEAE81008F2F69 /* GameAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
+		41FA81301DDEBEFE008F2F69 /* UIView+SaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SaveView.swift"; sourceTree = "<group>"; };
 		6799AFF7743A7870D1B4DCDA /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C15269652FAE8F226CB32AD /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		D35EE0ED1DCBC55700C07767 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				F7F0BC031DB14A8100FDBCD4 /* 1000 Cards-Bridging-Header.h */,
 				F75D9C961DAD58FB00421A53 /* AppDelegate.swift */,
 				F75D9C981DAD58FB00421A53 /* DeckViewController.swift */,
+				41FA812E1DDEAE81008F2F69 /* GameAction.swift */,
 				F7F0BBFD1DB14A4000FDBCD4 /* LoginViewController.swift */,
 				F7F0BBF91DB14A4000FDBCD4 /* CreateAccountViewController.swift */,
 				F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */,
@@ -213,6 +218,7 @@
 				D38AFF3E1DC838990019F9B7 /* HandViewController.swift */,
 				41FA812C1DDE7AA5008F2F69 /* CardReader.swift */,
 				D38AFF401DC846A40019F9B7 /* GameViewController.swift */,
+				41FA81301DDEBEFE008F2F69 /* UIView+SaveView.swift */,
 				D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */,
 				D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */,
 				F7F430921DB87CEC00910A17 /* GameView.swift */,
@@ -395,6 +401,7 @@
 				F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */,
 				D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */,
 				F7357D801DCC33F000013FB9 /* ChangeEmailViewController.swift in Sources */,
+				41FA812F1DDEAE81008F2F69 /* GameAction.swift in Sources */,
 				D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */,
 				D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */,
 				F7F0BC011DB14A4000FDBCD4 /* GamesViewController.swift in Sources */,
@@ -417,6 +424,7 @@
 				41FA812D1DDE7AA5008F2F69 /* CardReader.swift in Sources */,
 				F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */,
 				41FA812B1DDD1E29008F2F69 /* Array+ImageData.swift in Sources */,
+				41FA81311DDEBEFE008F2F69 /* UIView+SaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
