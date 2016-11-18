@@ -44,7 +44,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             newCard.add(descriptionTF.text, forKey: "description")
             newCard.add(newCardImageView.image!, forKey: "image")
             newCard.saveInBackground()
-            deck.add(newCard, forKey: "card")
+            //TODO: error handle adding card to deck
+            deck.add(newCard.objectId!, forKey: "card")
             deck.saveInBackground()
         }
 
