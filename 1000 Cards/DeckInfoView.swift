@@ -43,6 +43,10 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         //deckImage.image = UIImage(named: "defaultImage.jpg")
     }
     
+    func infoTapped(){
+        
+    }
+    
     func imageTapped(gesture: UIGestureRecognizer) {
         // if the tapped view is a UIImageView then set it to imageview
         //        if let imageView = gesture.view as? UIImageView {

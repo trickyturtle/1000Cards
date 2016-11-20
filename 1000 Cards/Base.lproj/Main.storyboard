@@ -588,7 +588,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6x-ml-1ue" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="72" width="375" height="397"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="408"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5iu-LI-Woa" id="n1e-JN-jNJ"/>
@@ -608,8 +608,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQk-W3-JTZ" userLabel="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-7D-5n0" userLabel="Button">
                                 <rect key="frame" x="82" y="536" width="211" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Add Card From Library">
+                                    <color key="titleColor" red="0.013609021900000001" green="0.16518847640000001" blue="0.31968146559999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQk-W3-JTZ" userLabel="Button">
+                                <rect key="frame" x="82" y="495" width="211" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Create New Card">
@@ -624,38 +637,31 @@
                                     <segue destination="dWY-oW-g0V" kind="show" id="FCI-CD-CNi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRR-lq-xaR" userLabel="Button">
-                                <rect key="frame" x="82" y="495" width="211" height="33"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Deck Info">
-                                    <color key="titleColor" red="0.013609021900000001" green="0.16518847640000001" blue="0.31968146559999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa5-mc-bGA">
+                                <rect key="frame" x="345" y="495" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="98v-KN-Pds" kind="show" id="i4b-Mz-3qD"/>
+                                    <segue destination="98v-KN-Pds" kind="show" id="fw3-Sq-h9V"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="leading" secondItem="7mM-l0-5vN" secondAttribute="leading" id="7lJ-S9-rEg"/>
-                            <constraint firstItem="C6x-ml-1ue" firstAttribute="centerX" secondItem="lRR-lq-xaR" secondAttribute="centerX" id="AfF-rW-BHt"/>
+                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="top" secondItem="C6x-ml-1ue" secondAttribute="bottom" constant="15" id="02w-LP-QKo"/>
+                            <constraint firstItem="cVi-7D-5n0" firstAttribute="trailing" secondItem="7mM-l0-5vN" secondAttribute="trailing" id="9QB-xZ-2jR"/>
+                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="centerX" secondItem="C6x-ml-1ue" secondAttribute="centerX" id="9Ta-Dn-nM7"/>
+                            <constraint firstItem="xa5-mc-bGA" firstAttribute="top" secondItem="kQk-W3-JTZ" secondAttribute="top" id="CWo-xW-I40"/>
+                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="leading" secondItem="cVi-7D-5n0" secondAttribute="leading" id="CY8-Bm-IBO"/>
                             <constraint firstItem="C6x-ml-1ue" firstAttribute="leading" secondItem="Qbj-wT-1dH" secondAttribute="leading" id="CkC-Wj-uhH"/>
-                            <constraint firstItem="lRR-lq-xaR" firstAttribute="trailing" secondItem="kQk-W3-JTZ" secondAttribute="trailing" id="FMg-hW-yKU"/>
+                            <constraint firstItem="I0A-eq-kCs" firstAttribute="top" secondItem="7mM-l0-5vN" secondAttribute="bottom" constant="8" symbolic="YES" id="GDS-nO-Z6o"/>
                             <constraint firstItem="C6x-ml-1ue" firstAttribute="top" secondItem="va5-De-zF5" secondAttribute="bottom" constant="8" symbolic="YES" id="Kbw-3n-uj4"/>
-                            <constraint firstItem="7mM-l0-5vN" firstAttribute="top" secondItem="kQk-W3-JTZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Mur-s2-4RD"/>
-                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="trailing" secondItem="7mM-l0-5vN" secondAttribute="trailing" id="OCW-dd-zS1"/>
-                            <constraint firstItem="lRR-lq-xaR" firstAttribute="leading" secondItem="Qbj-wT-1dH" secondAttribute="leadingMargin" constant="66" id="Tra-Xo-fld"/>
-                            <constraint firstItem="lRR-lq-xaR" firstAttribute="leading" secondItem="kQk-W3-JTZ" secondAttribute="leading" id="dPG-7M-PZg"/>
-                            <constraint firstItem="I0A-eq-kCs" firstAttribute="top" secondItem="7mM-l0-5vN" secondAttribute="bottom" constant="8" symbolic="YES" id="siH-NC-e3Y"/>
+                            <constraint firstItem="cVi-7D-5n0" firstAttribute="top" secondItem="kQk-W3-JTZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Uty-oP-sLt"/>
+                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="trailing" secondItem="cVi-7D-5n0" secondAttribute="trailing" id="Zsu-pX-Kkd"/>
+                            <constraint firstItem="xa5-mc-bGA" firstAttribute="leading" secondItem="kQk-W3-JTZ" secondAttribute="trailing" constant="52" id="cgW-Uf-lQV"/>
+                            <constraint firstItem="cVi-7D-5n0" firstAttribute="leading" secondItem="7mM-l0-5vN" secondAttribute="leading" id="cl8-qu-pXQ"/>
+                            <constraint firstItem="7mM-l0-5vN" firstAttribute="top" secondItem="cVi-7D-5n0" secondAttribute="bottom" constant="8" symbolic="YES" id="jpI-kV-6aS"/>
+                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="leading" secondItem="Qbj-wT-1dH" secondAttribute="leadingMargin" constant="66" id="tD2-tf-kag"/>
                             <constraint firstAttribute="trailing" secondItem="C6x-ml-1ue" secondAttribute="trailing" id="tZp-Yl-TE7"/>
-                            <constraint firstItem="kQk-W3-JTZ" firstAttribute="top" secondItem="lRR-lq-xaR" secondAttribute="bottom" constant="8" symbolic="YES" id="uu3-5t-esP"/>
-                            <constraint firstItem="lRR-lq-xaR" firstAttribute="top" secondItem="C6x-ml-1ue" secondAttribute="bottom" constant="26" id="ys0-AK-oKp"/>
                         </constraints>
                     </view>
                     <connections>

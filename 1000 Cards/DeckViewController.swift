@@ -26,6 +26,8 @@ class DeckViewController: UIViewController, iCarouselDataSource, iCarouselDelega
     {
         super.viewDidLoad()
         carousel.type = .coverFlow2
+        
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(DeckInfoView.infoTapped))
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int
