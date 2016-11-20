@@ -1762,11 +1762,20 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write description here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-Ac-sWe">
-                                <rect key="frame" x="16" y="139" width="343" height="431"/>
+                                <rect key="frame" x="16" y="139" width="343" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1E-kH-vrZ">
+                                <rect key="frame" x="16" y="110" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="qXS-3w-Dft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iJ-0G-NP1" userLabel="Button">
                                 <rect key="frame" x="75" y="578" width="225" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1783,11 +1792,11 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                     <action selector="updateDeckInfo:" destination="98v-KN-Pds" eventType="touchUpInside" id="LDJ-gr-Iq2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1E-kH-vrZ">
-                                <rect key="frame" x="16" y="110" width="105" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="qXS-3w-Dft"/>
-                                </constraints>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EkV-m0-83S">
+                                <rect key="frame" x="194" y="539" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owJ-Xx-m9f">
+                                <rect key="frame" x="130" y="544" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1800,19 +1809,25 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                             <constraint firstItem="A1E-kH-vrZ" firstAttribute="leading" secondItem="DuS-Ac-sWe" secondAttribute="leading" id="3Rt-58-ryN"/>
                             <constraint firstItem="DuS-Ac-sWe" firstAttribute="trailing" secondItem="YEh-iu-70T" secondAttribute="trailing" id="9Xg-lG-nZg"/>
                             <constraint firstItem="fbs-AW-Abf" firstAttribute="top" secondItem="u2x-ad-LRm" secondAttribute="bottom" constant="8" symbolic="YES" id="Lo1-MC-o1X"/>
+                            <constraint firstItem="EkV-m0-83S" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="8" symbolic="YES" id="MGU-H0-3xL"/>
                             <constraint firstItem="YEh-iu-70T" firstAttribute="trailing" secondItem="SGJ-MR-QoS" secondAttribute="trailingMargin" id="TkF-3b-lNy"/>
+                            <constraint firstItem="owJ-Xx-m9f" firstAttribute="leading" secondItem="DuS-Ac-sWe" secondAttribute="leading" constant="114" id="V7I-Uj-mMa"/>
+                            <constraint firstItem="EkV-m0-83S" firstAttribute="trailing" secondItem="DuS-Ac-sWe" secondAttribute="trailing" constant="-116" id="VT8-Qa-ADk"/>
                             <constraint firstItem="frk-ns-nFI" firstAttribute="top" secondItem="9iJ-0G-NP1" secondAttribute="bottom" constant="7" id="XGb-aA-INS"/>
-                            <constraint firstItem="9iJ-0G-NP1" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4H-9S-gPT"/>
+                            <constraint firstItem="9iJ-0G-NP1" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="47" id="Z4H-9S-gPT"/>
                             <constraint firstItem="DuS-Ac-sWe" firstAttribute="top" secondItem="A1E-kH-vrZ" secondAttribute="bottom" constant="8" symbolic="YES" id="aiZ-HD-jcj"/>
                             <constraint firstItem="9iJ-0G-NP1" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" constant="59" id="cOt-qv-EMP"/>
                             <constraint firstItem="A1E-kH-vrZ" firstAttribute="top" secondItem="YEh-iu-70T" secondAttribute="bottom" constant="8" symbolic="YES" id="cyQ-eG-OHQ"/>
                             <constraint firstItem="9iJ-0G-NP1" firstAttribute="centerX" secondItem="SGJ-MR-QoS" secondAttribute="centerX" id="gZr-1Z-aHH"/>
+                            <constraint firstItem="owJ-Xx-m9f" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="13" id="nM4-7U-FpJ"/>
+                            <constraint firstItem="owJ-Xx-m9f" firstAttribute="trailing" secondItem="A1E-kH-vrZ" secondAttribute="trailing" constant="65" id="pZx-2X-Kgk"/>
                             <constraint firstItem="fbs-AW-Abf" firstAttribute="top" secondItem="YEh-iu-70T" secondAttribute="top" id="y9c-r3-hjF"/>
                             <constraint firstItem="DuS-Ac-sWe" firstAttribute="centerX" secondItem="9iJ-0G-NP1" secondAttribute="centerX" id="yYb-TT-Qqo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionTF" destination="DuS-Ac-sWe" id="awb-BD-AL6"/>
+                        <outlet property="publicSwitch" destination="EkV-m0-83S" id="GIK-Dk-UsV"/>
                         <outlet property="titleTF" destination="YEh-iu-70T" id="teZ-Xy-uwE"/>
                     </connections>
                 </viewController>

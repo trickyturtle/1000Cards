@@ -15,6 +15,7 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBOutlet weak var descriptionTF: UITextView!
     @IBOutlet weak var deckImage: UIImageView!
     let imagePicker = UIImagePickerController()
+    @IBOutlet weak var publicSwitch: UISwitch!
     
     @IBAction func updateDeckInfo(_ sender: AnyObject) {
         //handle empty input
@@ -26,6 +27,7 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
             let newDeck = PFObject(className: "Deck")
             newDeck["title"] = titleTF.text!
             newDeck["description"] = descriptionTF.text!
+            newDeck["public"] = publicSwitch.isOn;
             newDeck.saveInBackground()
         }
     }
