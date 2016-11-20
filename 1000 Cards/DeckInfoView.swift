@@ -14,6 +14,7 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descriptionTF: UITextView!
     @IBOutlet weak var deckImage: UIImageView!
+    let imagePicker = UIImagePickerController()
     
     @IBAction func updateDeckInfo(_ sender: AnyObject) {
         //handle empty input
@@ -34,12 +35,13 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DeckInfoView.imageTapped))
+        imagePicker.delegate = self
         // add it to the image view;
         deckImage.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         deckImage.isUserInteractionEnabled = true
+        deckImage.image = UIImage(named: "defaultImage.jpg")
     }
     
     func imageTapped(gesture: UIGestureRecognizer) {
@@ -49,23 +51,43 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         //            //Here you can initiate your new ViewController
         //
         //        }
-        let image = UIImagePickerController()
+        /*let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        self.present(image, animated: true, completion: nil)
+        self.present(image, animated: true, completion: nil)*/
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
         
     }
     
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    /*private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let imgInfo: NSDictionary = info as NSDictionary
         let img: UIImage = imgInfo.object(forKey: UIImagePickerControllerOriginalImage) as! UIImage
         deckImage.image = img
         self.dismiss(animated: true, completion: nil)
+    }*/
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            deckImage.contentMode = .scaleAspectFit
+            deckImage.image = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     
