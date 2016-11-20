@@ -22,6 +22,7 @@ class PublicLibraryViewController: UIViewController, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         let gameQuery = PFQuery(className: "Deck")
+        gameQuery.whereKey("public", equalTo: true)
         gameQuery.order(byDescending: "createdAt")
         DispatchQueue.global().async {
             do {
