@@ -1263,7 +1263,6 @@ new email address</string>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yz6-7P-SII" firstAttribute="top" secondItem="NWo-li-rfR" secondAttribute="bottom" constant="8" symbolic="YES" id="49s-P8-qEy"/>
                             <constraint firstItem="Ymh-yb-piZ" firstAttribute="leading" secondItem="nbS-YZ-4Tk" secondAttribute="trailing" constant="8" symbolic="YES" id="7EP-Gu-a6a"/>
                             <constraint firstItem="Ymh-yb-piZ" firstAttribute="trailing" secondItem="7bO-2b-cHE" secondAttribute="trailingMargin" id="7RD-PB-KEg"/>
                             <constraint firstItem="nbS-YZ-4Tk" firstAttribute="top" secondItem="Ymh-yb-piZ" secondAttribute="top" id="7wq-ab-oLh"/>
@@ -1272,6 +1271,7 @@ new email address</string>
                             <constraint firstItem="nbS-YZ-4Tk" firstAttribute="leading" secondItem="7bO-2b-cHE" secondAttribute="leadingMargin" constant="12" id="CpD-KR-1aC"/>
                             <constraint firstItem="C8f-Ow-nFW" firstAttribute="centerX" secondItem="tkH-oL-TtO" secondAttribute="centerX" id="DqE-nl-DTn"/>
                             <constraint firstItem="Yz6-7P-SII" firstAttribute="leading" secondItem="C8f-Ow-nFW" secondAttribute="leading" id="KBB-JW-muu"/>
+                            <constraint firstItem="MUo-6j-fl3" firstAttribute="top" secondItem="NWo-li-rfR" secondAttribute="bottom" constant="253" id="Lhb-dL-Qen"/>
                             <constraint firstItem="NWo-li-rfR" firstAttribute="leading" secondItem="Yz6-7P-SII" secondAttribute="leading" id="aez-tx-Dcy"/>
                             <constraint firstItem="NWo-li-rfR" firstAttribute="top" secondItem="Ymh-yb-piZ" secondAttribute="bottom" constant="8" symbolic="YES" id="c7y-Gp-nvs"/>
                             <constraint firstItem="MUo-6j-fl3" firstAttribute="top" secondItem="tkH-oL-TtO" secondAttribute="bottom" constant="8" symbolic="YES" id="jvi-GV-2yn"/>
