@@ -23,10 +23,9 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
             print("no title for deck")
         }
         else{
-            let newDeck = PFObject(className: "Card")
-            newDeck.add(titleTF.text!, forKey: "title")
-            newDeck.add(descriptionTF.text, forKey: "description")
-            newDeck.add(deckImage.image!, forKey: "image")
+            let newDeck = PFObject(className: "Deck")
+            newDeck["title"] = titleTF.text!
+            newDeck["description"] = descriptionTF.text!
             newDeck.saveInBackground()
         }
     }
@@ -35,13 +34,13 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DeckInfoView.imageTapped))
-        imagePicker.delegate = self
+        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DeckInfoView.imageTapped))
+        //imagePicker.delegate = self
         // add it to the image view;
-        deckImage.addGestureRecognizer(tapGesture)
+        //deckImage.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
-        deckImage.isUserInteractionEnabled = true
-        deckImage.image = UIImage(named: "defaultImage.jpg")
+        //deckImage.isUserInteractionEnabled = true
+        //deckImage.image = UIImage(named: "defaultImage.jpg")
     }
     
     func imageTapped(gesture: UIGestureRecognizer) {
