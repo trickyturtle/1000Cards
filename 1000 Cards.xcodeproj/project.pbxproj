@@ -17,6 +17,7 @@
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
 		D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */; };
 		D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */; };
+		D398F4751DE264C1007FF083 /* PublicLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */; };
 		F734FFF81DB584EA00CA6DC5 /* cardLogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */; };
 		F734FFFA1DB5864B00CA6DC5 /* cardLogoBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */; };
 		F7357D6E1DCC2F6000013FB9 /* MessageBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7357D6D1DCC2F6000013FB9 /* MessageBoardViewController.swift */; };
@@ -83,6 +84,7 @@
 		D38AFF401DC846A40019F9B7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardViewController.swift; sourceTree = "<group>"; };
 		D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InPlayViewController.swift; sourceTree = "<group>"; };
+		D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicLibraryViewController.swift; sourceTree = "<group>"; };
 		F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoWhite.png; sourceTree = "<group>"; };
 		F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoBlue.png; sourceTree = "<group>"; };
 		F7357D6D1DCC2F6000013FB9 /* MessageBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBoardViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				F75D9CA51DAD58FB00421A53 /* Info.plist */,
 				F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */,
 				F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */,
+				D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */,
 			);
 			path = "1000 Cards";
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */,
 				F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */,
 				F7F0BC061DB14A8100FDBCD4 /* iCarousel.m in Sources */,
+				D398F4751DE264C1007FF083 /* PublicLibraryViewController.swift in Sources */,
 				41535A281DCAF0FC00889E44 /* CreateCardView.swift in Sources */,
 				F7357D821DCC348200013FB9 /* ChangePasswordViewController.swift in Sources */,
 				F7F430931DB87CEC00910A17 /* GameContainerView.swift in Sources */,
