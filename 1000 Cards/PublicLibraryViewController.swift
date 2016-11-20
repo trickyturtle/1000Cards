@@ -10,20 +10,38 @@ import UIKit
 
 class PublicLibraryViewController: UIViewController, UITableViewDataSource {
 
+    var sampleLibrary = ["Sample Deck"]
+    var decks = [PFObject]()
+    
+    @IBOutlet weak var publicLibraryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let gameQuery = PFQuery(className: "Deck")
+        gameQuery.order(byDescending: "createdAt")
+        DispatchQueue.global().async {
+            do {
+                self.decks = try gameQuery.findObjects()
+                if (self.publicLibraryTableView != nil) {
+                    DispatchQueue.main.async {
+                        self.publicLibraryTableView.reloadData()}
+                }
+            } catch {
+                print("\n***************ERROR***************")
+                print(error)
+                print("***************ERROR***************\n")
+            }
+        }
+        //setTabBarVisible(visible: true, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    var sampleLibrary = ["Sample Deck"]
-    @IBAction func createNewDeck(_ sender: AnyObject) {
     }
     
     //set number of sections in the table view to 1
@@ -33,14 +51,14 @@ class PublicLibraryViewController: UIViewController, UITableViewDataSource {
     
     //set number of rows in table view to be number of candidates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sampleLibrary.count
+        return decks.count
     }
     
-    //what to display in the table: first name and last name and num votes for each candidate
+    //what to display in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "publicLibraryCell", for: indexPath as IndexPath)
         let row = indexPath.row
-        cell.textLabel?.text = sampleLibrary[row]
+        cell.textLabel?.text = decks[row].object(forKey: "title") as? String
         return cell
     }
 

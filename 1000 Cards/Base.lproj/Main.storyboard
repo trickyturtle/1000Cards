@@ -863,6 +863,9 @@ new email address</string>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController?.setNavigationBarHidden" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="publicLibraryTableView" destination="euL-pC-J5s" id="VLq-dz-iGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCD-xW-bkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
