@@ -1756,7 +1756,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Om4-j9-oqG">
-                                <rect key="frame" x="16" y="110" width="343" height="254.5"/>
+                                <rect key="frame" x="16" y="110" width="343" height="255"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write description here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-Ac-sWe">
@@ -1790,7 +1790,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="createCardButton:" destination="98v-KN-Pds" eventType="touchUpInside" id="Rnj-eQ-5au"/>
                                     <action selector="updateDeckInfo:" destination="98v-KN-Pds" eventType="touchUpInside" id="LDJ-gr-Iq2"/>
                                 </connections>
                             </button>
@@ -1809,6 +1808,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                             <constraint firstItem="fbs-AW-Abf" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" constant="12" id="1kQ-ZC-xcZ"/>
                             <constraint firstItem="DuS-Ac-sWe" firstAttribute="top" secondItem="A1E-kH-vrZ" secondAttribute="bottom" constant="8" symbolic="YES" id="6tg-qr-XEV"/>
                             <constraint firstItem="DuS-Ac-sWe" firstAttribute="centerX" secondItem="9iJ-0G-NP1" secondAttribute="centerX" id="K4N-TK-OCh"/>
+                            <constraint firstItem="frk-ns-nFI" firstAttribute="top" secondItem="Om4-j9-oqG" secondAttribute="bottom" constant="253" id="L9c-9s-zM5"/>
                             <constraint firstItem="fbs-AW-Abf" firstAttribute="top" secondItem="u2x-ad-LRm" secondAttribute="bottom" constant="8" symbolic="YES" id="Lo1-MC-o1X"/>
                             <constraint firstItem="A1E-kH-vrZ" firstAttribute="leading" secondItem="DuS-Ac-sWe" secondAttribute="leading" id="OBD-PW-rnc"/>
                             <constraint firstItem="Om4-j9-oqG" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" id="RnV-LC-E6J"/>
@@ -1816,10 +1816,9 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                             <constraint firstItem="Om4-j9-oqG" firstAttribute="top" secondItem="YEh-iu-70T" secondAttribute="bottom" constant="8" symbolic="YES" id="U0f-BE-hqI"/>
                             <constraint firstItem="9iJ-0G-NP1" firstAttribute="leading" secondItem="SGJ-MR-QoS" secondAttribute="leadingMargin" constant="66" id="U2m-Dy-fTz"/>
                             <constraint firstItem="frk-ns-nFI" firstAttribute="top" secondItem="9iJ-0G-NP1" secondAttribute="bottom" constant="8" symbolic="YES" id="gjV-2F-mhJ"/>
-                            <constraint firstItem="9iJ-0G-NP1" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="8" symbolic="YES" id="nQR-sC-fOp"/>
                             <constraint firstItem="YEh-iu-70T" firstAttribute="trailing" secondItem="Om4-j9-oqG" secondAttribute="trailing" id="r2d-zO-T6E"/>
                             <constraint firstItem="Om4-j9-oqG" firstAttribute="trailing" secondItem="DuS-Ac-sWe" secondAttribute="trailing" id="rGE-hz-r3Y"/>
-                            <constraint firstItem="A1E-kH-vrZ" firstAttribute="top" secondItem="Om4-j9-oqG" secondAttribute="bottom" constant="8" symbolic="YES" id="w3e-cJ-AkI"/>
+                            <constraint firstItem="9iJ-0G-NP1" firstAttribute="top" secondItem="DuS-Ac-sWe" secondAttribute="bottom" constant="8" id="sFG-hL-yve"/>
                             <constraint firstItem="fbs-AW-Abf" firstAttribute="top" secondItem="YEh-iu-70T" secondAttribute="top" id="y9c-r3-hjF"/>
                         </constraints>
                     </view>
@@ -1831,7 +1830,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6R-hD-gqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5326" y="-103"/>
+            <point key="canvasLocation" x="5325.6000000000004" y="-103.89805097451276"/>
         </scene>
         <!--Password-->
         <scene sceneID="BZt-uh-ZbS">
