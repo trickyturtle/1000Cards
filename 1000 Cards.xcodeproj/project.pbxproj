@@ -12,6 +12,7 @@
 		41535A2A1DCB1A3600889E44 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41535A291DCB1A3600889E44 /* CardView.swift */; };
 		41D1D8B51DCBEB5E00287CC1 /* DeckInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */; };
 		41FA81291DD7C458008F2F69 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FA81281DD7C458008F2F69 /* defaultImage.jpg */; };
+		41FA81371DE27A19008F2F69 /* CardCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA81361DE27A19008F2F69 /* CardCarouselView.swift */; };
 		D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35EE0ED1DCBC55700C07767 /* Game.swift */; };
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
@@ -77,6 +78,7 @@
 		41535A291DCB1A3600889E44 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckInfoView.swift; sourceTree = "<group>"; };
 		41FA81281DD7C458008F2F69 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = SOURCE_ROOT; };
+		41FA81361DE27A19008F2F69 /* CardCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCarouselView.swift; sourceTree = "<group>"; };
 		8AF6E16DFCF15C2425718714 /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		AC7C31FDFFC654F8321C1821 /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35EE0ED1DCBC55700C07767 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				F7F430921DB87CEC00910A17 /* GameContainerView.swift */,
 				D35EE0ED1DCBC55700C07767 /* Game.swift */,
 				F7418B351DDD090500A16CBF /* InviteTableViewController.swift */,
+				41FA81361DE27A19008F2F69 /* CardCarouselView.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */,
 				F7F0BC011DB14A4000FDBCD4 /* GameTableViewController.swift in Sources */,
 				F79F8AF61DDB03F30036DC04 /* Constants.swift in Sources */,
+				41FA81371DE27A19008F2F69 /* CardCarouselView.swift in Sources */,
 				F780F53D1DDAE058002663E6 /* Message.swift in Sources */,
 				F75D9C991DAD58FB00421A53 /* DeckViewController.swift in Sources */,
 				D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */,

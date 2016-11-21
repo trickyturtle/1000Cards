@@ -28,7 +28,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         newCardImageView.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         newCardImageView.isUserInteractionEnabled = true
-        newCardImageView.image = UIImage(named: "defaultImage.jpg")
+        //newCardImageView.image = UIImage(named: "defaultImage.jpg") //TODO: replace with label
     }
 
     @IBAction func createCardButton(_ sender: AnyObject) {
@@ -43,26 +43,16 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             newCard.add(descriptionTF.text, forKey: "description")
             newCard.add(newCardImageView.image!, forKey: "image")
             newCard.saveInBackground()
-            deck.add(newCard, forKey: "card")
+            //TODO: error handle adding card to deck
+            deck.add(newCard.objectId!, forKey: "card")
             deck.saveInBackground()
         }
 
     }
     
-//    func imageTapped(gesture: UIGestureRecognizer) {
+
     func imageTapped() {
-        // if the tapped view is a UIImageView then set it to imageview
-//        if let imageView = gesture.view as? UIImageView {
-//
-//            //Here you can initiate your new ViewController
-//            
-//        }
-//        let image = UIImagePickerController()
-//        image.delegate = self
-//        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-//        self.present(image, animated: true, completion: nil)
-        
-        
+
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
             imagePicker.allowsEditing = true
@@ -70,13 +60,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         }
     }
     
-//    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-//        let imgInfo: NSDictionary = info as NSDictionary
-//        let img: UIImage = imgInfo.object(forKey: UIImagePickerControllerOriginalImage) as! UIImage
-//        newCardImageView.image = img
-//        self.dismiss(animated: true, completion: nil)
-//    }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -97,8 +81,6 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         dismiss(animated: true, completion: nil)
     }
 
-
-    
     
     /*
      // MARK: - Navigation
