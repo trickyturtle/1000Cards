@@ -84,29 +84,6 @@ class GameAction{
         return "Turn Action Error"
     }
     
-    static func saveDeckLocally(parseID: String) {
-        print("test")
-        print(parseID)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-
-        let entity =  NSEntityDescription.entity(forEntityName: "Deck",
-                                                 in:managedContext)
-        
-        let deck = NSManagedObject(entity: entity!,
-                                     insertInto: managedContext)
-        
-        deck.setValue(parseID, forKey: "parseID")
-        
-
-        do {
-            try managedContext.save()
-
-            //decks.append(deck)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-    }
     
     static func getPreLoadedDeck(){
         //TODO: WIP

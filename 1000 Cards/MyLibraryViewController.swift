@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MyLibraryViewController: UIViewController, UITableViewDataSource {
 
@@ -25,8 +26,8 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource {
         }
 
         //Save deck parse ID locally
-        print(newDeck.objectId!)
-        GameAction.saveDeckLocally(parseID: newDeck.objectId!)
+
+        saveDeckLocally(parseID: newDeck.objectId!)
         //segue to deckinfoView
         let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
         vc.deckID = newDeck.objectId! as String!
@@ -61,6 +62,30 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource {
         let row = indexPath.row
         cell.textLabel?.text = sampleLibrary[row]
         return cell
+    }
+    
+    func saveDeckLocally(parseID: String) {
+        print("parseID = ")
+        print(parseID)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity =  NSEntityDescription.entity(forEntityName: "Deck",
+                                                 in:managedContext)
+        
+        let deck = NSManagedObject(entity: entity!,
+                                   insertInto: managedContext)
+        
+        deck.setValue(parseID, forKey: "parseID")
+        
+        
+        do {
+            try managedContext.save()
+            
+            //decks.append(deck)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 
 }
