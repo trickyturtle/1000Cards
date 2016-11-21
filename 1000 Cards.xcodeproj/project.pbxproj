@@ -14,6 +14,7 @@
 		41FA81291DD7C458008F2F69 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FA81281DD7C458008F2F69 /* defaultImage.jpg */; };
 		41FA81371DE27A19008F2F69 /* CardCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA81361DE27A19008F2F69 /* CardCarouselView.swift */; };
 		41FA81391DE28079008F2F69 /* CardReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA81381DE28079008F2F69 /* CardReader.swift */; };
+		41FA813B1DE2810D008F2F69 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA813A1DE2810D008F2F69 /* GameAction.swift */; };
 		D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35EE0ED1DCBC55700C07767 /* Game.swift */; };
 		D38AFF3F1DC838990019F9B7 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF3E1DC838990019F9B7 /* HandViewController.swift */; };
 		D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF401DC846A40019F9B7 /* GameViewController.swift */; };
@@ -81,6 +82,7 @@
 		41FA81281DD7C458008F2F69 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = SOURCE_ROOT; };
 		41FA81361DE27A19008F2F69 /* CardCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCarouselView.swift; sourceTree = "<group>"; };
 		41FA81381DE28079008F2F69 /* CardReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardReader.swift; sourceTree = "<group>"; };
+		41FA813A1DE2810D008F2F69 /* GameAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
 		8AF6E16DFCF15C2425718714 /* Pods-1000 Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1000 Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1000 Cards/Pods-1000 Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		AC7C31FDFFC654F8321C1821 /* Pods_1000_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1000_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35EE0ED1DCBC55700C07767 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				F7418B351DDD090500A16CBF /* InviteTableViewController.swift */,
 				41FA81361DE27A19008F2F69 /* CardCarouselView.swift */,
 				41FA81381DE28079008F2F69 /* CardReader.swift */,
+				41FA813A1DE2810D008F2F69 /* GameAction.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				F7F0BC021DB14A4000FDBCD4 /* LoginViewController.swift in Sources */,
 				F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */,
 				F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */,
+				41FA813B1DE2810D008F2F69 /* GameAction.swift in Sources */,
 				F7418B361DDD090500A16CBF /* InviteTableViewController.swift in Sources */,
 				41535A2A1DCB1A3600889E44 /* CardView.swift in Sources */,
 				F7357D841DCC34CF00013FB9 /* SettingsTableViewController.swift in Sources */,
