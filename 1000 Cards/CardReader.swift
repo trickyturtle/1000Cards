@@ -86,4 +86,18 @@ class CardReader{
             return nil
         }
     }
+    
+    static func getCardTitle(parseID: String)->String{
+        var cardTitle:String = "CardTitle Error"
+
+        do {cardTitle = try (PFQuery.getObjectOfClass("Card", objectId: parseID).object(forKey: "title") as! String?)!
+        }catch {
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        return cardTitle
+    }
+    
 }

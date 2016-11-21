@@ -43,8 +43,16 @@ class GameAction{
     }
     
     static func formatAMForPrint(messageID: String)->String{
-        //TODO: error handle
-        let actionMessage = PFQuery.getObjectOfClass("ActionMessage", objectId: messageID)
+        var actionMessage: PFObject
+        do {actionMessage = try PFQuery.getObjectOfClass("ActionMessage", objectId: messageID)
+        }catch {
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            NSLog("while getting ActionMessage object")
+            abort()
+        }
+        
         //TODO: we probably expect a player ID and convert it into a username
         let name:String = actionMessage.object(forKey: "player") as! String
         let source:String = actionMessage.object(forKey: "source") as! String
@@ -58,14 +66,13 @@ class GameAction{
             }
         }
         else{
+            var cardTitle:String = ""
             if (source == "hand"){
-                //TODO error handling
-                let cardTitle:String = (PFQuery.getObjectOfClass("Card", objectId: action).object(forKey: "title") as! String?)!
+                cardTitle = CardReader.getCardTitle(parseID: action)
                 return "\(name) played \(cardTitle)"
             }
             else if (source == "inPlay" && dest == "discard"){
-                //TODO error handling
-                let cardTitle:String = (PFQuery.getObjectOfClass("Card", objectId: action).object(forKey: "title") as! String?)!
+                cardTitle = CardReader.getCardTitle(parseID: action)
                 return "\(name) discarded \(cardTitle)"
             }
             else if (dest == "deck"){
@@ -73,6 +80,7 @@ class GameAction{
             }
         }
         
-        
+        //should never run
+        return "Turn Action Error"
     }
 }
