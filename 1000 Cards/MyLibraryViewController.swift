@@ -12,6 +12,26 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource {
 
     var sampleLibrary: [String] = []
     @IBAction func createNewDeck(_ sender: AnyObject) {
+        //Save deck in Parse
+        let newDeck = PFObject(className: "Deck")
+        do {
+            try newDeck.save()
+        }catch{
+            print("ERROR SAVING DECK")
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+
+        //Save deck parse ID locally
+        print(newDeck.objectId!)
+        GameAction.saveDeckLocally(parseID: newDeck.objectId!)
+        //segue to deckinfoView
+        let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+        vc.deckID = newDeck.objectId! as String!
+        //setTabBarVisible(visible: false, animated: true)
+        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
     
     override func viewDidLoad() {

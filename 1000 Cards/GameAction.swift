@@ -83,4 +83,55 @@ class GameAction{
         //should never run
         return "Turn Action Error"
     }
+    
+    static func saveDeckLocally(parseID: String) {
+
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+
+        let entity =  NSEntityDescription.entity(forEntityName: "Deck",
+                                                 in:managedContext)
+        
+        let deck = NSManagedObject(entity: entity!,
+                                     insertInto: managedContext)
+        
+        deck.setValue(parseID, forKey: "parseID")
+        
+
+        do {
+            try managedContext.save()
+
+            //decks.append(deck)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    static func getPreLoadedDeck(){
+        //TODO: WIP
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let managedContext = appDelegate.managedObjectContext
+//        
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PreLoadedDeck")
+//        var fetchedResults:[NSManagedObject]
+//        
+//        do {
+//            try fetchedResults = managedContext.fetch(fetchRequest) as! [PreLoadedDeck]
+//            if fetchedResults.count == 0{
+//                let newDeck = PFObject(className: "Deck")
+//                newDeck.saveEventually()
+//            }
+//            
+//            return fetchedResults[0].value(forKey: "deckID") as! String
+//            
+//        }catch {
+//            // If an error occurs
+//            let nserror = error as NSError
+//            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+//            abort()
+//        }
+//    }
+    }
 }

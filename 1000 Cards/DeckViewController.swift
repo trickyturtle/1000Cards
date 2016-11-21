@@ -8,8 +8,8 @@
 
 import UIKit
 
-var deckID: String = "Error"
+
 class DeckViewController: CardCarouselView
 {
-    
+    var deckID: String = "Error"
 }

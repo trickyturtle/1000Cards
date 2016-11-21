@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
         //Check if user exists and logged in
         if let user = PFUser.current() {
             if user.isAuthenticated {
+                //TODO: may need to save a preloaded deck here
                 let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
                 self.navigationController?.pushViewController(vc as! UIViewController, animated: true)            }

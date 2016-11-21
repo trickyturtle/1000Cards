@@ -10,13 +10,17 @@
         <attribute name="parseID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
     </entity>
+    <entity name="PreLoadedDeck" representedClassName="PreLoadedDeck" syncable="YES" codeGenerationType="class">
+        <attribute name="deckID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="CurrentGame" positionX="-45" positionY="0" width="128" height="60"/>
         <element name="User" positionX="-18" positionY="36" width="128" height="60"/>
-        <element name="Deck" positionX="9" positionY="63" width="128" height="75"/>
-        <element name="Card" positionX="27" positionY="81" width="128" height="60"/>
+        <element name="Deck" positionX="-189" positionY="195" width="128" height="75"/>
+        <element name="Card" positionX="108" positionY="183" width="128" height="60"/>
+        <element name="PreLoadedDeck" positionX="-54" positionY="135" width="128" height="58"/>
     </elements>
 </model>
