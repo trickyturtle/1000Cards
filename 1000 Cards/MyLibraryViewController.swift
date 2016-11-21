@@ -10,7 +10,7 @@ import UIKit
 
 class MyLibraryViewController: UIViewController, UITableViewDataSource {
 
-    var sampleLibrary = ["Sample Deck"]
+    var sampleLibrary: [String] = []
     @IBAction func createNewDeck(_ sender: AnyObject) {
     }
     
