@@ -85,10 +85,9 @@ class GameAction{
     }
     
     static func saveDeckLocally(parseID: String) {
-
-        let appDelegate =
-            UIApplication.shared.delegate as! AppDelegate
-        
+        print("test")
+        print(parseID)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
 
         let entity =  NSEntityDescription.entity(forEntityName: "Deck",

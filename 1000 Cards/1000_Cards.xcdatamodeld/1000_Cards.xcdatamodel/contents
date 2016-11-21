@@ -2,13 +2,14 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Card" representedClassName="Card" syncable="YES" codeGenerationType="class">
         <attribute name="parseID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="isIn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="contains" inverseEntity="Deck" syncable="YES"/>
     </entity>
     <entity name="CurrentGame" representedClassName="CurrentGame" syncable="YES" codeGenerationType="class">
         <attribute name="gameID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Deck" representedClassName="Deck" syncable="YES" codeGenerationType="class">
         <attribute name="parseID" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="isIn" inverseEntity="Card" syncable="YES"/>
     </entity>
     <entity name="PreLoadedDeck" representedClassName="PreLoadedDeck" syncable="YES" codeGenerationType="class">
         <attribute name="deckID" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,8 +20,8 @@
     <elements>
         <element name="CurrentGame" positionX="-45" positionY="0" width="128" height="60"/>
         <element name="User" positionX="-18" positionY="36" width="128" height="60"/>
-        <element name="Deck" positionX="-189" positionY="195" width="128" height="75"/>
-        <element name="Card" positionX="108" positionY="183" width="128" height="60"/>
+        <element name="Deck" positionX="-189" positionY="195" width="128" height="73"/>
+        <element name="Card" positionX="108" positionY="183" width="128" height="73"/>
         <element name="PreLoadedDeck" positionX="-54" positionY="135" width="128" height="58"/>
     </elements>
 </model>
