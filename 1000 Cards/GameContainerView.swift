@@ -21,6 +21,12 @@ class GameContainerView: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.viewControllers.remove(at: 1)
+        self.navigationController?.viewControllers.remove(at: 1)
+    }
+    
     @IBAction func showComponent(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0.5, animations: {
@@ -55,10 +61,7 @@ class GameContainerView: UIViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
         if (segue.identifier == "messageBoardSegue") {
             let messageBoard = segue.destination as! MessageBoardViewController;
             messageBoard.gameId = game.value(forKey: "objectId") as! String

@@ -21,12 +21,13 @@ class LoginViewController: UIViewController {
 
         
         //Check if user exists and logged in
-        if let user = PFUser.current() {
-            if user.isAuthenticated {
+        if PFUser.current() != nil {
+            //if user.isAuthenticated {
                 //TODO: may need to save a preloaded deck here
-                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
-                self.navigationController?.pushViewController(vc as! UIViewController, animated: true)            }
+                self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
+            //}
         }
     }
 
@@ -49,12 +50,9 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
-                
-                //remove everything from the navigation stack
-                
-                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
-                self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+                self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
             } else if (error != nil) {
                 //failure
                 let controller = UIAlertController(title: "Login error occured", message: "Please ensure username and password entered correctly.", preferredStyle: .alert)

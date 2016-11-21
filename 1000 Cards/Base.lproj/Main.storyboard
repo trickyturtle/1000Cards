@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ykc-0a-fq9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ykc-0a-fq9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -235,7 +235,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="nVP-uI-VhE">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" id="Tdn-rn-bYh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabRoot" id="Tdn-rn-bYh" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wCn-ER-FHE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -470,7 +470,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4WP-lJ-HND">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ykc-0a-fq9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navRoot" automaticallyAdjustsScrollViewInsets="NO" id="ykc-0a-fq9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dSY-pX-XGb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -959,7 +959,7 @@ new email address</string>
                             <tableViewSection headerTitle="Basic Settings" id="dDE-D5-NBs">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notifications" id="n3o-zE-a9T">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n3o-zE-a9T" id="dQ3-NB-sI8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -984,7 +984,7 @@ new email address</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X78-5W-xjC" userLabel="instructionsDescriptions">
-                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X78-5W-xjC" id="I2K-We-x1V">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1011,7 +1011,7 @@ new email address</string>
                             <tableViewSection headerTitle="Account Settings" id="mtJ-kp-kAt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jMz-mw-6xm">
-                                        <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="200" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jMz-mw-6xm" id="QVR-y2-6Fs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1036,7 +1036,7 @@ new email address</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="N75-WS-SSG">
-                                        <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="244" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N75-WS-SSG" id="g8w-K1-yp5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1061,7 +1061,7 @@ new email address</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kmp-yw-SF1">
-                                        <rect key="frame" x="0.0" y="287.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="288" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kmp-yw-SF1" id="PZW-kS-kd9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1083,7 +1083,7 @@ new email address</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0da-9s-cRW">
-                                        <rect key="frame" x="0.0" y="331.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="332" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0da-9s-cRW" id="rD9-cn-EO9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1095,6 +1095,9 @@ new email address</string>
                                                     <state key="normal" title="Delete Account">
                                                         <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="deleteAccount:" destination="GFc-kE-nzE" eventType="touchUpInside" id="oyT-04-Byj"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1387,13 +1390,13 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHT-Su-XCp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZhN-DW-GAG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inviteCell" id="ZhN-DW-GAG">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZhN-DW-GAG" id="erT-zn-6sd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1404,7 +1407,11 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Invite" id="9fe-xM-aSX">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="PP8-xo-ihb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="PP8-xo-ihb">
+                            <connections>
+                                <action selector="doneButton:" destination="U6m-R3-ait" id="zEO-7O-7I6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6L-8f-Zi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1447,7 +1454,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="U6m-R3-ait" kind="show" id="zkY-bq-aVu"/>
+                                    <segue destination="U6m-R3-ait" kind="show" identifier="createGameSegue" id="zkY-bq-aVu"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's the name of the game?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDT-PX-QEb">
@@ -1991,40 +1998,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8y-tJ-FWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4544.8000000000002" y="1790.5547226386807"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="anW-Ae-nhM">
-            <objects>
-                <viewController id="cKv-jX-eED" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xoW-k5-nZA"/>
-                        <viewControllerLayoutGuide type="bottom" id="bGh-LZ-7qP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bee-Aq-Yb2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U9Y-MS-IqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="JdD-Ye-OaI">
-            <objects>
-                <viewController id="F2p-zm-mwb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="scJ-GD-aSI"/>
-                        <viewControllerLayoutGuide type="bottom" id="F8i-1v-fbF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="feH-zr-JHP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p6D-d5-i5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

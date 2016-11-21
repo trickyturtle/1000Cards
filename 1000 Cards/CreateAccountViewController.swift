@@ -49,9 +49,9 @@ class CreateAccountViewController: UIViewController {
 
         } else {
             let user = PFUser()
-            user.username = usernameTF.text
-            user.password = passwordTF.text
-            user.email = emailTF.text
+            user.username = usernameTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            user.password = passwordTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            user.email = emailTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             user.signUpInBackground { succeeded, error in
                 if (succeeded) {
                     //The registration was successful
@@ -72,9 +72,9 @@ class CreateAccountViewController: UIViewController {
     
     
     @IBAction func instructDescriptButton(_ sender: AnyObject) {
-        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController")
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
+        self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
     }
 
     /*

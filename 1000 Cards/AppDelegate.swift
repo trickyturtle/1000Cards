@@ -41,9 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.isLocalDatastoreEnabled = true
         }
         Parse.initialize(with: configuration)
-        PFUser.enableAutomaticUser()
-        
-        
         
         return true
     }
@@ -133,6 +130,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    
+    
+    // MARK: - Change Root View Controllers Between Navigation and Tab Controller
+    
+    func switchToNavRoot() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let navRoot = storyboard.instantiateViewController(withIdentifier: "navRoot") as! UINavigationController
+        self.window?.rootViewController = navRoot
+        
+    }
+    
+    func switchToTabRoot() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let tabRoot = storyboard.instantiateViewController(withIdentifier: "tabRoot") as! UITabBarController
+        self.window?.rootViewController = tabRoot
     }
 
 }

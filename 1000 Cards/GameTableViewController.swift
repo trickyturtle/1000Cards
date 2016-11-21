@@ -26,6 +26,7 @@ class GameTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         let gameQuery = PFQuery(className: "Game")
+        gameQuery.whereKey("players", equalTo: PFUser.current()!)
         gameQuery.order(byDescending: "createdAt")
         DispatchQueue.global().async {
             do {
