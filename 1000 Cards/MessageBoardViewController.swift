@@ -14,6 +14,8 @@ import JSQSystemSoundPlayer
 
 class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let currentUser = PFUser.current()
+    
     var timer: Timer = Timer()
     var isLoading: Bool = false
     
@@ -36,9 +38,9 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let user = PFUser.current() {
-            self.senderId = user.objectId
-            self.senderDisplayName = user.value(forKey: "username") as! String
+        if (currentUser != nil) {
+            self.senderId = currentUser?.objectId
+            self.senderDisplayName = currentUser?.value(forKey: "username") as! String
         }
         
         outgoingBubbleImage = bubbleFactory?.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
@@ -190,25 +192,38 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
     
     override func didPressAccessoryButton(_ sender: UIButton!) {
         self.view.endEditing(true)
+        self.inputToolbar.contentView!.textView!.resignFirstResponder()
         
-        //let action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
-//        let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        action.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        action.addAction(UIAlertAction(title: "Take Photo", style: .action, handler: Camera.shouldStartCamera(self, canEdit: true, frontFacing: true)))
-//        self.present(action, animated: true, completion: { _ in })
+        //        let action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
+        let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let photoAction = UIAlertAction(title: "Take photo", style: .default) { (action) in
+            Camera.startCamera(self, canEdit: true, frontFacing: false)
+        }
+        
+        //        let locationAction = UIAlertAction(title: "Send location", style: .default) { (action) in
+        //            /**
+        //             *  Add fake location
+        //             */
+        //            let locationItem = self.buildLocationItem()
+        //
+        //            self.addMedia(locationItem)
+        //        }
+        let photoLibraryAction = UIAlertAction(title: "Choose existing photo", style: .default) { (action) in
+            Camera.startPhotoLibrary(self, canEdit: true)
+        }
+        let videoLibraryAction = UIAlertAction(title: "Choose existing video", style: .default) { (action) in
+            Camera.startVideoLibrary(self, canEdit: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        action.addAction(photoAction)
+        action.addAction(photoLibraryAction)
+        action.addAction(videoLibraryAction)
+        //        action.addAction(locationAction)
+        action.addAction(cancelAction)
+        
+        self.present(action, animated: true, completion: nil)
     }
-    
-//    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
-//        if buttonIndex != actionSheet.cancelButtonIndex {
-//            if buttonIndex == 1 {
-//                Camera.shouldStartCamera(self, canEdit: true, frontFacing: true)
-//            } else if buttonIndex == 2 {
-//                Camera.shouldStartPhotoLibrary(self, canEdit: true)
-//            } else if buttonIndex == 3 {
-//                Camera.shouldStartVideoLibrary(self, canEdit: true)
-//            }
-//        }
-//    }
     
     // MARK: - JSQMessages CollectionView DataSource
     
@@ -227,13 +242,13 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         let user = self.players[indexPath.item]
         if self.avatars[user.objectId!] == nil {
-//            let thumbnailFile = user[PF_USER_THUMBNAIL] as? PFFile
-//            thumbnailFile?.getDataInBackground(block: { (imageData: Data?, error: Error?) -> Void in
-//                if error == nil {
-//                    self.avatars[user.objectId!] = JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(data: imageData!), diameter: 30)
-//                    self.collectionView.reloadData()
-//                }
-//            })
+            //            let thumbnailFile = user[PF_USER_THUMBNAIL] as? PFFile
+            //            thumbnailFile?.getDataInBackground(block: { (imageData: Data?, error: Error?) -> Void in
+            //                if error == nil {
+            //                    self.avatars[user.objectId!] = JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(data: imageData!), diameter: 30)
+            //                    self.collectionView.reloadData()
+            //                }
+            //            })
             return blankAvatarImage
         } else {
             return self.avatars[user.objectId!]
@@ -325,14 +340,14 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapMessageBubbleAt indexPath: IndexPath!) {
-//        let message = self.messages[indexPath.item]
-//        if message.isMediaMessage {
-//            if let mediaItem = message.media as? JSQVideoMediaItem {
-//                let moviePlayer = AVPlayerViewController(coder: mediaItem.fileURL)
-//                self.presentMoviePlayerViewControllerAnimated(moviePlayer)
-//                moviePlayer?.moviePlayer.play()
-//            }
-//        }
+        //        let message = self.messages[indexPath.item]
+        //        if message.isMediaMessage {
+        //            if let mediaItem = message.media as? JSQVideoMediaItem {
+        //                let moviePlayer = AVPlayerViewController(coder: mediaItem.fileURL)
+        //                self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+        //                moviePlayer?.moviePlayer.play()
+        //            }
+        //        }
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapCellAt indexPath: IndexPath!, touchLocation: CGPoint) {
@@ -341,7 +356,7 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
     
     // MARK: - UIImagePickerControllerDelegate
     
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [AnyHashable: Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         let video = info[UIImagePickerControllerMediaURL] as? URL
         let picture = info[UIImagePickerControllerEditedImage] as? UIImage
         

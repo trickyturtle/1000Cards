@@ -10,7 +10,7 @@ import UIKit
 
 
 var playerNum = "1" //TODO: add this functionality
-var dictKey = "player\(playerNum)Hand"
+var deckTypeKey = "player\(playerNum)Hand"
 
 
 class HandViewController: CardCarouselView

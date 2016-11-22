@@ -46,7 +46,11 @@ class CardReader{
     //    return [documentsPath stringByAppendingPathComponent:name];
     //    }
     
-    
+    static func imageToParseFile(image: UIImage, title: String) -> PFFile {
+        let data = UIImagePNGRepresentation(image)
+        let file = PFFile(name: title, data: data!)
+        return file!
+    }
     
     static func convertDataToImage(data: Data) ->UIImage{
         let image : UIImage = UIImage(data: data)!
@@ -58,7 +62,7 @@ class CardReader{
         let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(parseID)")
         //let image = UIImage(named: "apple.jpg")
         print(paths)
-        let imageData = UIImageJPEGRepresentation(image, 0.5)
+        let imageData = UIImageJPEGRepresentation(image, 0.2)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
     }
     

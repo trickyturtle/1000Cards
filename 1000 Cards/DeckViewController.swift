@@ -11,5 +11,14 @@ import UIKit
 
 class DeckViewController: CardCarouselView
 {
-    var deckID: String = "Error"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if deck["title"] == nil{
+            let vc : DeckInfoView = self.storyboard!.instantiateViewController(withIdentifier: "deckInfo") as! DeckInfoView
+            vc.deck = deck
+            self.navigationController?.pushViewController(vc as UIViewController, animated: true)
+        } else {
+            self.title = deck["title"] as? String
+        }
+    }
 }

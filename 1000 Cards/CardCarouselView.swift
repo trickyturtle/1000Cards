@@ -9,12 +9,13 @@
 import Foundation
 class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate{
     
+    var deckID = "Error"
+    var deckArray = NSMutableArray()
+    var deck = PFObject(className: "Deck")
     var cards = [UIImage]()
-    var currentGameID: String = "Game Object Init Error"
-    var currentGame: PFObject = PFObject(className: "Game")
-    var cardList: [String] = []
+//    var currentGameID: String = "Game Object Init Error"
+//    var currentGame: PFObject = PFObject(className: "Game")
     var cardData = PFObject(className: "Card")
-    //@IBOutlet var carousel: iCarousel!
     var carousel: iCarousel!
     
     override func awakeFromNib()
@@ -22,33 +23,46 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
         super.awakeFromNib()
         
         
-        for cardKey in currentGame.object(forKey: dictKey) as! NSArray
+        for cardKey in deckArray
         {
             //TODO: this should probably be a view object rather than an image...if possible
-            cardList.append(cardKey as! String)
-            cards.append(CardReader.getImage(parseID: cardKey as! String)!)
+            cards.append(CardReader.getImage(parseID: cardKey as! String )!)
         }
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        //Get Game info
         carousel.type = .coverFlow2
-        currentGameID = GameAction.getCurrentGame()
-        do {try currentGame = PFQuery.getObjectOfClass("Game", objectId: currentGameID)
-        }catch {
-            // If an error occurs
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
+//        do {
+//            print(deckID)
+//            deck = try PFQuery.getObjectOfClass("Deck", objectId: deckID)
+//            deckArray = deck.object(forKey: "cards") as! NSMutableArray
+//
+//        } catch {
+//                // If an error occurs
+//                let nserror = error as NSError
+//                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+//                abort()
+//            }
+        let temp = deck["cards"] as! PFRelation
+        let query = temp.query()
+        var result = [PFObject]()
+        do {
+            result = try query.findObjects()
+            
+        } catch {
+            print(error)
         }
+        for obj in result {
+            deckArray.add(obj["objectId"])
+        }
+        deckID = deck.objectId!
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int
     {
-        return cards.count
+        return deckArray.count
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView
@@ -86,8 +100,8 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
         //you'll get weird issues with carousel item content appearing
         //in the wrong place in the carousel
         do{
-            try label.text = PFQuery.getObjectOfClass("Card", objectId: cardList[index]).object(forKey: "title") as! String?
-        }catch{
+            try label.text = PFQuery.getObjectOfClass("Card", objectId: deckArray[index] as! String).object(forKey: "title") as! String?
+        } catch{
             // If an error occurs
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
@@ -109,9 +123,9 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "cardViewController")
         do{
-            try cardData = PFQuery.getObjectOfClass("Card", objectId: cardList[index])
+            try cardData = PFQuery.getObjectOfClass("Card", objectId: deckArray[index] as! String)
             
-        }catch{
+        } catch{
             // If an error occurs
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
@@ -120,12 +134,13 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
         self.navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "cardViewController",
-            let destination = segue.destination as? CardView
-        {
+            let destination = segue.destination as? CardView {
             destination.card = cardData
+        } else if segue.identifier == "createNewCardSegue",
+            let destination = segue.destination as? CreateNewCardView {
+            destination.deck = deck
         }
     }
     

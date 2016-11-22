@@ -11,10 +11,10 @@ import UIKit
 
 class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var deck = PFObject(className: "Deck")
+    
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descriptionTF: UITextView!
-    @IBOutlet weak var deckImage: UIImageView!
-    let imagePicker = UIImagePickerController()
     @IBOutlet weak var publicSwitch: UISwitch!
     
     @IBAction func updateDeckInfo(_ sender: AnyObject) {
@@ -24,66 +24,25 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
             print("no title for deck")
         }
         else{
-            let newDeck = PFObject(className: "Deck")
-            newDeck["title"] = titleTF.text!
-            newDeck["description"] = descriptionTF.text!
-            newDeck["public"] = publicSwitch.isOn;
-            newDeck.saveInBackground()
+            deck["title"] = titleTF.text!
+            deck["description"] = descriptionTF.text!
+            deck["public"] = publicSwitch.isOn;
+            deck.saveInBackground()
+            // TODO: Alert that deck info was saved
+            navigationItem.hidesBackButton = false
         }
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DeckInfoView.imageTapped))
-        //imagePicker.delegate = self
-        // add it to the image view;
-        //deckImage.addGestureRecognizer(tapGesture)
-        // make sure imageView can be interacted with by user
-        //deckImage.isUserInteractionEnabled = true
-        //deckImage.image = UIImage(named: "defaultImage.jpg")
+        if ((titleTF.text?.isEmpty)!) {
+            navigationItem.hidesBackButton = true
+        }
     }
     
     func infoTapped(){
         
-    }
-    
-    func imageTapped(gesture: UIGestureRecognizer) {
-        // if the tapped view is a UIImageView then set it to imageview
-        //        if let imageView = gesture.view as? UIImageView {
-        //
-        //            //Here you can initiate your new ViewController
-        //
-        //        }
-        /*let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        self.present(image, animated: true, completion: nil)*/
-        
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        
-    }
-    
-    /*private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        let imgInfo: NSDictionary = info as NSDictionary
-        let img: UIImage = imgInfo.object(forKey: UIImagePickerControllerOriginalImage) as! UIImage
-        deckImage.image = img
-        self.dismiss(animated: true, completion: nil)
-    }*/
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-    {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            deckImage.contentMode = .scaleAspectFit
-            deckImage.image = pickedImage
-        }
-        
-        dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

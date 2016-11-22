@@ -39,13 +39,20 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         }
         else{
             let newCard = PFObject(className: "Card")
-            newCard.add(titleTF.text!, forKey: "title")
-            newCard.add(descriptionTF.text, forKey: "description")
-            newCard.add(newCardImageView.image!, forKey: "image")
-            newCard.saveInBackground()
+            newCard["title"] = titleTF.text!
+            newCard["description"] = descriptionTF.text
+            newCard["image"] = CardReader.imageToParseFile(image: newCardImageView.image!, title: titleTF.text!)
+            do {
+                try newCard.save()
+            } catch {
+                    print(error)
+            }
             //TODO: error handle adding card to deck
-            deck.add(newCard.objectId!, forKey: "card")
+            CardReader.saveImageToDocumentDirectory(image: newCardImageView.image!, parseID: newCard.objectId!)
+            let relation = deck.relation(forKey: "cards")
+            relation.add(newCard)
             deck.saveInBackground()
+            _ = self.navigationController?.popViewController(animated: true)
         }
 
     }

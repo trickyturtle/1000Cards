@@ -25,6 +25,7 @@ class GameContainerView: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.viewControllers.remove(at: 1)
         self.navigationController?.viewControllers.remove(at: 1)
+        self.title = game.value(forKey: "name") as! String?
     }
     
     @IBAction func showComponent(sender: UISegmentedControl) {

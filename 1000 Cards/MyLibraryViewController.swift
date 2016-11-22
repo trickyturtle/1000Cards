@@ -9,37 +9,61 @@
 import UIKit
 import CoreData
 
-class MyLibraryViewController: UIViewController, UITableViewDataSource {
+class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var sampleLibrary: [String] = []
+    var myDecks = [PFObject(className: "Deck")]
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBAction func createNewDeck(_ sender: AnyObject) {
         //Save deck in Parse
         let newDeck = PFObject(className: "Deck")
-        do {
-            try newDeck.save()
-        }catch{
-            print("ERROR SAVING DECK")
-            // If an error occurs
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
+            do {
+                newDeck["createdBy"] = PFUser.current()
+                try newDeck.save()
+            } catch{
+                print("ERROR SAVING DECK")
+                // If an error occurs
+                let nserror = error as NSError
+                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+            let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+            vc.deckID = newDeck.objectId! as String!
+            self.navigationController?.pushViewController(vc as UIViewController, animated: true)
 
         //Save deck parse ID locally
 
-        saveDeckLocally(parseID: newDeck.objectId!)
+//        saveDeckLocally(parseID: newDeck.objectId!)
         //segue to deckinfoView
-        let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
-        vc.deckID = newDeck.objectId! as String!
-        //setTabBarVisible(visible: false, animated: true)
-        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let deckQuery = PFQuery(className: "Deck")
+        deckQuery.whereKey("createdBy", equalTo: PFUser.current()!)
+        deckQuery.order(byDescending: "createdAt")
+        DispatchQueue.global().async {
+            do {
+                self.myDecks = try deckQuery.findObjects()
+                if (self.tableView != nil) {
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()}
+                }
+            } catch {
+                print("\n***************ERROR***************")
+                print(error)
+                print("***************ERROR***************\n")
+            }
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,39 +77,48 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource {
     
     //set number of rows in table view to be number of candidates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sampleLibrary.count
+        return myDecks.count
     }
     
     //what to display in the table: first name and last name and num votes for each candidate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myLibraryCell", for: indexPath as IndexPath)
         let row = indexPath.row
-        cell.textLabel?.text = sampleLibrary[row]
+        cell.textLabel?.text = myDecks[row].value(forKey: "title") as? String
         return cell
     }
     
-    func saveDeckLocally(parseID: String) {
-        print("parseID = ")
-        print(parseID)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        
-        let entity =  NSEntityDescription.entity(forEntityName: "Deck",
-                                                 in:managedContext)
-        
-        let deck = NSManagedObject(entity: entity!,
-                                   insertInto: managedContext)
-        
-        deck.setValue(parseID, forKey: "parseID")
-        
-        
-        do {
-            try managedContext.save()
-            
-            //decks.append(deck)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
+    // MARK: - Navigation
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let deck = myDecks[indexPath.row]
+        let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+        vc.deck = deck
+        self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
     }
+    
+//    func saveDeckLocally(parseID: String) {
+//        print("parseID = \(parseID)")
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let managedContext = appDelegate.managedObjectContext
+//        
+//        let entity =  NSEntityDescription.entity(forEntityName: "Deck",
+//                                                 in:managedContext)
+//        
+//        let deck = NSManagedObject(entity: entity!,
+//                                   insertInto: managedContext)
+//        
+//        deck.setValue(parseID, forKey: "parseID")
+//        
+//        
+//        do {
+//            try managedContext.save()
+//            
+//            //decks.append(deck)
+//        } catch let error as NSError  {
+//            print("Could not save \(error), \(error.userInfo)")
+//        }
+//    }
 
 }

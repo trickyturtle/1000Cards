@@ -37,8 +37,9 @@
 		F75D9CA41DAD58FB00421A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75D9CA21DAD58FB00421A53 /* LaunchScreen.storyboard */; };
 		F77C304C1DCC1DC80008EEA5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77C304B1DCC1DC80008EEA5 /* MobileCoreServices.framework */; };
 		F780F53D1DDAE058002663E6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F53C1DDAE058002663E6 /* Message.swift */; };
+		F7812F061DE39C52006CFE66 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7812F051DE39C52006CFE66 /* Camera.swift */; };
+		F7812F081DE39CB3006CFE66 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7812F071DE39CB3006CFE66 /* Messages.swift */; };
 		F79F8AF01DDB03B80036DC04 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79F8AEB1DDB03B80036DC04 /* Images.swift */; };
-		F79F8AF11DDB03B80036DC04 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79F8AEC1DDB03B80036DC04 /* Messages.swift */; };
 		F79F8AF31DDB03B80036DC04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79F8AEE1DDB03B80036DC04 /* Utilities.swift */; };
 		F79F8AF61DDB03F30036DC04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79F8AF51DDB03F30036DC04 /* Constants.swift */; };
 		F7A143BA1DB6BECD000F29A8 /* Chat Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143B91DB6BECD000F29A8 /* Chat Filled-30.png */; };
@@ -110,8 +111,9 @@
 		F75D9CA51DAD58FB00421A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F77C304B1DCC1DC80008EEA5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F780F53C1DDAE058002663E6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F7812F051DE39C52006CFE66 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		F7812F071DE39CB3006CFE66 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		F79F8AEB1DDB03B80036DC04 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		F79F8AEC1DDB03B80036DC04 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		F79F8AEE1DDB03B80036DC04 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F79F8AF51DDB03F30036DC04 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F7A143B91DB6BECD000F29A8 /* Chat Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chat Filled-30.png"; sourceTree = "<group>"; };
@@ -305,9 +307,10 @@
 			isa = PBXGroup;
 			children = (
 				F7357D6D1DCC2F6000013FB9 /* MessageBoardViewController.swift */,
+				F7812F051DE39C52006CFE66 /* Camera.swift */,
 				F780F53C1DDAE058002663E6 /* Message.swift */,
+				F7812F071DE39CB3006CFE66 /* Messages.swift */,
 				F79F8AEB1DDB03B80036DC04 /* Images.swift */,
-				F79F8AEC1DDB03B80036DC04 /* Messages.swift */,
 				F79F8AEE1DDB03B80036DC04 /* Utilities.swift */,
 			);
 			name = "Message Board";
@@ -520,15 +523,16 @@
 				D398F4751DE264C1007FF083 /* PublicLibraryViewController.swift in Sources */,
 				F71C48CC1DE2F8420022A3C2 /* InviteTableCell.swift in Sources */,
 				41535A281DCAF0FC00889E44 /* CreateCardView.swift in Sources */,
+				F7812F081DE39CB3006CFE66 /* Messages.swift in Sources */,
 				F7357D821DCC348200013FB9 /* ChangePasswordViewController.swift in Sources */,
 				F7F430931DB87CEC00910A17 /* GameContainerView.swift in Sources */,
 				F79F8AF31DDB03B80036DC04 /* Utilities.swift in Sources */,
-				F79F8AF11DDB03B80036DC04 /* Messages.swift in Sources */,
 				41D1D8B51DCBEB5E00287CC1 /* DeckInfoView.swift in Sources */,
 				D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */,
 				F7F0BC001DB14A4000FDBCD4 /* ForgotPasswordViewController.swift in Sources */,
 				F7357D6E1DCC2F6000013FB9 /* MessageBoardViewController.swift in Sources */,
 				41FA81391DE28079008F2F69 /* CardReader.swift in Sources */,
+				F7812F061DE39C52006CFE66 /* Camera.swift in Sources */,
 				F7F0BC021DB14A4000FDBCD4 /* LoginViewController.swift in Sources */,
 				F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */,
 				F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */,
