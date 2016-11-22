@@ -11,7 +11,7 @@ import UIKit
 
 class InPlayViewController: CardCarouselView
 {
-    
+    var game = PFObject(className: "Game")
     //TODO add carousel IBOutlet
 }
 

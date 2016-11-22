@@ -111,4 +111,12 @@ class GameTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tabBarIsVisible() ->Bool {
         return (self.tabBarController?.tabBar.frame.origin.y)! < self.view.frame.maxY
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "createNewGameSegue") {
+            setTabBarVisible(visible: false, animated: true)
+        }
+    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class DiscardViewController: CardCarouselView
 {
+    var game = PFObject(className: "Game")
     //TODO add IBOutlet carousel
     
 }

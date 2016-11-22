@@ -11,6 +11,8 @@ import CoreData
 
 class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var game = PFObject(className: "Game")
+    var choosingDeck = false
     var myDecks = [PFObject(className: "Deck")]
     @IBOutlet weak var tableView: UITableView!
     
@@ -44,6 +46,9 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        if (choosingDeck) {
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,15 +98,45 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         let deck = myDecks[indexPath.row]
         
-        if(indexPath.row == 0) {
-            let vc : AllPrivateCardsView = self.storyboard!.instantiateViewController(withIdentifier: "AllCardsView") as! AllPrivateCardsView
-            vc.deck = deck
-            vc.viewing = true
-            self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+        if(choosingDeck) {
+            let gameRelation = game.relation(forKey: "gameDeck")
+            let deckRelation = deck.relation(forKey: "cards")
+            let relationQuery = deckRelation.query()
+            var result = [PFObject]()
+            do {
+                result = try relationQuery.findObjects()
+            } catch {
+                print(error)
+            }
+            for obj in result {
+                gameRelation.add(obj)
+            }
+            DispatchQueue.global().async {
+                self.game.saveInBackground(block: { succeed, error in
+                    if (succeed) {
+                        //create game was successful
+                        let vc : GameContainerView = self.storyboard!.instantiateViewController(withIdentifier: "gameContainerView") as! GameContainerView
+                        vc.game = self.game
+                        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
+                    } else if let error = error {
+                        //Error has occurred
+                        print("\n***************ERROR***************")
+                        print(error)
+                        print("***************ERROR***************\n")
+                    }
+                })
+            }
         } else {
-            let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
-            vc.deck = deck
-            self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+            if(indexPath.row == 0) {
+                let vc : AllPrivateCardsView = self.storyboard!.instantiateViewController(withIdentifier: "AllCardsView") as! AllPrivateCardsView
+                vc.deck = deck
+                vc.viewing = true
+                self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+            } else {
+                let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+                vc.deck = deck
+                self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+            }
         }
         
     }

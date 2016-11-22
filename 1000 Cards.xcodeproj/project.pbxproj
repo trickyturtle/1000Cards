@@ -29,6 +29,7 @@
 		F7357D821DCC348200013FB9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7357D811DCC348200013FB9 /* ChangePasswordViewController.swift */; };
 		F7357D841DCC34CF00013FB9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7357D831DCC34CF00013FB9 /* SettingsTableViewController.swift */; };
 		F7391AEF1DE42EA900BF4177 /* AllPrivateCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391AEE1DE42EA900BF4177 /* AllPrivateCardsView.swift */; };
+		F7391AF11DE47E1C00BF4177 /* PublicDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391AF01DE47E1C00BF4177 /* PublicDeckView.swift */; };
 		F7418B361DDD090500A16CBF /* InviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7418B351DDD090500A16CBF /* InviteTableViewController.swift */; };
 		F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C961DAD58FB00421A53 /* AppDelegate.swift */; };
 		F75D9C991DAD58FB00421A53 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C981DAD58FB00421A53 /* DeckViewController.swift */; };
@@ -102,6 +103,7 @@
 		F7357D811DCC348200013FB9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		F7357D831DCC34CF00013FB9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F7391AEE1DE42EA900BF4177 /* AllPrivateCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPrivateCardsView.swift; sourceTree = "<group>"; };
+		F7391AF01DE47E1C00BF4177 /* PublicDeckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicDeckView.swift; sourceTree = "<group>"; };
 		F7418B351DDD090500A16CBF /* InviteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteTableViewController.swift; sourceTree = "<group>"; };
 		F75D9C931DAD58FB00421A53 /* 1000 Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1000 Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75D9C961DAD58FB00421A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */,
 				D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */,
 				F7391AEE1DE42EA900BF4177 /* AllPrivateCardsView.swift */,
+				F7391AF01DE47E1C00BF4177 /* PublicDeckView.swift */,
 			);
 			name = Decks;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				F75D9C9F1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld in Sources */,
 				41FA813B1DE2810D008F2F69 /* GameAction.swift in Sources */,
 				F7418B361DDD090500A16CBF /* InviteTableViewController.swift in Sources */,
+				F7391AF11DE47E1C00BF4177 /* PublicDeckView.swift in Sources */,
 				41535A2A1DCB1A3600889E44 /* CardView.swift in Sources */,
 				F7357D841DCC34CF00013FB9 /* SettingsTableViewController.swift in Sources */,
 				F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */,

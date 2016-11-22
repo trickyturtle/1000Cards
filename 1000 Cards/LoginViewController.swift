@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
          *  This was commented out to allow you to use the application without a login
          *  If you would like, you may create an account by going to Create Account.
          ****************************************************************************/
-        PFUser.logInWithUsername(inBackground: usernameTF.text!, password: passwordTF.text!) { user, error in
+        PFUser.logInWithUsername(inBackground: usernameTF.text!.lowercased(), password: passwordTF.text!) { user, error in
             if user != nil {
                 //success
                 let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")

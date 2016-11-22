@@ -49,9 +49,9 @@ class CreateAccountViewController: UIViewController {
 
         } else {
             let user = PFUser()
-            user.username = usernameTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            user.username = usernameTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             user.password = passwordTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            user.email = emailTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            user.email = emailTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             user.signUpInBackground { succeeded, error in
                 if (succeeded) {
                     //The registration was successful

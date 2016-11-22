@@ -160,4 +160,8 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
         cardImages.remove(at: (userInfo?["index"])!)
         carousel.reloadData()
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }

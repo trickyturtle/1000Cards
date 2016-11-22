@@ -178,18 +178,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JNl-M5-ZfD" id="DRf-AV-bTM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pfc-LV-Edk">
-                                                    <rect key="frame" x="15" y="14" width="34" height="21"/>
+                                                    <rect key="frame" x="15" y="15" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oTV-an-gcr">
-                                                    <rect key="frame" x="15" y="35" width="44" height="15"/>
+                                                    <rect key="frame" x="15" y="35.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -217,7 +217,7 @@
                     <navigationItem key="navigationItem" title="My Games" id="wKb-cl-xBf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iUr-h6-Fil">
                             <connections>
-                                <segue destination="isN-a9-SM9" kind="show" id="4l1-5e-rVc"/>
+                                <segue destination="isN-a9-SM9" kind="show" identifier="createNewGameSegue" id="4l1-5e-rVc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -739,7 +739,7 @@ new email address</string>
         <!--My Library-->
         <scene sceneID="50k-zW-MZt">
             <objects>
-                <viewController title="My Library" id="Cf6-PO-K2g" customClass="MyLibraryViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myLibraryView" title="My Library" id="Cf6-PO-K2g" customClass="MyLibraryViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lG4-0d-uXe"/>
                         <viewControllerLayoutGuide type="bottom" id="e8n-q7-eau"/>
@@ -757,11 +757,11 @@ new email address</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvH-FN-YYV" id="zfX-6W-9gD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t8J-uM-lTd">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -806,7 +806,7 @@ new email address</string>
         <!--Public Library-->
         <scene sceneID="t0e-4V-KRf">
             <objects>
-                <viewController title="Public Library" id="Vgc-aU-hKX" customClass="PublicLibraryViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="publicLibraryView" title="Public Library" id="Vgc-aU-hKX" customClass="PublicLibraryViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GN8-Xj-eie"/>
                         <viewControllerLayoutGuide type="bottom" id="gKs-tb-x40"/>
@@ -824,11 +824,11 @@ new email address</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6t-Ca-9U0" id="XiJ-j4-DRr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AZU-3t-YXM">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -1130,25 +1130,25 @@ new email address</string>
                             <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-TD-sie">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
-                                    <segue destination="cuq-Gq-nr0" kind="embed" id="Po7-TT-2Rs"/>
+                                    <segue destination="cuq-Gq-nr0" kind="embed" identifier="discardViewSegue" id="Joh-Kx-f4u"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0k-6S-p1Y">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
-                                    <segue destination="6rU-Mz-KIo" kind="embed" id="fQs-z8-CYo"/>
+                                    <segue destination="6rU-Mz-KIo" kind="embed" identifier="inPlayViewSegue" id="tdv-4U-pFv"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-wc-5AE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
-                                    <segue destination="hdV-dZ-fS2" kind="embed" id="uR7-01-CBt"/>
+                                    <segue destination="hdV-dZ-fS2" kind="embed" identifier="handViewSegue" id="Cll-Df-8Rr"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-ab-H9Y" userLabel="Container View Game">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
-                                    <segue destination="qCT-Vv-fgc" kind="embed" id="MK6-5g-paZ"/>
+                                    <segue destination="qCT-Vv-fgc" kind="embed" identifier="gameViewSegue" id="NtU-29-lbR"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-PN-gGE">
@@ -1376,41 +1376,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
             </objects>
             <point key="canvasLocation" x="1792.8" y="-863.1184407796103"/>
         </scene>
-        <!--Invite-->
-        <scene sceneID="hr9-N2-VVH">
-            <objects>
-                <tableViewController title="Invite" id="U6m-R3-ait" customClass="InviteTableViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHT-Su-XCp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inviteCell" id="ZhN-DW-GAG">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZhN-DW-GAG" id="erT-zn-6sd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="U6m-R3-ait" id="ahK-Zr-SXi"/>
-                            <outlet property="delegate" destination="U6m-R3-ait" id="BHT-bY-JW2"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Invite" id="9fe-xM-aSX">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="PP8-xo-ihb">
-                            <connections>
-                                <action selector="doneButton:" destination="U6m-R3-ait" id="zEO-7O-7I6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J6L-8f-Zi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3766" y="-2846"/>
-        </scene>
         <!--New Game-->
         <scene sceneID="fyf-mj-s7R">
             <objects>
@@ -1447,7 +1412,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="U6m-R3-ait" kind="show" identifier="createGameSegue" id="zkY-bq-aVu"/>
+                                    <segue destination="ufb-GY-cOt" kind="show" identifier="createGameSegue" id="s1A-b2-vsf"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's the name of the game?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDT-PX-QEb">
@@ -1472,7 +1437,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gameNameTF" destination="AOp-aa-txm" id="a3n-OH-xmm"/>
+                        <outlet property="gameNameTF" destination="AOp-aa-txm" id="Fd4-la-ZEF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXj-W2-9Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2031,6 +1996,89 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWN-7b-0GA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6145" y="-863"/>
+        </scene>
+        <!--Invite-->
+        <scene sceneID="wc6-uO-7OV">
+            <objects>
+                <tableViewController title="Invite" id="ufb-GY-cOt" customClass="InviteTableViewController" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="euB-c0-hdH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inviteCell" id="Ej2-CZ-Tlz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ej2-CZ-Tlz" id="9kh-ro-Nu7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recentPlayersCell" id="abE-ri-MKV" userLabel="recentPlayersCell">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abE-ri-MKV" id="G60-1y-J2v">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ufb-GY-cOt" id="cj9-1l-vJx"/>
+                            <outlet property="delegate" destination="ufb-GY-cOt" id="V2G-Bu-de2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Invite" id="Uq1-Z4-kaR">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="8dn-NT-UBJ">
+                            <connections>
+                                <action selector="doneButton:" destination="ufb-GY-cOt" id="2Pi-Dl-f9h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-2a-Tdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3766" y="-2846"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="mK5-cd-grm">
+            <objects>
+                <viewController storyboardIdentifier="PublicDeckView" title="Deck" id="59c-cd-xWf" customClass="PublicDeckView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dEx-dh-97H"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zba-Bg-zrn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXo-mG-KS5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfB-jx-BsK" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="83" width="375" height="501"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="59c-cd-xWf" id="zkj-JR-fUD"/>
+                                    <outlet property="delegate" destination="59c-cd-xWf" id="4SU-WF-PfR"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xfB-jx-BsK" secondAttribute="trailing" id="NfW-TP-Stb"/>
+                            <constraint firstItem="xfB-jx-BsK" firstAttribute="top" secondItem="dEx-dh-97H" secondAttribute="bottom" constant="63" id="bLh-Kj-73m"/>
+                            <constraint firstItem="xfB-jx-BsK" firstAttribute="leading" secondItem="CXo-mG-KS5" secondAttribute="leading" id="dt7-up-Rp3"/>
+                            <constraint firstItem="xfB-jx-BsK" firstAttribute="centerY" secondItem="CXo-mG-KS5" secondAttribute="centerY" id="qvm-qb-Lcm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deck" id="EiL-6n-6ma">
+                        <barButtonItem key="rightBarButtonItem" image="Settings-30.png" id="UBn-wD-p3E"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="carousel" destination="xfB-jx-BsK" id="Ach-kP-tc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiB-rh-qB4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4545" y="-213"/>
         </scene>
     </scenes>
     <resources>

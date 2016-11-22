@@ -15,7 +15,7 @@ var deckTypeKey = "player\(playerNum)Hand"
 
 class HandViewController: CardCarouselView
 {
-    
+    var game = PFObject(className: "Game")
     //TODO: add IBOutlet carousel
     
 }

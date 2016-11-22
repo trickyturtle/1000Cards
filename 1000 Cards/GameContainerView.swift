@@ -25,7 +25,7 @@ class GameContainerView: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if (newGame) {
-            //TODO needs to be tested
+            //TODO needs to be fixed/tested
             self.navigationController?.viewControllers.remove(at: 1)
             self.navigationController?.viewControllers.remove(at: 1)
         }
@@ -70,6 +70,18 @@ class GameContainerView: UIViewController {
         if (segue.identifier == "messageBoardSegue") {
             let messageBoard = segue.destination as! MessageBoardViewController;
             messageBoard.gameId = game.value(forKey: "objectId") as! String
+        } else if (segue.identifier == "gameViewSegue") {
+            let vc = segue.destination as! GameViewController;
+            vc.game = game
+        } else if (segue.identifier == "handViewSegue") {
+            let vc = segue.destination as! HandViewController;
+            vc.game = game
+        } else if (segue.identifier == "discardViewSegue") {
+            let vc = segue.destination as! DiscardViewController;
+            vc.game = game
+        } else if (segue.identifier == "inPlayViewSegue") {
+            let vc = segue.destination as! InPlayViewController;
+            vc.game = game
         }
     }
 }

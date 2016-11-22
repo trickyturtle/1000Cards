@@ -14,6 +14,7 @@ class AllPrivateCardsView: CardCarouselView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "All Cards"
+        self.navigationItem.rightBarButtonItem = nil
     }
     
     override func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
