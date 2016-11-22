@@ -253,25 +253,31 @@ class InviteTableViewController: UITableViewController {
         let relationGamePlayers = newGame.relation(forKey: "players")
         relationGamePlayers.add(currentUser)
         description += (currentUser.username?.lowercased())!
-        
+        var uniqueRecentPlayers = [String]()
         if (player2 != nil) {
             relationGamePlayers.add(player2)
             description +=  ", " + player2.username!
-            currentUser.add(player2.username!, forKey: "recentPlayers")
-            currentUser.saveInBackground()
+            if !recentUsersArr.contains(player2.username!) {
+                uniqueRecentPlayers.append(player2.username!)
+            }
         }
         if (player3 != nil) {
             relationGamePlayers.add(player3)
             description += ", " + player3.username!
-            currentUser.add(player3.username!, forKey: "recentPlayers")
-            currentUser.saveInBackground()
+            if !recentUsersArr.contains(player3.username!) {
+                uniqueRecentPlayers.append(player3.username!)
+            }
         }
         if (player4 != nil) {
             relationGamePlayers.add(player4)
             description += ", " + player4.username!
-            currentUser.add(player4.username!, forKey: "recentPlayers")
-            currentUser.saveInBackground()
+            if !recentUsersArr.contains(player4.username!) {
+                uniqueRecentPlayers.append(player4.username!)
+            }
         }
+        
+        currentUser.addObjects(from: uniqueRecentPlayers, forKey: "recentPlayers")
+        currentUser.saveInBackground()
         
         newGame["description"] = description
         newGame["player1Score"] = 0

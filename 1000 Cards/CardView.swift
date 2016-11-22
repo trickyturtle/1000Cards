@@ -16,6 +16,7 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     var card = PFObject(className: "Card")
     var cardImage: UIImage? = nil
     var calledByAllCards = false
+    var isHand = false
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cardDescription: UITextView!
@@ -31,8 +32,13 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         cardDescription.contentMode = .bottomLeft
         cardDescription.text = card.object(forKey: "description") as! String?
         
-        let trash  = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(CardView.trashBtn))
-        self.navigationItem.rightBarButtonItem = trash
+        if (isHand) {
+            let play  = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(CardView.playBtn))
+            self.navigationItem.rightBarButtonItem = play
+        } else {
+            let trash  = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(CardView.trashBtn))
+            self.navigationItem.rightBarButtonItem = trash
+        }
     }
     
 
@@ -60,6 +66,12 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         }
         _ = self.navigationController?.popViewController(animated: true)
 
+    }
+    
+    func playBtn() {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "playedCard"), object: nil, userInfo: ["cardPlayed": card])
+        _ = self.navigationController?.popViewController(animated: true)
+        
     }
     
     /*

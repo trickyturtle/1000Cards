@@ -14,6 +14,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
     var game = PFObject(className: "Game")
     var choosingDeckForGame = false
     var myDecks = [PFObject(className: "Deck")]
+    var deckForInfo = PFObject(className: "Deck")
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func createNewDeck(_ sender: AnyObject) {
@@ -97,6 +98,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let deck = myDecks[indexPath.row]
+        deckForInfo = deck
         
         if(choosingDeckForGame) {
             let gameRelation = game.relation(forKey: "gameDeck")
@@ -142,6 +144,12 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "deckInfoSegue",
+            let destination = segue.destination as? DeckInfoView {
+            destination.deck = deckForInfo
+        }
+    }
 //    func saveDeckLocally(parseID: String) {
 //        print("parseID = \(parseID)")
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate

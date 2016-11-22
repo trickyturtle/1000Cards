@@ -134,8 +134,9 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
         }
         else if segue.identifier == "addFromCardLibrarySegue",
             let destination = segue.destination as? AllPrivateCardsView {
+            let currUser = PFUser.current()!
             do{
-                try destination.deck = PFQuery.getObjectOfClass("Deck", objectId: PFUser.current()?.value(forKey: "allCardDeckId") as! String)
+                try destination.deck = PFQuery.getObjectOfClass("Deck", objectId: currUser["allCardsDeckId"] as! String)
 
             } catch{
                 // If an error occurs

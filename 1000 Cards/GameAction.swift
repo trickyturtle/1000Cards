@@ -34,10 +34,10 @@ class GameAction{
     
     static func createActionMessage(player: String, source: String, action: String, dest: String)->String{
         let actionMessage = PFObject(className: "ActionMessage")
-        actionMessage.add(source, forKey: "source")
-        actionMessage.add(player, forKey: "player")
-        actionMessage.add(action, forKey: "action")
-        actionMessage.add(dest, forKey: "destination")
+        actionMessage["source"] = source
+        actionMessage["player"] = player
+        actionMessage["action"] = action
+        actionMessage["destination"] = dest
         actionMessage.saveInBackground()
         return actionMessage.objectId!
     }
@@ -54,11 +54,11 @@ class GameAction{
         }
         
         //TODO: we probably expect a player ID and convert it into a username
-        let name:String = actionMessage.object(forKey: "player") as! String
-        let source:String = actionMessage.object(forKey: "source") as! String
-        let action:String = actionMessage.object(forKey: "action") as! String
+        let name:String = actionMessage["player"] as! String
+        let source:String = actionMessage["source"] as! String
+        let action:String = actionMessage["action"] as! String
         let dest:String
-            = actionMessage.object(forKey: "dest") as! String
+            = actionMessage["dest"] as! String
         
         if (action == "pop"){
             if (source == "deck"){

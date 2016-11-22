@@ -98,8 +98,8 @@ class GameContainerView: UIViewController {
                     break
                 }
             }
-//            let deckTypeKey = "player\(playerNum.description)Hand"
-//            vc.deck = game[deckTypeKey] as! PFObject
+            let deckTypeKey = "player\(playerNum.description)Hand"
+            vc.deckTypeKey = deckTypeKey
 
             vc.game = game
         } else if (segue.identifier == "discardViewSegue") {

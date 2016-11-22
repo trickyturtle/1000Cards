@@ -653,7 +653,7 @@
                     <navigationItem key="navigationItem" title="Deck" id="Oda-sQ-D2D">
                         <barButtonItem key="rightBarButtonItem" image="Settings-30.png" id="HAZ-ZE-Q0h">
                             <connections>
-                                <segue destination="98v-KN-Pds" kind="show" id="u2q-fx-Zrb"/>
+                                <action selector="deckInfoButton:" destination="5iu-LI-Woa" id="Ct5-dR-1rw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1479,6 +1479,9 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createNewCard:" destination="hdV-dZ-fS2" eventType="touchUpInside" id="3AV-aL-0QI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryb-Wt-QRi" userLabel="Button">
                                         <rect key="frame" x="82" y="562" width="211" height="33"/>
@@ -1492,6 +1495,9 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="drawCard:" destination="hdV-dZ-fS2" eventType="touchUpInside" id="iR0-xU-K3d"/>
+                                        </connections>
                                     </button>
                                     <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAj-pV-FIt">
                                         <rect key="frame" x="0.0" y="64" width="375" height="559"/>
@@ -1727,7 +1733,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-iu-70T">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of Deck" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-iu-70T">
                                 <rect key="frame" x="78" y="28" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1742,7 +1748,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-Ac-sWe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-Ac-sWe">
                                 <rect key="frame" x="16" y="95" width="343" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1814,7 +1820,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6R-hD-gqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5325.6000000000004" y="-103.89805097451276"/>
+            <point key="canvasLocation" x="5284" y="-213"/>
         </scene>
         <!--Password-->
         <scene sceneID="BZt-uh-ZbS">

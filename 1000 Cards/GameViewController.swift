@@ -57,6 +57,57 @@ class GameViewController: GameCardCarouselView
             tempIndex += 1
         }
     }
+    
+    override func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        var uiView: UIView
+        var label: UILabel
+        var imageView: UIImageView
+        
+        //create new view if no view is available for recycling
+        if (view == nil) {
+            //don't do anything specific to the index within
+            //this `if (view == nil) {...}` statement because the view will be
+            //recycled and used with other index values later
+            uiView = UIView(frame: CGRect(x:0, y:20, width:200, height:350))
+            
+            imageView = UIImageView(frame:CGRect(x:0, y:25, width:200, height:180))
+            imageView.contentMode = .scaleAspectFit
+            imageView.clipsToBounds = true
+            imageView.image = cardImages[index]
+            imageView.tag = 0
+            
+            label = UILabel(frame: CGRect(x:0, y:0, width:200, height:20))
+            label.backgroundColor = UIColor.clear
+            label.textColor = UIColor.white
+            label.textAlignment = .center
+            label.tag = 1
+            label.contentMode = .bottom
+            uiView.addSubview(imageView)
+            uiView.addSubview(label)
+            
+        } else {
+            //get a reference to the label in the recycled view
+            uiView = view! as UIView
+            imageView = uiView.viewWithTag(0) as! UIImageView!
+            label = uiView.viewWithTag(1) as! UILabel!
+        }
+        
+        //set item label
+        //remember to always set any properties of your carousel item
+        //views outside of the `if (view == nil) {...}` check otherwise
+        //you'll get weird issues with carousel item content appearing
+        //in the wrong place in the carousel
+        do{
+            try label.text = PFQuery.getObjectOfClass("Card", objectId: deckArray[index] ).object(forKey: "title") as! String?
+        } catch {
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        return uiView
+    }
 }
 
     

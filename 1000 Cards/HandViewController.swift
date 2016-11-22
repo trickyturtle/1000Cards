@@ -14,7 +14,15 @@ import UIKit
 
 class HandViewController: GameCardCarouselView
 {
+    var deckTypeKey:String = ""
     //TODO: add IBOutlet carousel    
+    @IBAction func createNewCard(_ sender: Any) {
+    }
+    @IBAction func drawCard(_ sender: Any) {
+        //add card to current players hand
+        
+        
+    }
 
     
 }

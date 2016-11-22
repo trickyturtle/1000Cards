@@ -22,6 +22,12 @@ class DeckViewController: CardCarouselView
         }
     }
     
+    @IBAction func deckInfoButton(_ sender: Any) {
+        let vc : DeckInfoView = self.storyboard!.instantiateViewController(withIdentifier: "deckInfo") as! DeckInfoView
+        vc.deck = deck
+        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
+
+    }
     
 //    @IBAction func removeFromDeck(_ sender: Any) {
 //        

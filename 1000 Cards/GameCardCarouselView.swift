@@ -15,14 +15,18 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     var cardImages = [UIImage]()
     var cardData = PFObject(className: "Card")
     var carousel: iCarousel!
+    var actionArray = [String]()
+    var handArray = [String]()
+    var inPlayArray = [String]()
+    var discardArray = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         carousel.type = .coverFlow2
-        NotificationCenter.default.addObserver(self, selector: #selector(CardCarouselView.addedCard( _:)), name:NSNotification.Name(rawValue: "addedCard"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(CardCarouselView.removedCard( _:)), name:NSNotification.Name(rawValue: "removedCard"), object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.addedCard( _:)), name:NSNotification.Name(rawValue: "addedCard"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.removedCard( _:)), name:NSNotification.Name(rawValue: "removedCard"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.playedCard( _:)), name:NSNotification.Name(rawValue: "playededCard"), object: nil)
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
@@ -90,6 +94,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         //you'll get weird issues with carousel item content appearing
         //in the wrong place in the carousel
         do{
+            //TODO: add check if we are in gameView, and if so get GameAction messages
             try label.text = PFQuery.getObjectOfClass("Card", objectId: deckArray[index] ).object(forKey: "title") as! String?
         } catch {
             // If an error occurs
@@ -115,6 +120,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
             vc.card = cardData
             vc.cardImage = cardImages[index]
             vc.currIndex = index
+            vc.isHand = true
         } catch{
             // If an error occurs
             let nserror = error as NSError
@@ -155,6 +161,15 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         let userInfo = notification.userInfo as? Dictionary<String, Int>
         deckArray.remove(at: (userInfo?["index"])!)
         cardImages.remove(at: (userInfo?["index"])!)
+        carousel.reloadData()
+    }
+    
+    func playedCard(_ notification: Notification) {
+        let userInfo = notification.userInfo as? Dictionary<String, PFObject>
+        let gameAction = PFObject(className: "GameAction")
+        gameAction["message"] = GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["playedCard"])!.objectId!, dest: "inPlay")
+        gameAction.saveEventually()
+        
         carousel.reloadData()
     }
     

@@ -12,7 +12,7 @@ import UIKit
 class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var deck = PFObject(className: "Deck")
-    
+
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descriptionTF: UITextView!
     @IBOutlet weak var publicSwitch: UISwitch!
@@ -36,6 +36,8 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleTF.text = deck["title"] as! String?
+        descriptionTF.text = deck["description"] as! String!
         if ((titleTF.text?.isEmpty)!) {
             navigationItem.hidesBackButton = true
         }
