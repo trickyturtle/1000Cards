@@ -11,8 +11,12 @@ import UIKit
 
 class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var currIndex = 0 //default
+    var currDeck = PFObject(className: "Deck")
     var card = PFObject(className: "Card")
-    @IBOutlet weak var titleLabel: UILabel!
+    var cardImage: UIImage? = nil
+    var calledByAllCards = false
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cardDescription: UITextView!
     
@@ -20,9 +24,15 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.text = card.object(forKey: "title") as! String?
-        imageView.image = card.object(forKey: "image") as! UIImage?
+        self.title = card.object(forKey: "title") as! String?
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.image = cardImage
+        cardDescription.contentMode = .bottomLeft
         cardDescription.text = card.object(forKey: "description") as! String?
+        
+        let trash  = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(CardView.trashBtn))
+        self.navigationItem.rightBarButtonItem = trash
     }
     
 
@@ -32,6 +42,25 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         // Dispose of any resources that can be recreated.
     }
     
+    func trashBtn() {
+        // TODO: Alert to confirm
+        if (!calledByAllCards){
+            let relation = currDeck.relation(forKey: "cards")
+            relation.remove(card)
+            do {
+                try currDeck.save()
+            } catch {
+                print(error)
+            }
+            
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "removedCard"), object: nil, userInfo: ["index": currIndex])
+        } else {
+            // TODO: Alert says warning action cannot be undone
+            card.deleteEventually()
+        }
+        _ = self.navigationController?.popViewController(animated: true)
+
+    }
     
     /*
      // MARK: - Navigation

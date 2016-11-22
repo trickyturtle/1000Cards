@@ -28,6 +28,7 @@
 		F7357D801DCC33F000013FB9 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7357D7F1DCC33F000013FB9 /* ChangeEmailViewController.swift */; };
 		F7357D821DCC348200013FB9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7357D811DCC348200013FB9 /* ChangePasswordViewController.swift */; };
 		F7357D841DCC34CF00013FB9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7357D831DCC34CF00013FB9 /* SettingsTableViewController.swift */; };
+		F7391AEF1DE42EA900BF4177 /* AllPrivateCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391AEE1DE42EA900BF4177 /* AllPrivateCardsView.swift */; };
 		F7418B361DDD090500A16CBF /* InviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7418B351DDD090500A16CBF /* InviteTableViewController.swift */; };
 		F75D9C971DAD58FB00421A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C961DAD58FB00421A53 /* AppDelegate.swift */; };
 		F75D9C991DAD58FB00421A53 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D9C981DAD58FB00421A53 /* DeckViewController.swift */; };
@@ -100,6 +101,7 @@
 		F7357D7F1DCC33F000013FB9 /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		F7357D811DCC348200013FB9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		F7357D831DCC34CF00013FB9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		F7391AEE1DE42EA900BF4177 /* AllPrivateCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPrivateCardsView.swift; sourceTree = "<group>"; };
 		F7418B351DDD090500A16CBF /* InviteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteTableViewController.swift; sourceTree = "<group>"; };
 		F75D9C931DAD58FB00421A53 /* 1000 Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1000 Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75D9C961DAD58FB00421A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,18 @@
 			name = Logo;
 			sourceTree = "<group>";
 		};
+		F7391AED1DE42E7000BF4177 /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */,
+				F75D9C981DAD58FB00421A53 /* DeckViewController.swift */,
+				F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */,
+				D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */,
+				F7391AEE1DE42EA900BF4177 /* AllPrivateCardsView.swift */,
+			);
+			name = Decks;
+			sourceTree = "<group>";
+		};
 		F7418B371DDD092400A16CBF /* Gameplay Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,8 +264,7 @@
 				F780F5391DDABE45002663E6 /* Settings */,
 				F780F5381DDABE1B002663E6 /* Game */,
 				F79F8AF41DDB03BF0036DC04 /* Message Board */,
-				41D1D8B41DCBEB5E00287CC1 /* DeckInfoView.swift */,
-				F75D9C981DAD58FB00421A53 /* DeckViewController.swift */,
+				F7391AED1DE42E7000BF4177 /* Decks */,
 				41535A291DCB1A3600889E44 /* CardView.swift */,
 				41535A271DCAF0FC00889E44 /* CreateCardView.swift */,
 				41FA81281DD7C458008F2F69 /* defaultImage.jpg */,
@@ -260,8 +273,6 @@
 				F75D9CA21DAD58FB00421A53 /* LaunchScreen.storyboard */,
 				F75D9CA51DAD58FB00421A53 /* Info.plist */,
 				F75D9C9D1DAD58FB00421A53 /* 1000_Cards.xcdatamodeld */,
-				F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */,
-				D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */,
 			);
 			path = "1000 Cards";
 			sourceTree = "<group>";
@@ -518,6 +529,7 @@
 				F780F53D1DDAE058002663E6 /* Message.swift in Sources */,
 				F75D9C991DAD58FB00421A53 /* DeckViewController.swift in Sources */,
 				D38AFF411DC846A40019F9B7 /* GameViewController.swift in Sources */,
+				F7391AEF1DE42EA900BF4177 /* AllPrivateCardsView.swift in Sources */,
 				F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */,
 				F7F0BC061DB14A8100FDBCD4 /* iCarousel.m in Sources */,
 				D398F4751DE264C1007FF083 /* PublicLibraryViewController.swift in Sources */,

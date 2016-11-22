@@ -43,6 +43,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             newCard["description"] = descriptionTF.text
             newCard["image"] = CardReader.imageToParseFile(image: newCardImageView.image!, title: titleTF.text!)
             do {
+                newCard["createdBy"] = PFUser.current()
                 try newCard.save()
             } catch {
                     print(error)
@@ -52,6 +53,22 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             let relation = deck.relation(forKey: "cards")
             relation.add(newCard)
             deck.saveInBackground()
+            
+            // save to all cards deck
+            let query = PFQuery(className: "Deck")
+            query.getObjectInBackground(withId: PFUser.current()?.value(forKey: "allCardsDeckId") as! String, block: { (object: PFObject?, error: Error?) -> Void in
+                if error != nil || object == nil {
+                    print("The getFirstObject request failed.")
+                } else {
+                    // The find succeeded.
+                    let relation = object?.relation(forKey: "cards")
+                    relation?.add(newCard)
+                    object?.saveInBackground()
+                }
+            })
+            
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "addedCard"), object: nil, userInfo: ["newCard": newCard.objectId!])
+            
             _ = self.navigationController?.popViewController(animated: true)
         }
 
@@ -62,7 +79,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
 
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
-            imagePicker.allowsEditing = true
+            imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
         }
     }

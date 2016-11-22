@@ -21,4 +21,9 @@ class DeckViewController: CardCarouselView
             self.title = deck["title"] as? String
         }
     }
+    
+    
+//    @IBAction func removeFromDeck(_ sender: Any) {
+//        
+//    }
 }

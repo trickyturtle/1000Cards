@@ -55,6 +55,23 @@ class CreateAccountViewController: UIViewController {
             user.signUpInBackground { succeeded, error in
                 if (succeeded) {
                     //The registration was successful
+                    
+                    //create all cards deck
+                    let allCardsDeck = PFObject(className: "Deck")
+                    do {
+                        allCardsDeck["createdBy"] = user
+                        allCardsDeck["title"] = "All Cards"
+                        try allCardsDeck.save()
+                    } catch{
+                        print("ERROR SAVING DECK")
+                        // If an error occurs
+                        let nserror = error as NSError
+                        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                        abort()
+                    }
+                    user["allCardsDeckId"] = allCardsDeck.objectId!
+
+                    
                     let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
                     var vcArray = self.navigationController?.viewControllers
                     vcArray?.removeAll()

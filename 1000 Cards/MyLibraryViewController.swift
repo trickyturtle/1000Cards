@@ -17,19 +17,19 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func createNewDeck(_ sender: AnyObject) {
         //Save deck in Parse
         let newDeck = PFObject(className: "Deck")
-            do {
-                newDeck["createdBy"] = PFUser.current()
-                try newDeck.save()
-            } catch{
-                print("ERROR SAVING DECK")
-                // If an error occurs
-                let nserror = error as NSError
-                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
-            }
-            let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
-            vc.deckID = newDeck.objectId! as String!
-            self.navigationController?.pushViewController(vc as UIViewController, animated: true)
+        do {
+            newDeck["createdBy"] = PFUser.current()
+            try newDeck.save()
+        } catch{
+            print("ERROR SAVING DECK")
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+        vc.deckID = newDeck.objectId! as String!
+        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
 
         //Save deck parse ID locally
 
@@ -75,12 +75,10 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         return 1
     }
     
-    //set number of rows in table view to be number of candidates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myDecks.count
     }
     
-    //what to display in the table: first name and last name and num votes for each candidate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myLibraryCell", for: indexPath as IndexPath)
         let row = indexPath.row
@@ -93,9 +91,18 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let deck = myDecks[indexPath.row]
-        let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
-        vc.deck = deck
-        self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+        
+        if(indexPath.row == 0) {
+            let vc : AllPrivateCardsView = self.storyboard!.instantiateViewController(withIdentifier: "AllCardsView") as! AllPrivateCardsView
+            vc.deck = deck
+            vc.viewing = true
+            self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+        } else {
+            let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+            vc.deck = deck
+            self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+        }
+        
     }
     
 //    func saveDeckLocally(parseID: String) {
