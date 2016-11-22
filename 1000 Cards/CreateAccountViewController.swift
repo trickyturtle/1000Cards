@@ -70,7 +70,7 @@ class CreateAccountViewController: UIViewController {
                         abort()
                     }
                     user["allCardsDeckId"] = allCardsDeck.objectId!
-
+                    user.saveInBackground()
                     
                     let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
                     var vcArray = self.navigationController?.viewControllers

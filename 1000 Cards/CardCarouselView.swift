@@ -29,22 +29,25 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
     
     func numberOfItems(in carousel: iCarousel) -> Int {
         if (deckArray.count == 0) {
-            let temp = deck["cards"] as! PFRelation
-            let query = temp.query()
-            var result = [PFObject]()
-            do {
-                result = try query.findObjects()
-                
-            } catch {
-                print(error)
-            }
-            for obj in result {
-                deckArray.append(obj.objectId! )
-            }
-            deckID = deck.objectId!
-            for cardKey in deckArray {
-                //TODO: this should probably be a view object rather than an image...if possible
-                cardImages.append(CardReader.getImage(parseID: cardKey )!)
+            let temp = deck["cards"]
+            if (temp != nil) {
+                let relation = temp as! PFRelation
+                let query = relation.query()
+                var result = [PFObject]()
+                do {
+                    result = try query.findObjects()
+                    
+                } catch {
+                    print(error)
+                }
+                for obj in result {
+                    deckArray.append(obj.objectId! )
+                }
+                deckID = deck.objectId!
+                for cardKey in deckArray {
+                    //TODO: this should probably be a view object rather than an image...if possible
+                    cardImages.append(CardReader.getImage(parseID: cardKey )!)
+                }
             }
         }
         return deckArray.count

@@ -616,7 +616,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NgN-JQ-oLN" kind="show" id="x8D-ws-tdu"/>
+                                    <segue destination="8XF-0J-59R" kind="show" identifier="addFromCardLibrarySegue" id="P6L-fJ-YZX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQk-W3-JTZ" userLabel="Button">
@@ -1993,44 +1993,44 @@ Cards with lasting effects, such as awarding points or changing the game's rules
             <point key="canvasLocation" x="4544.8000000000002" y="1790.5547226386807"/>
         </scene>
         <!--Data Source-->
-        <scene sceneID="0ND-Fg-PMk">
+        <scene sceneID="phi-cz-cEy">
             <objects>
-                <viewController storyboardIdentifier="AllCardsView" title="Deck" id="NgN-JQ-oLN" customClass="AllPrivateCardsView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllCardsView" title="Deck" id="8XF-0J-59R" customClass="AllPrivateCardsView" customModule="_000_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0dX-ft-ZlZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="5Z1-4a-gnU"/>
+                        <viewControllerLayoutGuide type="top" id="Nnv-uL-Cns"/>
+                        <viewControllerLayoutGuide type="bottom" id="bAn-IH-8ZZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2vk-vM-Rzv">
+                    <view key="view" contentMode="scaleToFill" id="5i2-Tl-R5L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nes-XC-pab" customClass="iCarousel">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wC-4D-nng" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="83" width="375" height="501"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="NgN-JQ-oLN" id="sLi-Zz-QIp"/>
-                                    <outlet property="delegate" destination="NgN-JQ-oLN" id="zBB-ju-MQy"/>
+                                    <outlet property="dataSource" destination="8XF-0J-59R" id="PRE-qm-APW"/>
+                                    <outlet property="delegate" destination="8XF-0J-59R" id="LqZ-Za-Th0"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.39372822549999997" green="0.55121993930000002" blue="0.66902121110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nes-XC-pab" firstAttribute="top" secondItem="0dX-ft-ZlZ" secondAttribute="bottom" constant="63" id="Bsd-a0-4Me"/>
-                            <constraint firstAttribute="trailing" secondItem="nes-XC-pab" secondAttribute="trailing" id="cOe-jl-efr"/>
-                            <constraint firstItem="nes-XC-pab" firstAttribute="leading" secondItem="2vk-vM-Rzv" secondAttribute="leading" id="f7x-Xf-IWL"/>
-                            <constraint firstItem="nes-XC-pab" firstAttribute="centerY" secondItem="2vk-vM-Rzv" secondAttribute="centerY" id="q7z-yN-HxX"/>
+                            <constraint firstItem="3wC-4D-nng" firstAttribute="top" secondItem="Nnv-uL-Cns" secondAttribute="bottom" constant="63" id="3m7-13-qRZ"/>
+                            <constraint firstItem="3wC-4D-nng" firstAttribute="centerY" secondItem="5i2-Tl-R5L" secondAttribute="centerY" id="8HZ-lo-7Dm"/>
+                            <constraint firstAttribute="trailing" secondItem="3wC-4D-nng" secondAttribute="trailing" id="f7p-6I-tbV"/>
+                            <constraint firstItem="3wC-4D-nng" firstAttribute="leading" secondItem="5i2-Tl-R5L" secondAttribute="leading" id="rqW-px-o6W"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Deck" id="5uo-qf-bEI">
-                        <barButtonItem key="rightBarButtonItem" image="Settings-30.png" id="aRq-5I-fD9"/>
+                    <navigationItem key="navigationItem" title="Deck" id="YN2-my-oB0">
+                        <barButtonItem key="rightBarButtonItem" image="Settings-30.png" id="XPO-qM-mZn"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="iCarousel" destination="nes-XC-pab" id="SGC-Ul-PY1"/>
+                        <outlet property="carousel" destination="3wC-4D-nng" id="XHg-I8-AkG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zpg-ap-HBQ" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWN-7b-0GA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6162" y="-863"/>
+            <point key="canvasLocation" x="6145" y="-863"/>
         </scene>
     </scenes>
     <resources>

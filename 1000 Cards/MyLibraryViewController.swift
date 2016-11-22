@@ -28,8 +28,9 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
             abort()
         }
         let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
+        vc.deck = newDeck
         vc.deckID = newDeck.objectId! as String!
-        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
+        self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
 
         //Save deck parse ID locally
 
@@ -48,7 +49,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(_ animated: Bool) {
         let deckQuery = PFQuery(className: "Deck")
         deckQuery.whereKey("createdBy", equalTo: PFUser.current()!)
-        deckQuery.order(byDescending: "createdAt")
+        deckQuery.order(byAscending: "createdAt")
         DispatchQueue.global().async {
             do {
                 self.myDecks = try deckQuery.findObjects()

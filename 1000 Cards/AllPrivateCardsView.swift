@@ -11,6 +11,11 @@ class AllPrivateCardsView: CardCarouselView {
     
     var viewing = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "All Cards"
+    }
+    
     override func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
         if(!viewing) {
             do{

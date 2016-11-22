@@ -55,8 +55,9 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             deck.saveInBackground()
             
             // save to all cards deck
+            let user = PFUser.current()
             let query = PFQuery(className: "Deck")
-            query.getObjectInBackground(withId: PFUser.current()?.value(forKey: "allCardsDeckId") as! String, block: { (object: PFObject?, error: Error?) -> Void in
+            query.getObjectInBackground(withId: user?["allCardsDeckId"] as! String, block: { (object: PFObject?, error: Error?) -> Void in
                 if error != nil || object == nil {
                     print("The getFirstObject request failed.")
                 } else {

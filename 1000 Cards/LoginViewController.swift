@@ -18,8 +18,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         //Check if user exists and logged in
         if PFUser.current() != nil {
             //if user.isAuthenticated {
