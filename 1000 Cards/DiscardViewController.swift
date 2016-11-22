@@ -8,9 +8,8 @@
 import Foundation
 import UIKit
 
-class DiscardViewController: CardCarouselView
+class DiscardViewController: GameCardCarouselView
 {
-    var game = PFObject(className: "Game")
     //TODO add IBOutlet carousel
     
 }

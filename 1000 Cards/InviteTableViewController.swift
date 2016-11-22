@@ -233,7 +233,7 @@ class InviteTableViewController: UITableViewController {
     
     func myLibraryDeck(newGame: PFObject){
         let vc : MyLibraryViewController = self.storyboard!.instantiateViewController(withIdentifier: "myLibraryView") as! MyLibraryViewController
-        vc.choosingDeck = true
+        vc.choosingDeckForGame = true
         vc.game = newGame
         self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
@@ -274,6 +274,39 @@ class InviteTableViewController: UITableViewController {
         }
         
         newGame["description"] = description
+        newGame["player1Score"] = 0
+        newGame["player2Score"] = 0
+        newGame["player3Score"] = 0
+        newGame["player4Score"] = 0
+//        let player1Hand = PFObject(className: "Deck")
+//        player1Hand["title"] = "Player 1 Hand"
+//        newGame["player1Hand"] = player1Hand
+//        
+//        let player2Hand = PFObject(className: "Deck")
+//        player2Hand["title"] = "Player 2 Hand"
+//        newGame["player2Hand"] = player2Hand
+//        
+//        let player3Hand = PFObject(className: "Deck")
+//        player3Hand["title"] = "Player 3 Hand"
+//        newGame["player3Hand"] = player3Hand
+//        
+//        let player4Hand = PFObject(className: "Deck")
+//        player4Hand["title"] = "Player 4 Hand"
+//        newGame["player4Hand"] = player4Hand
+//        
+//        let discard = PFObject(className: "Deck")
+//        discard["title"] = "Discard"
+//        newGame["discard"] = discard
+//        
+//        let gameDeck = PFObject(className: "Deck")
+//        gameDeck["title"] = "Main Deck"
+//        newGame["gameDeck"] = gameDeck
+//        
+//        let inPlay = PFObject(className: "Deck")
+//        inPlay["title"] = "In Play"
+//        newGame["inPlay"] = inPlay
+
+        
         return newGame
     }
     

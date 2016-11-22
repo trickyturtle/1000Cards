@@ -1152,7 +1152,7 @@ new email address</string>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-PN-gGE">
-                                <rect key="frame" x="0.0" y="28" width="375" height="29"/>
+                                <rect key="frame" x="16" y="28" width="343" height="29"/>
                                 <segments>
                                     <segment title="Game"/>
                                     <segment title="Hand"/>
@@ -1167,25 +1167,25 @@ new email address</string>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="4hf-PI-ePt"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="leading" secondItem="V0k-6S-p1Y" secondAttribute="leading" id="6qw-yv-wqL"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="7QU-yX-Us1"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="7gq-SR-3uL"/>
-                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="V0k-6S-p1Y" secondAttribute="trailing" id="Nr7-fB-DWi"/>
-                            <constraint firstItem="pn0-wc-5AE" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="QoI-pP-zs2"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leading" id="RUC-ld-KIU"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="pn0-wc-5AE" secondAttribute="top" id="T1b-2Y-xdn"/>
-                            <constraint firstItem="pn0-wc-5AE" firstAttribute="leading" secondItem="wtj-ab-H9Y" secondAttribute="leading" id="chM-Lx-EAn"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="eFj-v2-48N"/>
-                            <constraint firstItem="pn0-wc-5AE" firstAttribute="leading" secondItem="3aU-TD-sie" secondAttribute="leading" id="j6d-py-tKV"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="trailing" secondItem="pn0-wc-5AE" secondAttribute="trailing" id="mrY-5c-6sx"/>
-                            <constraint firstItem="pn0-wc-5AE" firstAttribute="top" secondItem="wtj-ab-H9Y" secondAttribute="top" id="mza-E4-uOn"/>
-                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="n8u-bk-h1S"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="top" secondItem="9d1-Ww-6cs" secondAttribute="bottom" constant="8" symbolic="YES" id="tUI-v3-sVG"/>
-                            <constraint firstAttribute="trailing" secondItem="lK9-PN-gGE" secondAttribute="trailing" id="uO6-JL-C6y"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="V0k-6S-p1Y" secondAttribute="top" id="v0T-LX-HPd"/>
-                            <constraint firstItem="3aU-TD-sie" firstAttribute="top" secondItem="lK9-PN-gGE" secondAttribute="bottom" constant="8" symbolic="YES" id="xCA-Jd-qRO"/>
-                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="V0k-6S-p1Y" secondAttribute="leading" id="xsQ-Up-Qhj"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leadingMargin" id="3io-xm-cbH"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="top" secondItem="9d1-Ww-6cs" secondAttribute="bottom" constant="8" symbolic="YES" id="4XZ-D6-Qxz"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="5oB-3u-Xas"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="top" secondItem="lK9-PN-gGE" secondAttribute="bottom" constant="8" symbolic="YES" id="JFV-1h-bcC"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="leading" secondItem="V0k-6S-p1Y" secondAttribute="leading" id="Njn-I1-MsE"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="top" secondItem="pn0-wc-5AE" secondAttribute="top" id="S7F-sz-Y7T"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="leading" secondItem="pn0-wc-5AE" secondAttribute="leading" id="Zep-aA-R6Z"/>
+                            <constraint firstItem="pn0-wc-5AE" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="caQ-UJ-Ney"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="top" secondItem="wtj-ab-H9Y" secondAttribute="top" id="dY1-wi-Z9O"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="daA-lo-SZf"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="bottom" secondItem="10q-DB-PIW" secondAttribute="top" id="e3j-Ha-Yjm"/>
+                            <constraint firstItem="lK9-PN-gGE" firstAttribute="centerX" secondItem="V0k-6S-p1Y" secondAttribute="centerX" id="g9v-bK-7it"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="trailing" secondItem="pn0-wc-5AE" secondAttribute="trailing" id="kYK-dQ-VK8"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="leading" secondItem="jjd-hu-aic" secondAttribute="leading" id="kye-he-2bw"/>
+                            <constraint firstItem="3aU-TD-sie" firstAttribute="leading" secondItem="pn0-wc-5AE" secondAttribute="leading" id="qb2-up-Hz5"/>
+                            <constraint firstItem="wtj-ab-H9Y" firstAttribute="top" secondItem="3aU-TD-sie" secondAttribute="top" id="qeS-9R-Hxb"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="trailing" secondItem="wtj-ab-H9Y" secondAttribute="trailing" id="sDq-Il-t5V"/>
+                            <constraint firstItem="V0k-6S-p1Y" firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="uah-a3-rwX"/>
+                            <constraint firstAttribute="trailing" secondItem="3aU-TD-sie" secondAttribute="trailing" id="xvo-XA-QeD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1484,7 +1484,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                         <rect key="frame" x="82" y="562" width="211" height="33"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                        <state key="normal" title="Play Card">
+                                        <state key="normal" title="Draw Card">
                                             <color key="titleColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>

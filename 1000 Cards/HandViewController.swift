@@ -9,13 +9,12 @@ import Foundation
 import UIKit
 
 
-var playerNum = "1" //TODO: add this functionality
-var deckTypeKey = "player\(playerNum)Hand"
 
 
-class HandViewController: CardCarouselView
+
+class HandViewController: GameCardCarouselView
 {
-    var game = PFObject(className: "Game")
-    //TODO: add IBOutlet carousel
+    //TODO: add IBOutlet carousel    
+
     
 }

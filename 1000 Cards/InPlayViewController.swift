@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-class InPlayViewController: CardCarouselView
+class InPlayViewController: GameCardCarouselView
 {
-    var game = PFObject(className: "Game")
     //TODO add carousel IBOutlet
 }
 

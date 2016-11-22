@@ -18,6 +18,9 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
     let imagePicker = UIImagePickerController()
     var deck = PFObject(className: "Deck")
     
+    // if called from game
+    var game = PFObject(className: "Deck")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,31 +46,50 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             newCard["description"] = descriptionTF.text
             newCard["image"] = CardReader.imageToParseFile(image: newCardImageView.image!, title: titleTF.text!)
             do {
-                newCard["createdBy"] = PFUser.current()
+                //newCard["createdBy"] = PFUser.current()
                 try newCard.save()
             } catch {
                     print(error)
             }
             //TODO: error handle adding card to deck
             CardReader.saveImageToDocumentDirectory(image: newCardImageView.image!, parseID: newCard.objectId!)
-            let relation = deck.relation(forKey: "cards")
-            relation.add(newCard)
-            deck.saveInBackground()
-            
-            // save to all cards deck
-            let user = PFUser.current()
-            let query = PFQuery(className: "Deck")
-            query.getObjectInBackground(withId: user?["allCardsDeckId"] as! String, block: { (object: PFObject?, error: Error?) -> Void in
-                if error != nil || object == nil {
-                    print("The getFirstObject request failed.")
-                } else {
-                    // The find succeeded.
-                    let relation = object?.relation(forKey: "cards")
-                    relation?.add(newCard)
-                    object?.saveInBackground()
-                }
-            })
-            
+            if (deck.objectId == nil) { // we are creating card for game
+                let relation = game.relation(forKey: "cards")
+                relation.add(newCard)
+                game.saveInBackground()
+                
+                // save to all cards deck
+                let user = PFUser.current()
+                let query = PFQuery(className: "Deck")
+                query.getObjectInBackground(withId: user?["allCardsDeckId"] as! String, block: { (object: PFObject?, error: Error?) -> Void in
+                    if error != nil || object == nil {
+                        print("The getFirstObject request failed.")
+                    } else {
+                        // The find succeeded.
+                        let relation = object?.relation(forKey: "cards")
+                        relation?.add(newCard)
+                        object?.saveInBackground()
+                    }
+                })
+            } else {
+                let relation = deck.relation(forKey: "cards")
+                relation.add(newCard)
+                deck.saveInBackground()
+                
+                // save to all cards deck
+                let user = PFUser.current()
+                let query = PFQuery(className: "Deck")
+                query.getObjectInBackground(withId: user?["allCardsDeckId"] as! String, block: { (object: PFObject?, error: Error?) -> Void in
+                    if error != nil || object == nil {
+                        print("The getFirstObject request failed.")
+                    } else {
+                        // The find succeeded.
+                        let relation = object?.relation(forKey: "cards")
+                        relation?.add(newCard)
+                        object?.saveInBackground()
+                    }
+                })
+            }
             NotificationCenter.default.post(name: Notification.Name(rawValue: "addedCard"), object: nil, userInfo: ["newCard": newCard.objectId!])
             
             _ = self.navigationController?.popViewController(animated: true)

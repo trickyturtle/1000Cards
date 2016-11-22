@@ -12,6 +12,7 @@ class GameContainerView: UIViewController {
     
     var game: PFObject!
     var newGame = false
+    var playerArray:[PFUser] = []
     
     @IBOutlet weak var containerViewGame: UIView!
     @IBOutlet weak var containerViewHand: UIView!
@@ -20,6 +21,21 @@ class GameContainerView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let temp = game["players"]
+        if (temp != nil) {
+            let relation = temp as! PFRelation
+            let query = relation.query()
+            var result = [PFObject]()
+            do {
+                result = try query.findObjects()
+                
+            } catch {
+                print(error)
+            }
+            for obj in result {
+                playerArray.append(obj as! PFUser)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,13 +91,25 @@ class GameContainerView: UIViewController {
             vc.game = game
         } else if (segue.identifier == "handViewSegue") {
             let vc = segue.destination as! HandViewController;
+            var playerNum = 0
+            for player in playerArray{
+                playerNum += 1
+                if player.objectId == PFUser.current()?.objectId{
+                    break
+                }
+            }
+//            let deckTypeKey = "player\(playerNum.description)Hand"
+//            vc.deck = game[deckTypeKey] as! PFObject
+
             vc.game = game
         } else if (segue.identifier == "discardViewSegue") {
             let vc = segue.destination as! DiscardViewController;
             vc.game = game
+            //vc.deck = game["discard"] as! PFObject
         } else if (segue.identifier == "inPlayViewSegue") {
             let vc = segue.destination as! InPlayViewController;
             vc.game = game
+            //vc.deck = game["inPlay"] as! PFObject
         }
     }
 }

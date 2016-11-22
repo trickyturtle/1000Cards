@@ -90,44 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "1000 Cards/CreateCardView.swift"
-            timestampString = "501500808.678831"
+            timestampString = "501527308.463712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "createCardButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "1000 Cards/CreateCardView.swift"
-            timestampString = "501496702.762912"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "createCardButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "1000 Cards/CardReader.swift"
-            timestampString = "501466406.394003"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "saveImageToDocumentDirectory(image:parseID:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -202,7 +170,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501521292.698813"
+                  timestampString = "501528562.154254"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "160"
@@ -217,7 +185,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501521292.701751"
+                  timestampString = "501528562.157034"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "160"
@@ -250,7 +218,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501521292.708376"
+                  timestampString = "501528562.162212"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "138"
@@ -265,7 +233,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501521292.711291"
+                  timestampString = "501528562.164789"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "138"
@@ -294,69 +262,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "1000 Cards/CreateCardView.swift"
-            timestampString = "501500808.678831"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "createCardButton(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_000_Cards.CreateNewCardView.createCardButton (Swift.AnyObject) -&gt; ()"
-                  moduleName = "1000 Cards"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CreateCardView.swift"
-                  timestampString = "501521292.716243"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "6126">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_000_Cards.CreateNewCardView.createCardButton (Swift.AnyObject) -&gt; ()"
-                  moduleName = "1000 Cards"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CreateCardView.swift"
-                  timestampString = "501521292.718375"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "9981">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_000_Cards.CreateNewCardView.(createCardButton (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "1000 Cards"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CreateCardView.swift"
-                  timestampString = "501521292.721434"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "23">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -377,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "1000 Cards/GameContainerView.swift"
-            timestampString = "501502100.615802"
+            timestampString = "501525351.053158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -399,6 +304,54 @@
             startingLineNumber = "142"
             endingLineNumber = "142"
             landmarkName = "doneButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1000 Cards/GameContainerView.swift"
+            timestampString = "501522748.207232"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1000 Cards/InviteTableViewController.swift"
+            timestampString = "501525078.89587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "createNewGameObject(player2:player3:player4:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1000 Cards/InviteTableViewController.swift"
+            timestampString = "501525081.353814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "createNewGameObject(player2:player3:player4:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

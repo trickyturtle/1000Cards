@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PFUser.logOut()
         //Check if user exists and logged in
         if PFUser.current() != nil {
             //if user.isAuthenticated {

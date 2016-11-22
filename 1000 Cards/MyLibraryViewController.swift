@@ -12,7 +12,7 @@ import CoreData
 class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var game = PFObject(className: "Game")
-    var choosingDeck = false
+    var choosingDeckForGame = false
     var myDecks = [PFObject(className: "Deck")]
     @IBOutlet weak var tableView: UITableView!
     
@@ -46,7 +46,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        if (choosingDeck) {
+        if (choosingDeckForGame) {
             self.navigationItem.rightBarButtonItem = nil
         }
     }
@@ -98,7 +98,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         let deck = myDecks[indexPath.row]
         
-        if(choosingDeck) {
+        if(choosingDeckForGame) {
             let gameRelation = game.relation(forKey: "gameDeck")
             let deckRelation = deck.relation(forKey: "cards")
             let relationQuery = deckRelation.query()
@@ -111,6 +111,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
             for obj in result {
                 gameRelation.add(obj)
             }
+           
             DispatchQueue.global().async {
                 self.game.saveInBackground(block: { succeed, error in
                     if (succeed) {

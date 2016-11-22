@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-class GameViewController: CardCarouselView
+class GameViewController: GameCardCarouselView
 {
-    var game = PFObject(className: "Game")
     var playerArray:[PFUser] = []
     @IBOutlet weak var player1Name: UILabel!
     @IBOutlet weak var player2Name: UILabel!
@@ -25,27 +24,27 @@ class GameViewController: CardCarouselView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let temp = game["players"]
-        if (temp != nil) {
-            let relation = temp as! PFRelation
-            let query = relation.query()
-            var result = [PFObject]()
-            do {
-                result = try query.findObjects()
-                
-            } catch {
-                print(error)
-            }
-            for obj in result {
-                playerArray.append(obj as! PFUser)
-            }
-        }
+//        let temp = game["players"]
+//        if (temp != nil) {
+//            let relation = temp as! PFRelation
+//            let query = relation.query()
+//            var result = [PFObject]()
+//            do {
+//                result = try query.findObjects()
+//                
+//            } catch {
+//                print(error)
+//            }
+//            for obj in result {
+//                playerArray.append(obj as! PFUser)
+//            }
+        
         
         var numPlayers = playerArray.count
         var tempIndex = 0
         let playerLabelArray = [player1Name, player2Name, player3Name, player4Name]
         let playerScoreLabelArray = [player1Score, player2Score, player3Score, player4Score]
-        while(numPlayers>0){
+        while(numPlayers > 0){
             playerLabelArray[tempIndex]?.text = playerArray[tempIndex].username
 
             numPlayers -= 1
@@ -58,6 +57,7 @@ class GameViewController: CardCarouselView
             tempIndex += 1
         }
     }
-    
-    
 }
+
+    
+

@@ -50,6 +50,7 @@
 		F7A143C01DB6BF9E000F29A8 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */; };
 		F7B7A2E31DB9721F00C5145C /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */; };
 		F7BFD5E01DB9466E009CD95D /* CreateNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */; };
+		F7C7D4A01DE4AF6800B36323 /* GameCardCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7D49F1DE4AF6800B36323 /* GameCardCarouselView.swift */; };
 		F7E5A9CF1DDC2B6B00A487B2 /* chat_blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E5A9C81DDC2B6B00A487B2 /* chat_blank@2x.png */; };
 		F7E5A9D01DDC2B6B00A487B2 /* messages_blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E5A9C91DDC2B6B00A487B2 /* messages_blank@2x.png */; };
 		F7E5A9D11DDC2B6B00A487B2 /* profile_blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E5A9CA1DDC2B6B00A487B2 /* profile_blank@2x.png */; };
@@ -126,6 +127,7 @@
 		F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-30.png"; sourceTree = "<group>"; };
 		F7B7A2E21DB9721F00C5145C /* MyLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
 		F7BFD5DF1DB9466E009CD95D /* CreateNewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGameViewController.swift; sourceTree = "<group>"; };
+		F7C7D49F1DE4AF6800B36323 /* GameCardCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCardCarouselView.swift; sourceTree = "<group>"; };
 		F7E5A9C81DDC2B6B00A487B2 /* chat_blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_blank@2x.png"; sourceTree = "<group>"; };
 		F7E5A9C91DDC2B6B00A487B2 /* messages_blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messages_blank@2x.png"; sourceTree = "<group>"; };
 		F7E5A9CA1DDC2B6B00A487B2 /* profile_blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_blank@2x.png"; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				41FA81381DE28079008F2F69 /* CardReader.swift */,
 				41FA813A1DE2810D008F2F69 /* GameAction.swift */,
 				F71C48CB1DE2F8420022A3C2 /* InviteTableCell.swift */,
+				F7C7D49F1DE4AF6800B36323 /* GameCardCarouselView.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			files = (
 				F7F0BBFE1DB14A4000FDBCD4 /* CreateAccountViewController.swift in Sources */,
 				D35EE0EE1DCBC55700C07767 /* Game.swift in Sources */,
+				F7C7D4A01DE4AF6800B36323 /* GameCardCarouselView.swift in Sources */,
 				F7357D801DCC33F000013FB9 /* ChangeEmailViewController.swift in Sources */,
 				F79F8AF01DDB03B80036DC04 /* Images.swift in Sources */,
 				D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */,
