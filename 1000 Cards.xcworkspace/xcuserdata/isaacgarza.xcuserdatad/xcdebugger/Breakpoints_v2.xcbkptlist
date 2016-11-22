@@ -234,7 +234,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501500306.606631"
+                  timestampString = "501502101.779816"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "160"
@@ -249,7 +249,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501500306.609959"
+                  timestampString = "501502101.782679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "160"
@@ -282,7 +282,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501500306.615508"
+                  timestampString = "501502101.788968"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "138"
@@ -297,7 +297,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501500306.617289"
+                  timestampString = "501502101.792939"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "138"
@@ -346,12 +346,12 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CreateCardView.swift"
-                  timestampString = "501500306.621281"
+                  timestampString = "501502101.797596"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "7187">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "6126">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -361,12 +361,12 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CreateCardView.swift"
-                  timestampString = "501500306.623656"
+                  timestampString = "501502101.800099"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "11122">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "9981">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -376,14 +376,46 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CreateCardView.swift"
-                  timestampString = "501500306.626458"
+                  timestampString = "501502101.803061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1000 Cards/GameTableViewController.swift"
+            timestampString = "501501159.951156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1000 Cards/GameContainerView.swift"
+            timestampString = "501502100.615802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

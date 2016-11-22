@@ -1127,12 +1127,6 @@ new email address</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-ab-H9Y" userLabel="Container View Game">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <connections>
-                                    <segue destination="qCT-Vv-fgc" kind="embed" id="MK6-5g-paZ"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aU-TD-sie">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
@@ -1149,6 +1143,12 @@ new email address</string>
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <connections>
                                     <segue destination="hdV-dZ-fS2" kind="embed" id="uR7-01-CBt"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-ab-H9Y" userLabel="Container View Game">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <connections>
+                                    <segue destination="qCT-Vv-fgc" kind="embed" id="MK6-5g-paZ"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-PN-gGE">
@@ -1603,26 +1603,26 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3l-7y-o20">
-                                <rect key="frame" x="31.5" y="538.5" width="28.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3l-7y-o20">
+                                <rect key="frame" x="40.5" y="538.5" width="10.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-dW-0Eq">
-                                <rect key="frame" x="122.5" y="538.5" width="31" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-dW-0Eq">
+                                <rect key="frame" x="133" y="538.5" width="10.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="970-cF-3qc">
-                                <rect key="frame" x="216.5" y="537.5" width="39" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="970-cF-3qc">
+                                <rect key="frame" x="231" y="537.5" width="10.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-600" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-2V-hTH">
-                                <rect key="frame" x="308.5" y="537.5" width="39" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-2V-hTH">
+                                <rect key="frame" x="323" y="537.5" width="10.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1635,12 +1635,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                     <outlet property="delegate" destination="qCT-Vv-fgc" id="GOj-GT-iUG"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 played &quot;Damn Dirty Apes&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXT-vT-nX7">
-                                <rect key="frame" x="56.5" y="460.5" width="262" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.39423289895057678" green="0.55108559131622314" blue="0.67191207408905029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1649,7 +1643,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                             <constraint firstItem="u3l-7y-o20" firstAttribute="baseline" secondItem="VYU-dW-0Eq" secondAttribute="baseline" id="7Aj-PA-3hT"/>
                             <constraint firstAttribute="bottomMargin" secondItem="u3l-7y-o20" secondAttribute="bottom" id="8QL-O1-iaD"/>
                             <constraint firstItem="Kg0-WX-F5A" firstAttribute="centerX" secondItem="u3l-7y-o20" secondAttribute="centerX" id="90A-ZG-o5D"/>
-                            <constraint firstItem="Kg0-WX-F5A" firstAttribute="top" secondItem="ZXT-vT-nX7" secondAttribute="bottom" constant="29" id="BSo-HC-5Im"/>
                             <constraint firstItem="joD-5W-a4q" firstAttribute="top" secondItem="EPF-mj-SK0" secondAttribute="bottom" constant="30" id="C5Y-LA-C9y"/>
                             <constraint firstItem="970-cF-3qc" firstAttribute="top" secondItem="Vr2-bd-SK8" secondAttribute="bottom" constant="7" id="FSj-Pa-XFQ"/>
                             <constraint firstItem="EPF-mj-SK0" firstAttribute="top" secondItem="c4G-uP-oTu" secondAttribute="topMargin" constant="-45" id="Fsg-oD-JuG"/>
@@ -1658,7 +1651,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                             <constraint firstItem="5Ec-ja-3h7" firstAttribute="trailing" secondItem="c4G-uP-oTu" secondAttribute="trailingMargin" id="Twb-Nh-7ch"/>
                             <constraint firstItem="u3l-7y-o20" firstAttribute="top" secondItem="Kg0-WX-F5A" secondAttribute="bottom" constant="8" symbolic="YES" id="VEy-yq-jnU"/>
                             <constraint firstItem="5Ec-ja-3h7" firstAttribute="leading" secondItem="Vr2-bd-SK8" secondAttribute="trailing" constant="30" id="VWz-2a-dqE"/>
-                            <constraint firstItem="ZXT-vT-nX7" firstAttribute="centerX" secondItem="EPF-mj-SK0" secondAttribute="centerX" id="Wca-bO-fy9"/>
                             <constraint firstAttribute="trailing" secondItem="EPF-mj-SK0" secondAttribute="trailing" id="ayb-1h-jAF"/>
                             <constraint firstItem="Vr2-bd-SK8" firstAttribute="top" secondItem="EPF-mj-SK0" secondAttribute="bottom" constant="30" id="d36-eN-X3o"/>
                             <constraint firstItem="970-cF-3qc" firstAttribute="baseline" secondItem="eQg-2V-hTH" secondAttribute="baseline" id="qW5-wO-dBL"/>
@@ -1670,6 +1662,14 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                     </view>
                     <connections>
                         <outlet property="carousel" destination="EPF-mj-SK0" id="Zhg-Em-NNp"/>
+                        <outlet property="player1Name" destination="Kg0-WX-F5A" id="GaW-dC-y8k"/>
+                        <outlet property="player1Score" destination="u3l-7y-o20" id="ZgF-gB-HzK"/>
+                        <outlet property="player2Name" destination="joD-5W-a4q" id="ilg-u7-lIT"/>
+                        <outlet property="player2Score" destination="VYU-dW-0Eq" id="n0u-m1-Bxq"/>
+                        <outlet property="player3Name" destination="Vr2-bd-SK8" id="c0A-pT-0zK"/>
+                        <outlet property="player3Score" destination="970-cF-3qc" id="4zy-hU-2Qb"/>
+                        <outlet property="player4Name" destination="5Ec-ja-3h7" id="XKo-fO-5qe"/>
+                        <outlet property="player4Score" destination="eQg-2V-hTH" id="QLk-fP-WUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BT9-Oi-osv" userLabel="First Responder" sceneMemberID="firstResponder"/>

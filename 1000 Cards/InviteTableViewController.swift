@@ -173,6 +173,7 @@ class InviteTableViewController: UITableViewController {
                     //create game was successful
                     let vc : GameContainerView = self.storyboard!.instantiateViewController(withIdentifier: "gameContainerView") as! GameContainerView
                     vc.game = newGame
+                    vc.newGame = true
                     self.navigationController?.pushViewController(vc as UIViewController, animated: true)
                 } else if let error = error {
                     //Error has occurred

@@ -11,6 +11,7 @@ import UIKit
 class GameContainerView: UIViewController {
     
     var game: PFObject!
+    var newGame = false
     
     @IBOutlet weak var containerViewGame: UIView!
     @IBOutlet weak var containerViewHand: UIView!
@@ -23,8 +24,11 @@ class GameContainerView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.viewControllers.remove(at: 1)
-        self.navigationController?.viewControllers.remove(at: 1)
+        if (newGame) {
+            //TODO needs to be tested
+            self.navigationController?.viewControllers.remove(at: 1)
+            self.navigationController?.viewControllers.remove(at: 1)
+        }
         self.title = game.value(forKey: "name") as! String?
     }
     
