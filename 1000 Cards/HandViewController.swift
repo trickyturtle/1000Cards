@@ -31,12 +31,18 @@ class HandViewController: GameCardCarouselView
         do {
             result = try query.findObjects()
             let numCards = result.count
-            let card = result[Int(arc4random_uniform(UInt32(numCards)))]
-            relation.remove(card)
-            relation = game.relation(forKey: deckTypeKey)
-            relation.add(card)
-            //TODO: this needs to happen more quickly, we need save() and error handling or an alert
-            game.saveEventually()
+            if numCards == 0{
+                let controller = UIAlertController(title: "Deck is empty!", message: "Create more cards!", preferredStyle: .alert)
+                controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
+                self.present(controller, animated: true, completion: nil)
+            }else{
+                let card = result[Int(arc4random_uniform(UInt32(numCards)))]
+                relation.remove(card)
+                relation = game.relation(forKey: deckTypeKey)
+                relation.add(card)
+                //TODO: this needs to happen more quickly, we need save() and error handling or an alert
+                    game.saveEventually()
+            }
 
             
         } catch {
