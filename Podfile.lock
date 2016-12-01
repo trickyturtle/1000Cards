@@ -3,22 +3,16 @@ PODS:
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
-  - PureLayout (3.0.2)
-  - SlackTextViewController (1.9.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - JSQMessagesViewController
-  - PureLayout
-  - SlackTextViewController
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
 
-PODFILE CHECKSUM: 4e868983c83dc0b0a8d0825a3045640a943c2e39
+PODFILE CHECKSUM: 8bf4599b755a62468a2d3203de1903df7d3e0cae
 
 COCOAPODS: 1.0.1

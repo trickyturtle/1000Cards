@@ -24,30 +24,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SlackTextViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1ED4DFAAD25E1999D0244868457A351E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>26C624CFEC537BD482EAC6A7B8A93A4C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>310D50A0D6C7CAB351BD8B35BC9FF008</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2EB3B8481F277C3CD8FEDBBCFFD4322</key>
+		<key>DE8845E387A312392E617FD17D23636D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
