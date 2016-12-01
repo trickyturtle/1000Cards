@@ -245,9 +245,23 @@ class InviteTableViewController: UITableViewController {
         self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
     
+    func addGameDeck(deckKey: String, game :PFObject){
+        //TODO: this is a race condition
+        let newDeck = PFObject(className: "Deck")
+        newDeck["name"] = deckKey
+        newDeck.saveInBackground()
+        let newGameDeckRelation = game.relation(forKey: deckKey)
+        newGameDeckRelation.add(newDeck)
+        game.saveInBackground()
+    }
+    
     func createNewGameObject(player2: PFUser!, player3: PFUser!, player4: PFUser!) -> PFObject {
         let newGame = PFObject(className: "Game")
         newGame["name"] = gameTitle
+        
+        addGameDeck(deckKey: "player1Hand", game: newGame)
+        addGameDeck(deckKey: "discard", game: newGame)
+        addGameDeck(deckKey: "inPlay", game: newGame)
         
         var description = ""
         let relationGamePlayers = newGame.relation(forKey: "players")
@@ -255,6 +269,7 @@ class InviteTableViewController: UITableViewController {
         description += (currentUser.username?.lowercased())!
         var uniqueRecentPlayers = [String]()
         if (player2 != nil) {
+            addGameDeck(deckKey: "player2Hand", game: newGame)
             relationGamePlayers.add(player2)
             description +=  ", " + player2.username!
             if !recentUsersArr.contains(player2.username!) {
@@ -262,6 +277,7 @@ class InviteTableViewController: UITableViewController {
             }
         }
         if (player3 != nil) {
+            addGameDeck(deckKey: "player3Hand", game: newGame)
             relationGamePlayers.add(player3)
             description += ", " + player3.username!
             if !recentUsersArr.contains(player3.username!) {
@@ -269,6 +285,7 @@ class InviteTableViewController: UITableViewController {
             }
         }
         if (player4 != nil) {
+            addGameDeck(deckKey: "player4Hand", game: newGame)
             relationGamePlayers.add(player4)
             description += ", " + player4.username!
             if !recentUsersArr.contains(player4.username!) {
