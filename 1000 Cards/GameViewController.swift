@@ -12,7 +12,7 @@ import UIKit
 class GameViewController: GameCardCarouselView
 {
     var playerArray:[PFUser] = []
-    var actionArray:[String] = []
+
     @IBOutlet weak var player1Name: UILabel!
     @IBOutlet weak var player2Name: UILabel!
     @IBOutlet weak var player3Name: UILabel!
@@ -60,7 +60,7 @@ class GameViewController: GameCardCarouselView
     }
     
     override func numberOfItems(in carousel: iCarousel) -> Int {
-        if (deckArray.count == 0) {
+        if (deckArray.count == 0 || actionArray.count == 0) {
             let temp = game[deckTypeKey]
             if (temp != nil) {
                 let relation = temp as! PFRelation
@@ -125,6 +125,11 @@ class GameViewController: GameCardCarouselView
             label.contentMode = .bottom
             uiView.addSubview(imageView)
             uiView.addSubview(label)
+            //TODO why does this break outside of the if statement?
+            if (index < actionArray.count){
+                label.text = actionArray[index]
+
+            }
             
         } else {
             //get a reference to the label in the recycled view
@@ -132,7 +137,7 @@ class GameViewController: GameCardCarouselView
             imageView = uiView.viewWithTag(0) as! UIImageView!
             label = uiView.viewWithTag(1) as! UILabel!
         }
-        label.text = actionArray[index]
+
         
         
         return uiView

@@ -18,6 +18,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     var handArray = [String]()
     var inPlayArray = [String]()
     var discardArray = [String]()
+    var actionArray:[String] = []
     var deckTypeKey = ""
     
     
@@ -167,7 +168,9 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     func playedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, PFObject>
         let gameAction = PFObject(className: "GameAction")
-        gameAction["message"] = GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["playedCard"])!.objectId!, dest: "inPlay")
+        //TODO this returns a gameAction id string
+        let messageID = (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["playedCard"])!.objectId!, dest: "inPlay"))
+        actionArray.append(messageID)
         gameAction.saveEventually()
         
         carousel.reloadData()

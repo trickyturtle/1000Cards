@@ -55,6 +55,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
                     print(error)
             }
             //TODO: error handle adding card to deck
+            print(newCard.description)
             CardReader.saveImageToDocumentDirectory(image: newCardImageView.image!, parseID: newCard.objectId!)
             if (deck.objectId == nil) { // we are creating card for game
                 let relation = game.relation(forKey: "cards")
