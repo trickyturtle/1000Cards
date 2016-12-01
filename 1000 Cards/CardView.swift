@@ -61,7 +61,7 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
             NotificationCenter.default.post(name: Notification.Name(rawValue: "removedCard"), object: nil, userInfo: ["index": currIndex])
         } else {
             let controller = UIAlertController(title: "Permanently Delete Card", message: "Are you sure? This will delete the card from any and all decks it is contained in. You cannot undo this action.", preferredStyle: .alert)
-            controller.addAction(UIAlertAction(title: "Yes",style: .cancel, handler: { action in
+            controller.addAction(UIAlertAction(title: "Yes",style: .default, handler: { action in
                 self.card.deleteEventually()
             }))
             controller.addAction(UIAlertAction(title: "No",style: .cancel, handler: nil))

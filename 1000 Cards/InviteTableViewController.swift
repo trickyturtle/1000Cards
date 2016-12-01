@@ -16,21 +16,26 @@ class InviteTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: Make recentUser relation
-        //recentUsersArr = currentUser.value(forKey: "recentPlayers") as! [PFUser]
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //First Call Super
         super.viewWillAppear(animated)
-        
-        //Register the Custom DataCell
         self.tableView.register(InviteTableCell.classForCoder(), forCellReuseIdentifier: "inviteCell")
         
-        if (currentUser.object(forKey: "recentPlayers") != nil) {
-            recentUsersArr = currentUser.object(forKey: "recentPlayers") as! [String]
+        let recentPlayers = currentUser["recentPlayers"]
+        if (recentPlayers != nil) {
+            let relation = recentPlayers as! PFRelation
+            let query = relation.query()
+            var result = [PFUser]()
+            do {
+                result = try query.findObjects() as! [PFUser]
+            } catch {
+                print(error)
+            }
+            for obj in result {
+                recentUsersArr.append(obj.username!)
+            }
         }
-        
     }
     
     // MARK: - Table view data source
@@ -129,8 +134,6 @@ class InviteTableViewController: UITableViewController {
         }
     }
     
-    
-    
     @IBAction func doneButton(_ sender: Any) {
         self.view.endEditing(true)
         let player2TF = self.tableView.viewWithTag(2) as! UITextField
@@ -138,32 +141,35 @@ class InviteTableViewController: UITableViewController {
         let player4TF = self.tableView.viewWithTag(4) as! UITextField
         
         if (player2TF.text! == "" && player3TF.text! == "" && player4TF.text! == "") {
-            // TODO: Alert to confirm no invites
-            let newGame = createNewGameObject(player2: nil, player3: nil, player4: nil)
-            let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            let blankDeckAction = UIAlertAction(title: "Start With Blank Deck", style: .default) {(action) in
-                self.saveGame(newGame: newGame)
-            }
-            let myLibraryAction = UIAlertAction(title: "Start With Deck From My Library", style: .default) { (action) in
-                self.myLibraryDeck(newGame: newGame)
-            }
-            let publicLibraryAction = UIAlertAction(title: "Start With Deck From My Library", style: .default) { (action) in
-                self.publicLibraryDeck(newGame: newGame)
-            }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            action.addAction(blankDeckAction)
-            action.addAction(myLibraryAction)
-            action.addAction(publicLibraryAction)
-            action.addAction(cancelAction)
-            
-            self.present(action, animated: true, completion: nil)
+            let controller = UIAlertController(title: "No Invites", message: "Are you sure you don't want to invite anybody?", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            controller.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in
+                let newGame = self.createNewGameObject(player2: nil, player3: nil, player4: nil)
+                let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                let blankDeckAction = UIAlertAction(title: "Start With Blank Deck", style: .default) {(action) in
+                    self.saveGame(newGame: newGame)
+                }
+                let myLibraryAction = UIAlertAction(title: "Start With Deck From My Library", style: .default) { (action) in
+                    self.myLibraryDeck(newGame: newGame)
+                }
+                let publicLibraryAction = UIAlertAction(title: "Start With Deck From My Library", style: .default) { (action) in
+                    self.publicLibraryDeck(newGame: newGame)
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                action.addAction(blankDeckAction)
+                action.addAction(myLibraryAction)
+                action.addAction(publicLibraryAction)
+                action.addAction(cancelAction)
+                
+                self.present(action, animated: true, completion: nil)
+            }))
+            self.present(controller, animated: true, completion: nil)
         } else {
             // Check valid username
             var query = PFUser.query()
             var player2: PFUser? = nil, player3: PFUser? = nil, player4: PFUser? = nil
             DispatchQueue.global().async {
-                // TODO: Don't do query if any player is you
                 do {
                     player2 = try query?.whereKey("username", equalTo: player2TF.text!.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)).getFirstObject() as? PFUser
                 } catch {
@@ -209,13 +215,14 @@ class InviteTableViewController: UITableViewController {
                     
                     self.present(action, animated: true, completion: nil)
                 } else {
-                    // TODO: Alert, invalid users
-                    print("invalid")
+                    let controller = UIAlertController(title: "Invalid Users", message: "You inputted invalid username(s)", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    print("invalid users")
                 }
             }
         }
     }
-
 
     func validUsers(player2: PFUser!, player3: PFUser!, player4: PFUser!) -> Bool {
         let p2NotNil = player2 != nil
@@ -245,59 +252,59 @@ class InviteTableViewController: UITableViewController {
         self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
     
-    func addGameDeck(deckKey: String, game :PFObject){
-        //TODO: this is a race condition
-        let newDeck = PFObject(className: "Deck")
-        newDeck["name"] = deckKey
-        newDeck.saveInBackground()
-        let newGameDeckRelation = game.relation(forKey: deckKey)
-        newGameDeckRelation.add(newDeck)
-        game.saveInBackground()
-    }
+//    func addGameDeck(deckKey: String, game :PFObject){
+//        let newDeck = PFObject(className: "Deck")
+//        newDeck["name"] = deckKey
+//        newDeck.saveInBackground(block: { succeed, error in
+//            if (succeed) {
+//                // Deck saved successfully
+//                let newGameDeckRelation = game.relation(forKey: deckKey)
+//                newGameDeckRelation.add(newDeck)
+//                game.saveInBackground()
+//            } else if let error = error {
+//                //Error has occurred
+//                print("\n***************ERROR***************")
+//                print(error)
+//                print("***************ERROR***************\n")
+//            }
+//        })
+//    }
     
     func createNewGameObject(player2: PFUser!, player3: PFUser!, player4: PFUser!) -> PFObject {
         let newGame = PFObject(className: "Game")
         newGame["name"] = gameTitle
         
-        addGameDeck(deckKey: "player1Hand", game: newGame)
-        addGameDeck(deckKey: "discard", game: newGame)
-        addGameDeck(deckKey: "inPlay", game: newGame)
+//        addGameDeck(deckKey: "player1Hand", game: newGame)
+//        addGameDeck(deckKey: "discard", game: newGame)
+//        addGameDeck(deckKey: "inPlay", game: newGame)
         newGame["player1"] = (currentUser.username)!
         
         var description = ""
         let relationGamePlayers = newGame.relation(forKey: "players")
+        let relationRecentPlayers = currentUser.relation(forKey: "recentPlayers")
         relationGamePlayers.add(currentUser)
         description += (currentUser.username?.lowercased())!
-        var uniqueRecentPlayers = [String]()
         if (player2 != nil) {
-            addGameDeck(deckKey: "player2Hand", game: newGame)
+//            addGameDeck(deckKey: "player2Hand", game: newGame)
             relationGamePlayers.add(player2)
             description +=  ", " + player2.username!
             newGame["player2"] = (player2.username)!
-            if !recentUsersArr.contains(player2.username!) {
-                uniqueRecentPlayers.append(player2.username!)
-            }
+            relationRecentPlayers.add(player2)
         }
         if (player3 != nil) {
-            addGameDeck(deckKey: "player3Hand", game: newGame)
+//            addGameDeck(deckKey: "player3Hand", game: newGame)
             relationGamePlayers.add(player3)
             description += ", " + player3.username!
             newGame["player3"] = (player3.username)!
-            if !recentUsersArr.contains(player3.username!) {
-                uniqueRecentPlayers.append(player3.username!)
-            }
+            relationRecentPlayers.add(player3)
         }
         if (player4 != nil) {
-            addGameDeck(deckKey: "player4Hand", game: newGame)
+//            addGameDeck(deckKey: "player4Hand", game: newGame)
             relationGamePlayers.add(player4)
             description += ", " + player4.username!
             newGame["player4"] = (player4.username)!
-            if !recentUsersArr.contains(player4.username!) {
-                uniqueRecentPlayers.append(player4.username!)
-            }
+            relationRecentPlayers.add(player4)
         }
-        
-        currentUser.addObjects(from: uniqueRecentPlayers, forKey: "recentPlayers")
         currentUser.saveInBackground()
         
         newGame["description"] = description
