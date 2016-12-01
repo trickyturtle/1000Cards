@@ -89,22 +89,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "1000 Cards/CreateCardView.swift"
-            timestampString = "501527308.463712"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "createCardButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "1000 Cards/CardCarouselView.swift"
             timestampString = "501499378.426927"
             startingColumnNumber = "9223372036854775807"
@@ -134,22 +118,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "1000 Cards/CardView.swift"
-            timestampString = "501532257.84286"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -169,8 +137,8 @@
                   symbolName = "_000_Cards.CardCarouselView.removedCard (Foundation.Notification) -&gt; ()"
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "502250925.521412"
+                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/1000Cards/1000%20Cards/CardCarouselView.swift"
+                  timestampString = "502254368.953436"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "161"
@@ -184,8 +152,8 @@
                   symbolName = "_000_Cards.CardCarouselView.removedCard (Foundation.Notification) -&gt; ()"
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "502250925.525184"
+                  urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/1000Cards/1000%20Cards/CardCarouselView.swift"
+                  timestampString = "502254368.956229"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "161"

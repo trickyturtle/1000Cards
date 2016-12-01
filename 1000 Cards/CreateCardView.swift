@@ -15,6 +15,8 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descriptionTF: UITextView!
     @IBOutlet weak var newCardImageView: UIImageView!
+    @IBOutlet weak var clickHereLabel: UILabel!
+    
     let imagePicker = UIImagePickerController()
     var deck = PFObject(className: "Deck")
     
@@ -31,13 +33,14 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         newCardImageView.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         newCardImageView.isUserInteractionEnabled = true
-        //newCardImageView.image = UIImage(named: "defaultImage.jpg") //TODO: replace with label
     }
 
     @IBAction func createCardButton(_ sender: AnyObject) {
         //handle empty input
         if((titleTF.text?.isEmpty)!){
-            //TODO: Add alert
+            let controller = UIAlertController(title: "Incomplete", message: "Please enter a title", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
+            self.present(controller, animated: true, completion: nil)
             print("no title for card")
         }
         else{
@@ -46,7 +49,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             newCard["description"] = descriptionTF.text
             newCard["image"] = CardReader.imageToParseFile(image: newCardImageView.image!, title: titleTF.text!)
             do {
-                //newCard["createdBy"] = PFUser.current()
+                newCard["createdBy"] = PFUser.current()
                 try newCard.save()
             } catch {
                     print(error)
@@ -96,17 +99,15 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         }
 
     }
-    
 
     func imageTapped() {
-
+        clickHereLabel.isHidden = true
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
@@ -123,20 +124,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
         // Dispose of any resources that can be recreated.
     }
     
-
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

@@ -49,7 +49,6 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     }
     
     func trashBtn() {
-        // TODO: Alert to confirm
         if (!calledByAllCards){
             let relation = currDeck.relation(forKey: "cards")
             relation.remove(card)
@@ -61,8 +60,12 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
             
             NotificationCenter.default.post(name: Notification.Name(rawValue: "removedCard"), object: nil, userInfo: ["index": currIndex])
         } else {
-            // TODO: Alert says warning action cannot be undone
-            card.deleteEventually()
+            let controller = UIAlertController(title: "Permanently Delete Card", message: "Are you sure? This will delete the card from any and all decks it is contained in. You cannot undo this action.", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Yes",style: .cancel, handler: { action in
+                self.card.deleteEventually()
+            }))
+            controller.addAction(UIAlertAction(title: "No",style: .cancel, handler: nil))
+            self.present(controller, animated: true, completion: nil)
         }
         _ = self.navigationController?.popViewController(animated: true)
 

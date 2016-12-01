@@ -46,7 +46,5 @@ class AllPrivateCardsView: CardCarouselView {
             }
             self.navigationController?.pushViewController(vc as UIViewController, animated: true)
         }
-        
     }
-    
 }

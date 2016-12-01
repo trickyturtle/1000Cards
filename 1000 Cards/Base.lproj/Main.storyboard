@@ -978,7 +978,7 @@ new email address</string>
                             <tableViewSection headerTitle="Account Settings" id="mtJ-kp-kAt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jMz-mw-6xm">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="201" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jMz-mw-6xm" id="QVR-y2-6Fs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1003,7 +1003,7 @@ new email address</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="N75-WS-SSG">
-                                        <rect key="frame" x="0.0" y="244" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="245" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N75-WS-SSG" id="g8w-K1-yp5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1028,7 +1028,7 @@ new email address</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kmp-yw-SF1">
-                                        <rect key="frame" x="0.0" y="288" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="289" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kmp-yw-SF1" id="PZW-kS-kd9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1050,7 +1050,7 @@ new email address</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0da-9s-cRW">
-                                        <rect key="frame" x="0.0" y="332" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="333" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0da-9s-cRW" id="rD9-cn-EO9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1212,7 +1212,6 @@ new email address</string>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-li-rfR">
                                 <rect key="frame" x="16" y="66" width="343" height="348"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="dnw-Ok-7ey" appends="YES" id="YCX-Ii-oR9"/>
@@ -1252,6 +1251,13 @@ new email address</string>
                                     <action selector="createCardButton:" destination="dWY-oW-g0V" eventType="touchUpInside" id="Y9U-Ia-4MG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click here to add image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfl-SF-ifO">
+                                <rect key="frame" x="97" y="230" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1275,6 +1281,7 @@ new email address</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clickHereLabel" destination="Bfl-SF-ifO" id="NU5-mv-C22"/>
                         <outlet property="descriptionTF" destination="C8f-Ow-nFW" id="9Y9-eV-B83"/>
                         <outlet property="newCardImageView" destination="NWo-li-rfR" id="Kpd-g2-onH"/>
                         <outlet property="titleTF" destination="Ymh-yb-piZ" id="kjf-8b-wCJ"/>
@@ -1708,13 +1715,13 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of Deck" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-iu-70T">
-                                <rect key="frame" x="78" y="72" width="281" height="30"/>
+                                <rect key="frame" x="78" y="28" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-AW-Abf">
-                                <rect key="frame" x="28" y="72" width="42" height="21"/>
+                                <rect key="frame" x="28" y="28" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="rcf-67-6xX"/>
                                 </constraints>
@@ -1723,13 +1730,13 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-Ac-sWe">
-                                <rect key="frame" x="16" y="139" width="343" height="430"/>
+                                <rect key="frame" x="16" y="95" width="343" height="523"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1E-kH-vrZ">
-                                <rect key="frame" x="16" y="110" width="105" height="21"/>
+                                <rect key="frame" x="16" y="66" width="105" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="D8i-wj-MZK"/>
                                 </constraints>
@@ -1738,7 +1745,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iJ-0G-NP1" userLabel="Button">
-                                <rect key="frame" x="75" y="577" width="225" height="33"/>
+                                <rect key="frame" x="75" y="626" width="225" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Save Info">
@@ -1975,7 +1982,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ej2-CZ-Tlz" id="9kh-ro-Nu7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1983,7 +1990,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abE-ri-MKV" id="G60-1y-J2v">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
