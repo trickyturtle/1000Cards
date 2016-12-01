@@ -33,6 +33,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     func numberOfItems(in carousel: iCarousel) -> Int {
         if (deckArray.count == 0) {
             let temp = game[deckTypeKey]
+            print(deckTypeKey)
             if (temp != nil) {
                 let relation = temp as! PFRelation
                 let query = relation.query()
@@ -153,7 +154,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     
     func addedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, String>
-        deckArray.append(userInfo!["newCard"]!)
+        //deckArray.append(userInfo!["newCard"]!)
         cardImages.append(CardReader.getImage(parseID: userInfo!["newCard"]! )!)
         carousel.reloadData()
     }
