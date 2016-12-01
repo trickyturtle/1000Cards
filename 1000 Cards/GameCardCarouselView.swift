@@ -156,6 +156,8 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         let userInfo = notification.userInfo as? Dictionary<String, String>
         //deckArray.append(userInfo!["newCard"]!)
         cardImages.append(CardReader.getImage(parseID: userInfo!["newCard"]! )!)
+        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "N/A", action: "N/A", dest: "deck"))
+        GameAction.saveActionToGame(game: game, gameAction: gameAction)
         carousel.reloadData()
     }
     
@@ -168,12 +170,16 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     
     func playedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, PFObject>
-        let gameAction = PFObject(className: "GameAction")
-        //TODO this returns a gameAction id string
-        let messageID = (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["playedCard"])!.objectId!, dest: "inPlay"))
-        actionArray.append(messageID)
-        gameAction.saveEventually()
+        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["playedCard"])!.objectId!, dest: "inPlay"))
+        GameAction.saveActionToGame(game: game, gameAction: gameAction)
         
+        var relation = game.relation(forKey: deckTypeKey)
+        relation.remove((userInfo?["playedCard"])!)
+        relation = game.relation(forKey: "inPlay")
+        relation.add((userInfo?["playedCard"])!)
+        //TODO: this needs to happen more quickly, we need save() and error handling or an alert
+        game.saveEventually()
+                
         carousel.reloadData()
     }
     

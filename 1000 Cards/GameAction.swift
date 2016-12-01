@@ -32,7 +32,7 @@ class GameAction{
         }
     }
     
-    static func createActionMessage(player: String, source: String, action: String, dest: String)->String{
+    static func createActionMessage(player: String, source: String, action: String, dest: String)->PFObject{
         let actionMessage = PFObject(className: "ActionMessage")
         
         //TODO refactor this
@@ -41,7 +41,14 @@ class GameAction{
         actionMessage["action"] = action
         actionMessage["destination"] = dest
         actionMessage.saveInBackground()
-        return actionMessage.objectId!
+        return actionMessage
+    }
+    
+    static func saveActionToGame(game: PFObject, gameAction: PFObject){
+        let relationActionMessages = game.relation(forKey: "recentlyPlayed")
+        relationActionMessages.add(gameAction)
+        gameAction.saveEventually()
+        game.saveEventually()
     }
     
     static func formatAMForPrint(actionMessage: PFObject)->String{
