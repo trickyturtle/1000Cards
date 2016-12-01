@@ -15,7 +15,6 @@ class GameTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var currentGamesTableView: UITableView!
     
     let cellIdentifier = "gameCell"
-    //let user = PFUser.current()
     var games = [PFObject]()
     var selectedGame: String?
     
@@ -68,7 +67,6 @@ class GameTableViewController: UIViewController, UITableViewDataSource, UITableV
         //text side of cell is game's name
         cell.textLabel?.text = rowGameName
         //detail side of cell is game's description
-        //cell.detailTextLabel?.font =
         cell.detailTextLabel?.text = rowGameDescription
         return cell
     }

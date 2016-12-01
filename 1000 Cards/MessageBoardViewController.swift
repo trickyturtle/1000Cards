@@ -194,20 +194,10 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
         self.view.endEditing(true)
         self.inputToolbar.contentView!.textView!.resignFirstResponder()
         
-        //        let action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
         let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let photoAction = UIAlertAction(title: "Take photo", style: .default) { (action) in
             Camera.startCamera(self, canEdit: true, frontFacing: false)
         }
-        
-        //        let locationAction = UIAlertAction(title: "Send location", style: .default) { (action) in
-        //            /**
-        //             *  Add fake location
-        //             */
-        //            let locationItem = self.buildLocationItem()
-        //
-        //            self.addMedia(locationItem)
-        //        }
         let photoLibraryAction = UIAlertAction(title: "Choose existing photo", style: .default) { (action) in
             Camera.startPhotoLibrary(self, canEdit: true)
         }
@@ -219,7 +209,6 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
         action.addAction(photoAction)
         action.addAction(photoLibraryAction)
         action.addAction(videoLibraryAction)
-        //        action.addAction(locationAction)
         action.addAction(cancelAction)
         
         self.present(action, animated: true, completion: nil)
@@ -340,14 +329,16 @@ class MessageBoardViewController: JSQMessagesViewController, UIActionSheetDelega
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapMessageBubbleAt indexPath: IndexPath!) {
-        //        let message = self.messages[indexPath.item]
-        //        if message.isMediaMessage {
-        //            if let mediaItem = message.media as? JSQVideoMediaItem {
-        //                let moviePlayer = AVPlayerViewController(coder: mediaItem.fileURL)
-        //                self.presentMoviePlayerViewControllerAnimated(moviePlayer)
-        //                moviePlayer?.moviePlayer.play()
-        //            }
-        //        }
+        let message = self.messages[indexPath.item]
+        if message.isMediaMessage {
+            if let mediaItem = message.media as? JSQVideoMediaItem {
+                let moviePlayer = AVPlayer(url: mediaItem.fileURL)
+                let playerViewController = AVPlayerViewController()
+                playerViewController.player = moviePlayer
+                self.present(playerViewController, animated: true, completion: nil)
+                //moviePlayer?.moviePlayer.play()
+            }
+        }
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapCellAt indexPath: IndexPath!, touchLocation: CGPoint) {

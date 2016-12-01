@@ -252,31 +252,10 @@ class InviteTableViewController: UITableViewController {
         self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
     
-//    func addGameDeck(deckKey: String, game :PFObject){
-//        let newDeck = PFObject(className: "Deck")
-//        newDeck["name"] = deckKey
-//        newDeck.saveInBackground(block: { succeed, error in
-//            if (succeed) {
-//                // Deck saved successfully
-//                let newGameDeckRelation = game.relation(forKey: deckKey)
-//                newGameDeckRelation.add(newDeck)
-//                game.saveInBackground()
-//            } else if let error = error {
-//                //Error has occurred
-//                print("\n***************ERROR***************")
-//                print(error)
-//                print("***************ERROR***************\n")
-//            }
-//        })
-//    }
-    
     func createNewGameObject(player2: PFUser!, player3: PFUser!, player4: PFUser!) -> PFObject {
         let newGame = PFObject(className: "Game")
         newGame["name"] = gameTitle
         
-//        addGameDeck(deckKey: "player1Hand", game: newGame)
-//        addGameDeck(deckKey: "discard", game: newGame)
-//        addGameDeck(deckKey: "inPlay", game: newGame)
         newGame["player1"] = (currentUser.username)!
         
         var description = ""
@@ -285,21 +264,18 @@ class InviteTableViewController: UITableViewController {
         relationGamePlayers.add(currentUser)
         description += (currentUser.username?.lowercased())!
         if (player2 != nil) {
-//            addGameDeck(deckKey: "player2Hand", game: newGame)
             relationGamePlayers.add(player2)
             description +=  ", " + player2.username!
             newGame["player2"] = (player2.username)!
             relationRecentPlayers.add(player2)
         }
         if (player3 != nil) {
-//            addGameDeck(deckKey: "player3Hand", game: newGame)
             relationGamePlayers.add(player3)
             description += ", " + player3.username!
             newGame["player3"] = (player3.username)!
             relationRecentPlayers.add(player3)
         }
         if (player4 != nil) {
-//            addGameDeck(deckKey: "player4Hand", game: newGame)
             relationGamePlayers.add(player4)
             description += ", " + player4.username!
             newGame["player4"] = (player4.username)!
@@ -312,34 +288,6 @@ class InviteTableViewController: UITableViewController {
         newGame["player2Score"] = 0
         newGame["player3Score"] = 0
         newGame["player4Score"] = 0
-//        let player1Hand = PFObject(className: "Deck")
-//        player1Hand["title"] = "Player 1 Hand"
-//        newGame["player1Hand"] = player1Hand
-//        
-//        let player2Hand = PFObject(className: "Deck")
-//        player2Hand["title"] = "Player 2 Hand"
-//        newGame["player2Hand"] = player2Hand
-//        
-//        let player3Hand = PFObject(className: "Deck")
-//        player3Hand["title"] = "Player 3 Hand"
-//        newGame["player3Hand"] = player3Hand
-//        
-//        let player4Hand = PFObject(className: "Deck")
-//        player4Hand["title"] = "Player 4 Hand"
-//        newGame["player4Hand"] = player4Hand
-//        
-//        let discard = PFObject(className: "Deck")
-//        discard["title"] = "Discard"
-//        newGame["discard"] = discard
-//        
-//        let gameDeck = PFObject(className: "Deck")
-//        gameDeck["title"] = "Main Deck"
-//        newGame["gameDeck"] = gameDeck
-//        
-//        let inPlay = PFObject(className: "Deck")
-//        inPlay["title"] = "In Play"
-//        newGame["inPlay"] = inPlay
-
         
         return newGame
     }

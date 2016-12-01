@@ -21,6 +21,7 @@ class HandViewController: GameCardCarouselView
         vc.game = game
         self.navigationController?.pushViewController(vc as UIViewController, animated: true)
     }
+    
     @IBAction func drawCard(_ sender: Any) {
         //add card to current players hand
         
