@@ -19,6 +19,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     var handArray = [String]()
     var inPlayArray = [String]()
     var discardArray = [String]()
+    var deckTypeKey = ""
     
     
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     
     func numberOfItems(in carousel: iCarousel) -> Int {
         if (deckArray.count == 0) {
-            let temp = game["gameDeck"]
+            let temp = game[deckTypeKey]
             if (temp != nil) {
                 let relation = temp as! PFRelation
                 let query = relation.query()

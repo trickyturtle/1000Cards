@@ -14,7 +14,7 @@ import UIKit
 
 class HandViewController: GameCardCarouselView
 {
-    var deckTypeKey:String = ""
+
     //TODO: add IBOutlet carousel    
     @IBAction func createNewCard(_ sender: Any) {
     }
@@ -23,6 +23,6 @@ class HandViewController: GameCardCarouselView
         
         
     }
-
+    
     
 }

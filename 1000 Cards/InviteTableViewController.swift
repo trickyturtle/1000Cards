@@ -262,6 +262,7 @@ class InviteTableViewController: UITableViewController {
         addGameDeck(deckKey: "player1Hand", game: newGame)
         addGameDeck(deckKey: "discard", game: newGame)
         addGameDeck(deckKey: "inPlay", game: newGame)
+        newGame["player1"] = (currentUser.username)!
         
         var description = ""
         let relationGamePlayers = newGame.relation(forKey: "players")
@@ -272,6 +273,7 @@ class InviteTableViewController: UITableViewController {
             addGameDeck(deckKey: "player2Hand", game: newGame)
             relationGamePlayers.add(player2)
             description +=  ", " + player2.username!
+            newGame["player2"] = (player2.username)!
             if !recentUsersArr.contains(player2.username!) {
                 uniqueRecentPlayers.append(player2.username!)
             }
@@ -280,6 +282,7 @@ class InviteTableViewController: UITableViewController {
             addGameDeck(deckKey: "player3Hand", game: newGame)
             relationGamePlayers.add(player3)
             description += ", " + player3.username!
+            newGame["player3"] = (player3.username)!
             if !recentUsersArr.contains(player3.username!) {
                 uniqueRecentPlayers.append(player3.username!)
             }
@@ -288,6 +291,7 @@ class InviteTableViewController: UITableViewController {
             addGameDeck(deckKey: "player4Hand", game: newGame)
             relationGamePlayers.add(player4)
             description += ", " + player4.username!
+            newGame["player4"] = (player4.username)!
             if !recentUsersArr.contains(player4.username!) {
                 uniqueRecentPlayers.append(player4.username!)
             }

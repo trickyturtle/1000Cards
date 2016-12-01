@@ -11,6 +11,7 @@ import UIKit
 
 class InPlayViewController: GameCardCarouselView
 {
+
     //TODO add carousel IBOutlet
 }
 

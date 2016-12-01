@@ -89,6 +89,7 @@ class GameContainerView: UIViewController {
         } else if (segue.identifier == "gameViewSegue") {
             let vc = segue.destination as! GameViewController;
             vc.game = game
+            vc.deckTypeKey = "lastPlayed"
         } else if (segue.identifier == "handViewSegue") {
             let vc = segue.destination as! HandViewController;
             var playerNum = 0
@@ -105,10 +106,12 @@ class GameContainerView: UIViewController {
         } else if (segue.identifier == "discardViewSegue") {
             let vc = segue.destination as! DiscardViewController;
             vc.game = game
+            vc.deckTypeKey = "discard"
             //vc.deck = game["discard"] as! PFObject
         } else if (segue.identifier == "inPlayViewSegue") {
             let vc = segue.destination as! InPlayViewController;
             vc.game = game
+            vc.deckTypeKey = "inPlay"
             //vc.deck = game["inPlay"] as! PFObject
         }
     }
