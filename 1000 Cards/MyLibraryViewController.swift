@@ -22,6 +22,7 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         let newDeck = PFObject(className: "Deck")
         do {
             newDeck["createdBy"] = PFUser.current()
+            newDeck["public"] = false
             try newDeck.save()
         } catch{
             print("ERROR SAVING DECK")

@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "1000 Cards/MyLibraryViewController.swift"
-            timestampString = "501533448.224992"
+            timestampString = "502247521.721272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "createNewDeck(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,7 +170,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501533500.602378"
+                  timestampString = "502250925.521412"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "161"
@@ -185,7 +185,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/merge/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "501533500.605077"
+                  timestampString = "502250925.525184"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "161"
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "1000 Cards/MyLibraryViewController.swift"
-            timestampString = "501533448.224992"
+            timestampString = "502247521.721272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "createNewDeck(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -304,38 +304,6 @@
             startingLineNumber = "310"
             endingLineNumber = "310"
             landmarkName = "createNewGameObject(player2:player3:player4:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "1000 Cards/DeckInfoView.swift"
-            timestampString = "501532986.676783"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "1000 Cards/MyLibraryViewController.swift"
-            timestampString = "501533490.612387"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
