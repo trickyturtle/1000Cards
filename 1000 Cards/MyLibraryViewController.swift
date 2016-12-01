@@ -35,11 +35,6 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         vc.deck = newDeck
         vc.deckID = newDeck.objectId! as String!
         self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
-
-        //Save deck parse ID locally
-
-//        saveDeckLocally(parseID: newDeck.objectId!)
-        //segue to deckinfoView
     }
     
     override func viewDidLoad() {
@@ -151,27 +146,4 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
             destination.deck = deckForInfo
         }
     }
-//    func saveDeckLocally(parseID: String) {
-//        print("parseID = \(parseID)")
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let managedContext = appDelegate.managedObjectContext
-//        
-//        let entity =  NSEntityDescription.entity(forEntityName: "Deck",
-//                                                 in:managedContext)
-//        
-//        let deck = NSManagedObject(entity: entity!,
-//                                   insertInto: managedContext)
-//        
-//        deck.setValue(parseID, forKey: "parseID")
-//        
-//        
-//        do {
-//            try managedContext.save()
-//            
-//            //decks.append(deck)
-//        } catch let error as NSError  {
-//            print("Could not save \(error), \(error.userInfo)")
-//        }
-//    }
-
 }

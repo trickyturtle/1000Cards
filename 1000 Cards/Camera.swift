@@ -50,9 +50,6 @@ class Camera {
         if target is MessageBoardViewController {
             cameraUI.delegate = target as! MessageBoardViewController
         }
-//        else if target is ProfileViewController {
-//            cameraUI.delegate = target as! ProfileViewController
-//        }
         target.present(cameraUI, animated: true, completion: nil)
         
         return
@@ -84,9 +81,6 @@ class Camera {
         if target is MessageBoardViewController {
             imagePicker.delegate = target as! MessageBoardViewController
         }
-//        else if target is ProfileViewController {
-//            imagePicker.delegate = target as! ProfileViewController
-//        }
         target.present(imagePicker, animated: true, completion: nil)
         
         return

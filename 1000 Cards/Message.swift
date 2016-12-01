@@ -33,10 +33,4 @@ class Message: NSObject {
         self.text = text
         self.date = date
     }
-    
-//    convenience init(senderId: String, displayName: String, media: JSQMessageMediaData) {
-//    }
-//    
-//    init(senderId: String, senderDisplayName: String, date: Date, media: JSQMessageMediaData) {
-//    }
 }

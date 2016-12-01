@@ -31,16 +31,6 @@ class CreateAccountViewController: UIViewController {
     
     
     @IBAction func createAccountButton(_ sender: AnyObject) {
-        
-        /********************** UNCOMMENT TO DISABLE CREATE ACCOUNT ***********************
-        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
-        var vcArray = self.navigationController?.viewControllers
-        vcArray?.removeAll()
-        vcArray?.append(vc as! UIViewController)
-        self.navigationController?.viewControllers = vcArray!
-        ********************************************************************/
-
-        
         let email = emailTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let username = usernameTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         
@@ -133,15 +123,4 @@ class CreateAccountViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -41,7 +41,6 @@ class PublicLibraryViewController: UIViewController, UITableViewDataSource, UITa
                 print("***************ERROR***************\n")
             }
         }
-        //setTabBarVisible(visible: true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,6 +95,4 @@ class PublicLibraryViewController: UIViewController, UITableViewDataSource, UITa
             self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
         }
     }
-
-
 }

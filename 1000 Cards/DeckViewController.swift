@@ -28,8 +28,4 @@ class DeckViewController: CardCarouselView
         self.navigationController?.pushViewController(vc as UIViewController, animated: true)
 
     }
-    
-//    @IBAction func removeFromDeck(_ sender: Any) {
-//        
-//    }
 }
