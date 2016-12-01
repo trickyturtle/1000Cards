@@ -17,6 +17,7 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     var cardImage: UIImage? = nil
     var calledByAllCards = false
     var isHand = false
+    var isInPlay = false
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cardDescription: UITextView!
@@ -59,8 +60,11 @@ class CardView: UIViewController, UINavigationControllerDelegate, UIImagePickerC
             }
             
             NotificationCenter.default.post(name: Notification.Name(rawValue: "removedCard"), object: nil, userInfo: ["index": currIndex])
-        } else {
-            let controller = UIAlertController(title: "Permanently Delete Card", message: "Are you sure? This will delete the card from any and all decks it is contained in. You cannot undo this action.", preferredStyle: .alert)
+        } else if (isInPlay){
+            
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "discardedCard"), object: nil, userInfo: ["cardRemoved": card])
+            
+        } else {let controller = UIAlertController(title: "Permanently Delete Card", message: "Are you sure? This will delete the card from any and all decks it is contained in. You cannot undo this action.", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "Yes",style: .default, handler: { action in
                 self.card.deleteEventually()
             }))

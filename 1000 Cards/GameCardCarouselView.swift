@@ -161,6 +161,14 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         carousel.reloadData()
     }
     
+    func discardedCard(_ notification: Notification) {
+        let userInfo = notification.userInfo as? Dictionary<String, String>
+
+        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "inPlay", action: (userInfo?["removedCard"])!.objectId!, dest: "discard"))
+        GameAction.saveActionToGame(game: game, gameAction: gameAction)
+        carousel.reloadData()
+    }
+    
     func removedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, Int>
         deckArray.remove(at: (userInfo?["index"])!)
