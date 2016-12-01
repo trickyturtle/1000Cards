@@ -24,8 +24,8 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 2 {
             let controller = UIAlertController(title: "Logout", message: "Are you sure?", preferredStyle: .alert)
-            controller.addAction(UIAlertAction(title: "Yes",style: .default, handler: logout))
             controller.addAction(UIAlertAction(title: "No",style: .cancel, handler: nil))
+            controller.addAction(UIAlertAction(title: "Yes",style: .default, handler: logout))
             self.present(controller, animated: true, completion: nil)
         }
     }
@@ -38,8 +38,8 @@ class SettingsTableViewController: UITableViewController {
 
     @IBAction func deleteAccount(_ sender: Any) {
         let controller = UIAlertController(title: "Delete Account", message: "Are you sure? You cannot undo this action.", preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: "Yes",style: .default, handler: deleteAccount))
         controller.addAction(UIAlertAction(title: "No",style: .cancel, handler: nil))
+        controller.addAction(UIAlertAction(title: "Yes",style: .default, handler: deleteAccount))
         self.present(controller, animated: true, completion: nil)
     }
     

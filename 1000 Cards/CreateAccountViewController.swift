@@ -11,6 +11,7 @@ import UIKit
 class CreateAccountViewController: UIViewController {
 
     let homePageSegue = "CreateAccountSuccess"
+    let validUsername = true
     
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
@@ -40,6 +41,8 @@ class CreateAccountViewController: UIViewController {
         ********************************************************************/
 
         
+        let email = emailTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let username = usernameTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         
         // Check that the passwords matched
         if (passwordTF.text != retypePassword.text) {
@@ -47,46 +50,83 @@ class CreateAccountViewController: UIViewController {
             controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
             self.present(controller, animated: true, completion: nil)
 
+        } else if (!isValidEmail(email: email!)) {
+            let controller = UIAlertController(title: "Invalid email", message: "Please enter a valid email address.", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Okay",style: .default, handler: nil))
+            self.present(controller, animated: true, completion: nil)
         } else {
-            let user = PFUser()
-            user.username = usernameTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            user.password = passwordTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            user.email = emailTF.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            user.signUpInBackground { succeeded, error in
-                if (succeeded) {
-                    //The registration was successful
-                    
-                    //create all cards deck
-                    let allCardsDeck = PFObject(className: "Deck")
-                    do {
-                        allCardsDeck["createdBy"] = user
-                        allCardsDeck["title"] = "All Cards"
-                        try allCardsDeck.save()
-                    } catch{
-                        print("ERROR SAVING DECK")
-                        // If an error occurs
-                        let nserror = error as NSError
-                        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                        abort()
+            let query = PFUser.query()
+            query?.whereKey("username", equalTo: username!)
+            query?.findObjectsInBackground {
+                (objects: [PFObject]?, error: Error?) in
+                if error == nil {
+                    if (objects!.count > 0){
+                        let controller = UIAlertController(title: "Username Taken", message: "Please enter a valid username.", preferredStyle: .alert)
+                        controller.addAction(UIAlertAction(title: "Okay",style: .default, handler: nil))
+                        self.present(controller, animated: true, completion: nil)
+                        print("username is taken")
+                    } else {
+                        // valid username, create account
+                        self.createUser(email: email!, username: username!)
                     }
-                    user["allCardsDeckId"] = allCardsDeck.objectId!
-                    user.saveInBackground()
-                    
-                    let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
-                    var vcArray = self.navigationController?.viewControllers
-                    vcArray?.removeAll()
-                    vcArray?.append(vc as! UIViewController)
-                    self.navigationController?.viewControllers = vcArray!
-                } else if let error = error {
-                    //Something bad has occurred
-                    print("\n***************ERROR***************")
-                    print(error)
-                    print("***************ERROR***************\n")
+                } else {
+                    let controller = UIAlertController(title: "Error", message: "Please check your internet connection.", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "Okay",style: .default, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    print("error")
                 }
             }
         }
     }
     
+    func isValidEmail(email: String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: email)
+    }
+    
+    func createUser(email: String, username: String) {
+        let user = PFUser()
+        user.username = username
+        user.password = passwordTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        user.email = email
+        user.signUpInBackground { succeeded, error in
+            if (succeeded) {
+                //The registration was successful
+                
+                //create all cards deck
+                let allCardsDeck = PFObject(className: "Deck")
+                do {
+                    allCardsDeck["createdBy"] = user
+                    allCardsDeck["title"] = "All Cards"
+                    try allCardsDeck.save()
+                } catch{
+                    print("ERROR SAVING DECK")
+                    // If an error occurs
+                    let nserror = error as NSError
+                    NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                    abort()
+                }
+                user["allCardsDeckId"] = allCardsDeck.objectId!
+                user.saveInBackground()
+                
+                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "instructionsDescriptions")
+                var vcArray = self.navigationController?.viewControllers
+                vcArray?.removeAll()
+                vcArray?.append(vc as! UIViewController)
+                self.navigationController?.viewControllers = vcArray!
+            } else if let error = error {
+                let controller = UIAlertController(title: "Error", message: "Please check your internet connection.", preferredStyle: .alert)
+                controller.addAction(UIAlertAction(title: "Okay",style: .default, handler: nil))
+                self.present(controller, animated: true, completion: nil)
+                print("\n***************ERROR***************")
+                print(error)
+                print("***************ERROR***************\n")
+            }
+        }
+    }
     
     @IBAction func instructDescriptButton(_ sender: AnyObject) {
         let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")

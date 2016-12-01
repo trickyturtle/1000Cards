@@ -138,7 +138,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "502259062.735287"
+                  timestampString = "502261651.805997"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "161"
@@ -153,7 +153,7 @@
                   moduleName = "1000 Cards"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/isaacgarza/Dropbox/Current%20Classes/CS%20378%20-%20IOS%20Mobile%20Computing/app/1000Cards/1000%20Cards/CardCarouselView.swift"
-                  timestampString = "502259062.738015"
+                  timestampString = "502261651.808329"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "161"
@@ -256,6 +256,22 @@
             startingLineNumber = "317"
             endingLineNumber = "317"
             landmarkName = "createNewGameObject(player2:player3:player4:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1000 Cards/CreateAccountViewController.swift"
+            timestampString = "502261515.266558"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "createAccountButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
