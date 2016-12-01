@@ -12,6 +12,7 @@ import UIKit
 class GameViewController: GameCardCarouselView
 {
     var playerArray:[PFUser] = []
+    var actionArray:[String] = []
     @IBOutlet weak var player1Name: UILabel!
     @IBOutlet weak var player2Name: UILabel!
     @IBOutlet weak var player3Name: UILabel!
@@ -58,6 +59,46 @@ class GameViewController: GameCardCarouselView
         }
     }
     
+    override func numberOfItems(in carousel: iCarousel) -> Int {
+        if (deckArray.count == 0) {
+            let temp = game[deckTypeKey]
+            if (temp != nil) {
+                let relation = temp as! PFRelation
+                let query = relation.query()
+                var result = [PFObject]()
+                do {
+                    result = try query.findObjects()
+                    
+                } catch {
+                    print(error)
+                }
+                for obj in result {
+                    let actionMessageCard = obj["card"]
+                    if (actionMessageCard != nil) {
+                        let relation2 = actionMessageCard as! PFRelation
+                        let query2 = relation2.query()
+                        var result2 = [PFObject]()
+                        do {
+                            result2 = try query2.findObjects()
+                            
+                        } catch {
+                            print(error)
+                        }
+                    
+                        deckArray.append(result2[0].objectId!)
+                        actionArray.append(GameAction.formatAMForPrint(actionMessage: obj))
+                    }
+                    
+                }
+                for cardKey in deckArray {
+                    //TODO: this should probably be a view object rather than an image...if possible
+                    cardImages.append(CardReader.getImage(parseID: cardKey )!)
+                }
+            }
+        }
+        return deckArray.count
+    }
+    
     override func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         var uiView: UIView
         var label: UILabel
@@ -91,20 +132,8 @@ class GameViewController: GameCardCarouselView
             imageView = uiView.viewWithTag(0) as! UIImageView!
             label = uiView.viewWithTag(1) as! UILabel!
         }
+        label.text = actionArray[index]
         
-        //set item label
-        //remember to always set any properties of your carousel item
-        //views outside of the `if (view == nil) {...}` check otherwise
-        //you'll get weird issues with carousel item content appearing
-        //in the wrong place in the carousel
-        do{
-            try label.text = PFQuery.getObjectOfClass("Card", objectId: deckArray[index] ).object(forKey: "title") as! String?
-        } catch {
-            // If an error occurs
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
         
         return uiView
     }

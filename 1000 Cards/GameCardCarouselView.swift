@@ -15,7 +15,6 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     var cardImages = [UIImage]()
     var cardData = PFObject(className: "Card")
     var carousel: iCarousel!
-    var actionArray = [String]()
     var handArray = [String]()
     var inPlayArray = [String]()
     var discardArray = [String]()

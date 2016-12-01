@@ -34,6 +34,8 @@ class GameAction{
     
     static func createActionMessage(player: String, source: String, action: String, dest: String)->String{
         let actionMessage = PFObject(className: "ActionMessage")
+        
+        //TODO refactor this
         actionMessage["source"] = source
         actionMessage["player"] = player
         actionMessage["action"] = action
@@ -42,16 +44,16 @@ class GameAction{
         return actionMessage.objectId!
     }
     
-    static func formatAMForPrint(messageID: String)->String{
-        var actionMessage: PFObject
-        do {actionMessage = try PFQuery.getObjectOfClass("ActionMessage", objectId: messageID)
-        }catch {
-            // If an error occurs
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            NSLog("while getting ActionMessage object")
-            abort()
-        }
+    static func formatAMForPrint(actionMessage: PFObject)->String{
+//        var actionMessage: PFObject
+//        do {actionMessage = try PFQuery.getObjectOfClass("ActionMessage", objectId: messageID)
+//        }catch {
+//            // If an error occurs
+//            let nserror = error as NSError
+//            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+//            NSLog("while getting ActionMessage object")
+//            abort()
+//        }
         
         //TODO: we probably expect a player ID and convert it into a username
         let name:String = actionMessage["player"] as! String
