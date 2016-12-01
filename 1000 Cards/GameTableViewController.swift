@@ -10,13 +10,12 @@ import UIKit
 
 class GameTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var sampleGame = ["Sample Game"]
-    
     @IBOutlet weak var currentGamesTableView: UITableView!
     
     let cellIdentifier = "gameCell"
     var games = [PFObject]()
     var selectedGame: String?
+    var removeGameIndexPath: IndexPath? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,13 +62,94 @@ class GameTableViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath)
         let row = indexPath.row
         let rowGameName = games[row].object(forKey: "name") as! String
-        let rowGameDescription = games[row].object(forKey: "description") as! String
+        let playerRelation = games[row].relation(forKey: "players")
+        let relationQuery = playerRelation.query()
+        var description: String = ""
+        do {
+            let players = try relationQuery.findObjects() as! [PFUser]
+            for player in players {
+                description += "\(player.username!), "
+            }
+        } catch {
+            print(error)
+        }
+        let index = description.index(description.endIndex, offsetBy: -2)
+        let rowGameDescription = description.substring(to: index)
         //text side of cell is game's name
         cell.textLabel?.text = rowGameName
         //detail side of cell is game's description
         cell.detailTextLabel?.text = rowGameDescription
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            removeGameIndexPath = indexPath
+            let gameToRemove = games[indexPath.row]
+            confirmRemoveGame(game: gameToRemove)
+        }
+    }
+    
+    func confirmRemoveGame(game: PFObject) {
+        let alert = UIAlertController(title: "Remove Game", message: "Are you sure you want to permanently delete \(game["name"] as! String)?", preferredStyle: .actionSheet)
+        
+        let removeAction = UIAlertAction(title: "Remove Game", style: .destructive, handler: handleRemoveGame)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in self.removeGameIndexPath = nil})
+        
+        alert.addAction(removeAction)
+        alert.addAction(cancelAction)
+        
+        // Support display in iPad
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func handleRemoveGame(alertAction: UIAlertAction!) -> Void {
+        if let indexPath = removeGameIndexPath {
+            currentGamesTableView.beginUpdates()
+            let gameToUpdate = games[indexPath.row]
+            let playerRelation = gameToUpdate.relation(forKey: "players")
+            let relationQuery = playerRelation.query()
+            relationQuery.findObjectsInBackground(block: { (objects: [PFObject]?, error: Error?) -> Void in
+                if ((objects?.count)! > 1) {
+                    for user in objects as! [PFUser] {
+                        if user.objectId == PFUser.current()?.objectId {
+                            playerRelation.remove(PFUser.current()!)
+                        }
+                    }
+                } else {
+                    gameToUpdate.deleteInBackground()
+                }
+            })
+            findPlayerToRemove(game: gameToUpdate, username: (PFUser.current()?.username)!)
+            gameToUpdate.saveInBackground()
+            
+            games.remove(at: indexPath.row)
+            // Note that indexPath is wrapped in an array:  [indexPath]
+            currentGamesTableView.deleteRows(at: [indexPath], with: .automatic)
+            removeGameIndexPath = nil
+            currentGamesTableView.endUpdates()
+        }
+    }
+    
+    func cancelRemoveGame(alertAction: UIAlertAction!) {
+        removeGameIndexPath = nil
+    }
+    
+    func findPlayerToRemove(game: PFObject, username: String) {
+        if(game["player1"] as! String == username) {
+            game["player1"] = ""
+        } else if(game["player2"] as! String == username) {
+            game["player2"] = ""
+        } else if(game["player3"] as! String == username) {
+            game["player3"] = ""
+        } else {
+            game["player4"] = ""
+        }
+    }
+
     
     // MARK: - Navigation
     

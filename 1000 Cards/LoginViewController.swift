@@ -19,10 +19,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Check if user exists and logged in
-        if PFUser.current() != nil {
-            let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
-            self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
+        let currentUser = PFUser.current()
+        if currentUser != nil {
+            if currentUser!["emailVerified"] as! Bool == true {
+                let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
+            } else {
+                let controller = UIAlertController(title: "Email not verified", message: "Please ensure that you have verified your email. The email containing the verification link should be in your inbox.", preferredStyle: .alert)
+                controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
+                self.present(controller, animated: true, completion: nil)
+            }
         }
     }
 
@@ -40,7 +47,7 @@ class LoginViewController: UIViewController {
                 self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)
             } else if (error != nil) {
                 //failure
-                let controller = UIAlertController(title: "Login error occured", message: "Please ensure username and password entered correctly.", preferredStyle: .alert)
+                let controller = UIAlertController(title: "Login error occured", message: "Please ensure that your username and password were entered correctly.", preferredStyle: .alert)
                 controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
                 self.present(controller, animated: true, completion: nil)
             }

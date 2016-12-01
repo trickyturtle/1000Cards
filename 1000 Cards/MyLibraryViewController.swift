@@ -15,26 +15,20 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
     var choosingDeckForGame = false
     var myDecks = [PFObject(className: "Deck")]
     var deckForInfo = PFObject(className: "Deck")
+    var deleteDeckIndexPath: IndexPath? = nil
+
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func createNewDeck(_ sender: AnyObject) {
         //Save deck in Parse
         let newDeck = PFObject(className: "Deck")
-        do {
-            newDeck["createdBy"] = PFUser.current()
-            newDeck["public"] = false
-            try newDeck.save()
-        } catch{
-            print("ERROR SAVING DECK")
-            // If an error occurs
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
-        let vc : DeckViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeckView") as! DeckViewController
-        vc.deck = newDeck
-        vc.deckID = newDeck.objectId! as String!
-        self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
+        newDeck["createdBy"] = PFUser.current()
+        newDeck["public"] = false
+        newDeck["title"] = ""
+        newDeck["description"] = ""
+        let deckInfoView : DeckInfoView = self.storyboard!.instantiateViewController(withIdentifier: "deckInfo") as! DeckInfoView
+        deckInfoView.deck = newDeck
+        self.navigationController?.pushViewController(deckInfoView as UIViewController, animated: true)
     }
     
     override func viewDidLoad() {
@@ -89,6 +83,52 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        if !choosingDeckForGame && indexPath.row != 0 {
+            return .delete
+        }
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteDeckIndexPath = indexPath
+            let deckToDelete = myDecks[indexPath.row]
+            confirmDeleteDeck(deck: deckToDelete)
+        }
+    }
+    
+    func confirmDeleteDeck(deck: PFObject) {
+        let alert = UIAlertController(title: "Delete Deck", message: "Are you sure you want to permanently delete \(deck["title"] as! String)? This will not remove the cards from your \"All Cards\" deck.", preferredStyle: .actionSheet)
+        
+        let removeAction = UIAlertAction(title: "Delete Deck", style: .destructive, handler: handleDeleteDeck)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in self.deleteDeckIndexPath = nil})
+        
+        alert.addAction(removeAction)
+        alert.addAction(cancelAction)
+        
+        // Support display in iPad
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func handleDeleteDeck(alertAction: UIAlertAction!) -> Void {
+        if let indexPath = deleteDeckIndexPath {
+            tableView.beginUpdates()
+            DispatchQueue.global().async {
+                self.myDecks[indexPath.row].deleteInBackground()
+            }
+            
+            myDecks.remove(at: indexPath.row)
+            // Note that indexPath is wrapped in an array:  [indexPath]
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            deleteDeckIndexPath = nil
+            tableView.endUpdates()
+        }
+    }
+    
     // MARK: - Navigation
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -101,13 +141,15 @@ class MyLibraryViewController: UIViewController, UITableViewDataSource, UITableV
             let deckRelation = deck.relation(forKey: "cards")
             let relationQuery = deckRelation.query()
             var result = [PFObject]()
-            do {
-                result = try relationQuery.findObjects()
-            } catch {
-                print(error)
-            }
-            for obj in result {
-                gameRelation.add(obj)
+            DispatchQueue.global().async {
+                do {
+                    result = try relationQuery.findObjects()
+                } catch {
+                    print(error)
+                }
+                for obj in result {
+                    gameRelation.add(obj)
+                }
             }
            
             DispatchQueue.global().async {

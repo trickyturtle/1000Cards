@@ -28,11 +28,16 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         else{
             deck["title"] = titleTF.text!
             deck["description"] = descriptionTF.text!
-            deck.saveInBackground()
-            let controller = UIAlertController(title: "Success!", message: "Deck info saved", preferredStyle: .alert)
-            controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
-            self.present(controller, animated: true, completion: nil)
-            navigationItem.hidesBackButton = false
+            DispatchQueue.global().async {
+                self.deck.saveInBackground(block: { (success, error) in
+                    let controller = UIAlertController(title: "Success!", message: "Deck info saved", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    self.navigationItem.hidesBackButton = false
+                    let publicButton = UIBarButtonItem(title: "Make Public", style: .plain, target: self, action: #selector(DeckInfoView.makePublicButton))
+                    self.navigationItem.rightBarButtonItem = publicButton
+                })
+            }
         }
     }
 
@@ -40,18 +45,20 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
         super.viewDidLoad()
         titleTF.text = deck["title"] as! String?
         descriptionTF.text = deck["description"] as! String!
-        if ((titleTF.text?.isEmpty)!) {
-            navigationItem.hidesBackButton = true
-        }
         isPublic = deck["public"] as! Bool
         var message = ""
-        if (!isPublic) {
-            message = "Make Public"
+        if ((titleTF.text?.isEmpty)!) {
+            navigationItem.hidesBackButton = true
+            self.navigationItem.rightBarButtonItem = nil
         } else {
-            message = "Make Private"
+            if (!isPublic) {
+                message = "Make Public"
+            } else {
+                message = "Make Private"
+            }
+            let publicButton = UIBarButtonItem(title: message, style: .plain, target: self, action: #selector(DeckInfoView.makePublicButton))
+            self.navigationItem.rightBarButtonItem = publicButton
         }
-        let publicButton = UIBarButtonItem(title: message, style: .plain, target: self, action: #selector(DeckInfoView.makePublicButton))
-        self.navigationItem.rightBarButtonItem = publicButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,20 +78,22 @@ class DeckInfoView: UIViewController, UINavigationControllerDelegate, UIImagePic
             message = "Private"
         }
         deck["public"] = !isPublic
-        deck.saveInBackground(block: { succeed, error in
-            if (succeed) {
-                let controller = UIAlertController(title: "Success!", message: "Deck made \(message)", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-            } else if let error = error {
-                //Error has occurred
-                let controller = UIAlertController(title: "Failure", message: "A problem has occurred. Check your internet connection.", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                print("\n***************ERROR***************")
-                print(error)
-                print("***************ERROR***************\n")
-            }
-        })
+        DispatchQueue.global().async {
+            self.deck.saveInBackground(block: { succeed, error in
+                if (succeed) {
+                    let controller = UIAlertController(title: "Success!", message: "Deck made \(message)", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                } else if let error = error {
+                    //Error has occurred
+                    let controller = UIAlertController(title: "Failure", message: "A problem has occurred. Check your internet connection.", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "Okay",style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    print("\n***************ERROR***************")
+                    print(error)
+                    print("***************ERROR***************\n")
+                }
+            })
+        }
     }
 }
