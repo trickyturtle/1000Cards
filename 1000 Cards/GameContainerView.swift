@@ -11,7 +11,6 @@ import UIKit
 class GameContainerView: UIViewController {
     
     var game: PFObject!
-    var newGame = false
     var playerArray:[PFUser] = []
     
     @IBOutlet weak var containerViewGame: UIView!
@@ -36,15 +35,12 @@ class GameContainerView: UIViewController {
                 playerArray.append(obj as! PFUser)
             }
         }
+        _ = self.navigationController?.popToRootViewController(animated: false)
+        self.navigationController?.pushViewController(self as UIViewController, animated: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if (newGame) {
-            //TODO needs to be fixed/tested
-            self.navigationController?.viewControllers.remove(at: 1)
-            self.navigationController?.viewControllers.remove(at: 1)
-        }
         self.title = game.value(forKey: "name") as! String?
     }
     
