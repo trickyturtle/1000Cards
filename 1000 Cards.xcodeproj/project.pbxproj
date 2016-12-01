@@ -21,6 +21,8 @@
 		D38AFF431DC84A5C0019F9B7 /* DiscardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */; };
 		D38AFF451DC84A6A0019F9B7 /* InPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */; };
 		D398F4751DE264C1007FF083 /* PublicLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */; };
+		F7051B231DEF9AC0009E4902 /* Info-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F7051B221DEF9AC0009E4902 /* Info-30.png */; };
+		F7051B251DEF9DDD009E4902 /* Info-22.png in Resources */ = {isa = PBXBuildFile; fileRef = F7051B241DEF9DDD009E4902 /* Info-22.png */; };
 		F71C48CC1DE2F8420022A3C2 /* InviteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C48CB1DE2F8420022A3C2 /* InviteTableCell.swift */; };
 		F734FFF81DB584EA00CA6DC5 /* cardLogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */; };
 		F734FFFA1DB5864B00CA6DC5 /* cardLogoBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */; };
@@ -96,6 +98,8 @@
 		D38AFF421DC84A5C0019F9B7 /* DiscardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardViewController.swift; sourceTree = "<group>"; };
 		D38AFF441DC84A6A0019F9B7 /* InPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InPlayViewController.swift; sourceTree = "<group>"; };
 		D398F4741DE264C1007FF083 /* PublicLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicLibraryViewController.swift; sourceTree = "<group>"; };
+		F7051B221DEF9AC0009E4902 /* Info-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info-30.png"; sourceTree = "<group>"; };
+		F7051B241DEF9DDD009E4902 /* Info-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info-22.png"; sourceTree = "<group>"; };
 		F71C48CB1DE2F8420022A3C2 /* InviteTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteTableCell.swift; sourceTree = "<group>"; };
 		F734FFF71DB584EA00CA6DC5 /* cardLogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoWhite.png; sourceTree = "<group>"; };
 		F734FFF91DB5864B00CA6DC5 /* cardLogoBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLogoBlue.png; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 		F734FFE31DB559B800CA6DC5 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F7051B221DEF9AC0009E4902 /* Info-30.png */,
+				F7051B241DEF9DDD009E4902 /* Info-22.png */,
 				F7A143BB1DB6BF9E000F29A8 /* Cards-30.png */,
 				F7A143BC1DB6BF9E000F29A8 /* Library-30.png */,
 				F7A143BD1DB6BF9E000F29A8 /* Settings-30.png */,
@@ -452,6 +458,7 @@
 				F734FFFA1DB5864B00CA6DC5 /* cardLogoBlue.png in Resources */,
 				F7E5A9D11DDC2B6B00A487B2 /* profile_blank@2x.png in Resources */,
 				41FA81291DD7C458008F2F69 /* defaultImage.jpg in Resources */,
+				F7051B231DEF9AC0009E4902 /* Info-30.png in Resources */,
 				F7A143BF1DB6BF9E000F29A8 /* Library-30.png in Resources */,
 				F7F0BC221DB15BDE00FDBCD4 /* damnapes.jpg in Resources */,
 				F75D9CA41DAD58FB00421A53 /* LaunchScreen.storyboard in Resources */,
@@ -465,6 +472,7 @@
 				F734FFF81DB584EA00CA6DC5 /* cardLogoWhite.png in Resources */,
 				F7E5A9D31DDC2B6B00A487B2 /* tab_messages@2x.png in Resources */,
 				F75D9C9C1DAD58FB00421A53 /* Main.storyboard in Resources */,
+				F7051B251DEF9DDD009E4902 /* Info-22.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

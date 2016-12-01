@@ -515,60 +515,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-fx-0Fo">
-                                <rect key="frame" x="16" y="57" width="343" height="364"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-fx-0Fo">
+                                <rect key="frame" x="16" y="83" width="343" height="338"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8T-eO-ClP">
-                                <rect key="frame" x="46" y="458" width="88" height="189"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="189" id="33d-He-Bol"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Description&gt;" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-7U-Iy0">
-                                <rect key="frame" x="16" y="458" width="343" height="189"/>
-                                <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="&lt;Description&gt;" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-7U-Iy0">
+                                <rect key="frame" x="16" y="458" width="343" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqF-AJ-6l5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqF-AJ-6l5">
                                 <rect key="frame" x="16" y="429" width="108" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="WEe-mr-E4X"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.55294117649999996" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="vgn-fx-0Fo" firstAttribute="leading" secondItem="MAq-id-dZu" secondAttribute="leadingMargin" id="2nT-KW-bdx"/>
-                            <constraint firstItem="O8T-eO-ClP" firstAttribute="leading" secondItem="MAq-id-dZu" secondAttribute="leadingMargin" constant="30" id="83v-D9-nd1"/>
-                            <constraint firstItem="vgn-fx-0Fo" firstAttribute="leading" secondItem="rqF-AJ-6l5" secondAttribute="leading" id="A3F-C3-TAy"/>
-                            <constraint firstItem="vgn-fx-0Fo" firstAttribute="trailing" secondItem="MAq-id-dZu" secondAttribute="trailingMargin" id="Ec4-fz-xga"/>
-                            <constraint firstItem="rqF-AJ-6l5" firstAttribute="leading" secondItem="Kra-7U-Iy0" secondAttribute="leading" id="M47-Zj-xCZ"/>
-                            <constraint firstItem="Kra-7U-Iy0" firstAttribute="top" secondItem="O8T-eO-ClP" secondAttribute="top" id="N1N-EA-9vn"/>
-                            <constraint firstAttribute="bottom" secondItem="O8T-eO-ClP" secondAttribute="bottom" constant="20" symbolic="YES" id="PoX-3F-Kts"/>
-                            <constraint firstItem="vgn-fx-0Fo" firstAttribute="top" secondItem="Swi-tc-LqF" secondAttribute="bottom" constant="37" id="TUb-fH-Czn"/>
-                            <constraint firstItem="vgn-fx-0Fo" firstAttribute="trailing" secondItem="Kra-7U-Iy0" secondAttribute="trailing" id="dvq-dv-nyu"/>
-                            <constraint firstItem="rqF-AJ-6l5" firstAttribute="top" secondItem="vgn-fx-0Fo" secondAttribute="bottom" constant="8" symbolic="YES" id="mEa-Ff-Lgz"/>
-                            <constraint firstItem="Kra-7U-Iy0" firstAttribute="top" secondItem="rqF-AJ-6l5" secondAttribute="bottom" constant="8" symbolic="YES" id="pS0-R1-0Vf"/>
-                            <constraint firstItem="Kra-7U-Iy0" firstAttribute="bottom" secondItem="O8T-eO-ClP" secondAttribute="bottom" id="vDU-ee-tcz"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vgn-fx-0Fo"/>
-                                <exclude reference="O8T-eO-ClP"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vgn-fx-0Fo"/>
-                                <include reference="O8T-eO-ClP"/>
                             </mask>
                         </variation>
                     </view>
@@ -581,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeA-ZE-YIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6145" y="-1520"/>
+            <point key="canvasLocation" x="6144.8000000000002" y="-1520.6896551724139"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="zMe-a7-aVB">
@@ -651,7 +625,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Deck" id="Oda-sQ-D2D">
-                        <barButtonItem key="rightBarButtonItem" image="Settings-30.png" id="HAZ-ZE-Q0h">
+                        <barButtonItem key="rightBarButtonItem" image="Info-22.png" id="HAZ-ZE-Q0h">
                             <connections>
                                 <action selector="deckInfoButton:" destination="5iu-LI-Woa" id="Ct5-dR-1rw"/>
                             </connections>
@@ -2090,6 +2064,7 @@ Cards with lasting effects, such as awarding points or changing the game's rules
     <resources>
         <image name="Cards-30.png" width="30" height="30"/>
         <image name="Chat Filled-30.png" width="30" height="30"/>
+        <image name="Info-22.png" width="22" height="22"/>
         <image name="Library-30.png" width="30" height="30"/>
         <image name="Settings-30.png" width="30" height="30"/>
     </resources>

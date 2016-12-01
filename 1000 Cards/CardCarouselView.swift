@@ -63,15 +63,15 @@ class CardCarouselView: UIViewController, iCarouselDataSource, iCarouselDelegate
             //don't do anything specific to the index within
             //this `if (view == nil) {...}` statement because the view will be
             //recycled and used with other index values later
-            uiView = UIView(frame: CGRect(x:0, y:20, width:200, height:350))
+            uiView = UIView(frame: CGRect(x:0, y:20, width:250, height:350))
             
-            imageView = UIImageView(frame:CGRect(x:0, y:25, width:200, height:180))
+            imageView = UIImageView(frame:CGRect(x:0, y:25, width:250, height:330))
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             imageView.image = cardImages[index]
             imageView.tag = 0
             
-            label = UILabel(frame: CGRect(x:0, y:0, width:200, height:20))
+            label = UILabel(frame: CGRect(x:0, y:0, width:250, height:20))
             label.backgroundColor = UIColor.clear
             label.textColor = UIColor.white
             label.textAlignment = .center
