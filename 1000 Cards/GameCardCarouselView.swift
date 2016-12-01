@@ -163,10 +163,10 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     
     // TODO: Fix funciton
     func discardedCard(_ notification: Notification) {
-//        let userInfo = notification.userInfo as? Dictionary<String, String>
+        let userInfo = notification.userInfo as? Dictionary<String, PFObject>
 
-//        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "inPlay", action: (userInfo?["removedCard"])!.objectId!, dest: "discard"))
-//        GameAction.saveActionToGame(game: game, gameAction: gameAction)
+        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "inPlay", action: (userInfo?["removedCard"])!.objectId!, dest: "discard"))
+        GameAction.saveActionToGame(game: game, gameAction: gameAction)
         carousel.reloadData()
     }
     
