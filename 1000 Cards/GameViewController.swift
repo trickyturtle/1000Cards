@@ -64,42 +64,41 @@ class GameViewController: GameCardCarouselView
     
     override func numberOfItems(in carousel: iCarousel) -> Int {
         if (deckArray.count == 0 || actionArray.count == 0) {
-            let temp = game[deckTypeKey]
-            if (temp != nil) {
-                let relation = temp as! PFRelation
-                let query = relation.query()
-                var result = [PFObject]()
+            let temp = game.relation(forKey: deckTypeKey)
+
+            let relation = temp
+            let query = relation.query()
+            var result = [PFObject]()
+            do {
+                result = try query.findObjects()
+                
+            } catch {
+                print(error)
+            }
+            for obj in result {
+                let actionMessageCard = obj.relation(forKey: "card")
+                let relation2 = actionMessageCard
+                let query2 = relation2.query()
+                var result2 = [PFObject]()
                 do {
-                    result = try query.findObjects()
+                    result2 = try query2.findObjects()
                     
                 } catch {
                     print(error)
                 }
-                for obj in result {
-                    let actionMessageCard = obj["card"]
-                    if (actionMessageCard != nil) {
-                        let relation2 = actionMessageCard as! PFRelation
-                        let query2 = relation2.query()
-                        var result2 = [PFObject]()
-                        do {
-                            result2 = try query2.findObjects()
-                            
-                        } catch {
-                            print(error)
-                        }
-                    
-                        deckArray.append(result2[0].objectId!)
-                        actionArray.append(GameAction.formatAMForPrint(actionMessage: obj))
-                    }
-                    
-                }
-                for cardKey in deckArray {
-                    //TODO: this should probably be a view object rather than an image...if possible
-                    cardImages.append(CardReader.getImage(parseID: cardKey )!)
-                }
+            
+                deckArray.append(result2[0].objectId!)
+                actionArray.append(GameAction.formatAMForPrint(actionMessage: obj))
+                
+                
             }
+            for cardKey in deckArray {
+                //TODO: this should probably be a view object rather than an image...if possible
+                cardImages.append(CardReader.getImage(parseID: cardKey )!)
+            }
+            
         }
-        return deckArray.count
+        return actionArray.count
     }
     
     override func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {

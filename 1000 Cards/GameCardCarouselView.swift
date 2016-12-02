@@ -25,9 +25,9 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     override func viewDidLoad() {
         super.viewDidLoad()
         carousel.type = .coverFlow2
-        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.addedCard( _:)), name:NSNotification.Name(rawValue: "addedCard"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.removedCard( _:)), name:NSNotification.Name(rawValue: "removedCard"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.playedCard( _:)), name:NSNotification.Name(rawValue: "playededCard"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.gameAddedCard( _:)), name:NSNotification.Name(rawValue: "gameAddedCard"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.gameRemovedCard( _:)), name:NSNotification.Name(rawValue: "gameRemovedCard"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.playedCard( _:)), name:NSNotification.Name(rawValue: "playedCard"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.discardedCard( _:)), name:NSNotification.Name(rawValue: "discardedCard"), object: nil)
     }
     
@@ -123,7 +123,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
             vc.card = cardData
             vc.cardImage = cardImages[index]
             vc.currIndex = index
-            vc.isHand = true
+
         } catch{
             // If an error occurs
             let nserror = error as NSError
@@ -153,7 +153,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         }
     }
     
-    func addedCard(_ notification: Notification) {
+    func gameAddedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, String>
         //deckArray.append(userInfo!["newCard"]!)
         cardImages.append(CardReader.getImage(parseID: userInfo!["newCard"]! )!)
@@ -171,7 +171,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         carousel.reloadData()
     }
     
-    func removedCard(_ notification: Notification) {
+    func gameRemovedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, Int>
         deckArray.remove(at: (userInfo?["index"])!)
         cardImages.remove(at: (userInfo?["index"])!)
@@ -180,15 +180,16 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
     
     func playedCard(_ notification: Notification) {
         let userInfo = notification.userInfo as? Dictionary<String, PFObject>
-        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["playedCard"])!.objectId!, dest: "inPlay"))
+
+        let gameAction =  (GameAction.createActionMessage(player: PFUser.current()!.username!, source: "hand", action: (userInfo?["cardPlayed"])!.objectId!, dest: "inPlay"))
         GameAction.saveActionToGame(game: game, gameAction: gameAction)
         
         var relation = game.relation(forKey: deckTypeKey)
-        relation.remove((userInfo?["playedCard"])!)
+        relation.remove((userInfo?["cardPlayed"])!)
         relation = game.relation(forKey: "inPlay")
-        relation.add((userInfo?["playedCard"])!)
+        relation.add((userInfo?["cardPlayed"])!)
         //TODO: this needs to happen more quickly, we need save() and error handling or an alert
-        game.saveEventually()
+        game.saveInBackground()
                 
         carousel.reloadData()
     }

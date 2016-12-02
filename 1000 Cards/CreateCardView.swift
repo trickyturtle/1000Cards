@@ -71,6 +71,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
             game.saveInBackground()
             
             // save to all cards deck
+            //TODO I think this is wrong
             let user = PFUser.current()
             let query = PFQuery(className: "Deck")
             query.getObjectInBackground(withId: user?["allCardsDeckId"] as! String, block: { (object: PFObject?, error: Error?) -> Void in
@@ -83,7 +84,16 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
                     // The find succeeded.
                     let relation = object?.relation(forKey: "cards")
                     relation?.add(newCard)
-                    object?.saveInBackground()
+                    object?.saveInBackground(block: {(success, error) in
+                        if (success) {
+                            NotificationCenter.default.post(name: Notification.Name(rawValue: "gameAddedCard"), object: nil, userInfo: ["newCard": newCard.objectId!])
+                        } else {
+                            let controller = UIAlertController(title: "Error", message: "Please check your internet connection. Also, the image may be too large. Portrait photos work best (for gameplay and for saving).", preferredStyle: .alert)
+                            controller.addAction(UIAlertAction(title: "Okay",style: .default, handler: nil))
+                            self.present(controller, animated: true, completion: nil)
+                            print(error!)
+                        }
+                    })
                 }
             })
         } else {
@@ -95,6 +105,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
                     let controller = UIAlertController(title: "Error", message: "Please check your internet connection.", preferredStyle: .alert)
                     controller.addAction(UIAlertAction(title: "Okay",style: .default, handler: nil))
                     self.present(controller, animated: true, completion: nil)
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "addedCard"), object: nil, userInfo: ["newCard": newCard.objectId!])
                 }
             })
             
@@ -115,7 +126,7 @@ class CreateNewCardView: UIViewController, UINavigationControllerDelegate, UIIma
                 }
             })
         }
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "addedCard"), object: nil, userInfo: ["newCard": newCard.objectId!])
+//        NotificationCenter.default.post(name: Notification.Name(rawValue: "addedCard"), object: nil, userInfo: ["newCard": newCard.objectId!])
 
         _ = self.navigationController?.popViewController(animated: true)
     }

@@ -11,7 +11,22 @@ import UIKit
 
 class InPlayViewController: GameCardCarouselView
 {
-
-    //TODO add carousel IBOutlet
+    
+    override func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        let vc : CardView = self.storyboard!.instantiateViewController(withIdentifier: "cardViewController") as! CardView
+        do{
+            try cardData = PFQuery.getObjectOfClass("Card", objectId: deckArray[index])
+            vc.card = cardData
+            vc.cardImage = cardImages[index]
+            vc.currIndex = index
+            vc.isInPlay = true
+        } catch{
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        self.navigationController?.pushViewController(vc as UIViewController, animated: true)
+    }
 }
 
