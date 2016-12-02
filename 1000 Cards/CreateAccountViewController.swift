@@ -82,6 +82,7 @@ class CreateAccountViewController: UIViewController {
         user.username = username
         user.password = passwordTF.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         user.email = email
+        user["emailVerified"] = false
         user.signUpInBackground { succeeded, error in
             if (succeeded) {
                 //The registration was successful

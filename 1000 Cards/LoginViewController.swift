@@ -20,9 +20,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         //Check if user exists and logged in
         let currentUser = PFUser.current()
-        //TODO does email verified ever get updated to false?
-        if (currentUser != nil && currentUser!["emailVerified"] != nil) {
-            if currentUser!["emailVerified"] as! Bool == true {
+        if (currentUser != nil) {
+            if (currentUser!["emailVerified"] as! Bool == true) {
                 let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "tabRoot")
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
                 self.navigationController?.pushViewController(vc as! UITabBarController, animated: true)

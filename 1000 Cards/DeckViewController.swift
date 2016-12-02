@@ -9,8 +9,7 @@
 import UIKit
 
 
-class DeckViewController: CardCarouselView
-{
+class DeckViewController: CardCarouselView {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if deck["title"] == nil{

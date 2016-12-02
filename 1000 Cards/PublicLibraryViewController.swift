@@ -92,6 +92,7 @@ class PublicLibraryViewController: UIViewController, UITableViewDataSource, UITa
         } else {
             let vc : PublicDeckView = self.storyboard!.instantiateViewController(withIdentifier: "PublicDeckView") as! PublicDeckView
             vc.deckTitle = deck["title"] as! String
+            vc.deck = deck
             self.navigationController?.pushViewController(vc as CardCarouselView, animated: true)
         }
     }

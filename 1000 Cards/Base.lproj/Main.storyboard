@@ -2041,9 +2041,6 @@ Cards with lasting effects, such as awarding points or changing the game's rules
                             <constraint firstItem="xfB-jx-BsK" firstAttribute="centerY" secondItem="CXo-mG-KS5" secondAttribute="centerY" id="qvm-qb-Lcm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Deck" id="EiL-6n-6ma">
-                        <barButtonItem key="rightBarButtonItem" image="Settings-30.png" id="UBn-wD-p3E"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="carousel" destination="xfB-jx-BsK" id="Ach-kP-tc6"/>
                     </connections>

@@ -44,10 +44,12 @@ class SettingsTableViewController: UITableViewController {
     }
     
     func deleteAccount(action: UIAlertAction){
-        PFUser.current()?.deleteInBackground()
-        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "navRoot")
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.pushViewController(vc as! UINavigationController, animated: true)
+        PFUser.current()?.deleteInBackground(block: { (deleteSuccessful, error) -> Void in
+            print("success = \(deleteSuccessful)")
+            PFUser.logOut()
+            let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "navRoot")
+            self.present(vc as! UINavigationController, animated: true, completion: nil)
+        })
     }
 
 }
