@@ -28,6 +28,7 @@ class GameCardCarouselView: UIViewController, iCarouselDataSource, iCarouselDele
         NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.addedCard( _:)), name:NSNotification.Name(rawValue: "addedCard"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.removedCard( _:)), name:NSNotification.Name(rawValue: "removedCard"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.playedCard( _:)), name:NSNotification.Name(rawValue: "playededCard"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameCardCarouselView.discardedCard( _:)), name:NSNotification.Name(rawValue: "discardedCard"), object: nil)
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
