@@ -88,13 +88,7 @@ class GameContainerView: UIViewController {
             vc.deckTypeKey = "lastPlayed"
         } else if (segue.identifier == "handViewSegue") {
             let vc = segue.destination as! HandViewController;
-            var playerNum = 0
-            for player in playerArray{
-                playerNum += 1
-                if player.objectId == PFUser.current()?.objectId{
-                    break
-                }
-            }
+            let playerNum = HandViewController.getPlayerHandNum(game: game)
             let deckTypeKey = "player\(playerNum.description)Hand"
             vc.deckTypeKey = deckTypeKey
 

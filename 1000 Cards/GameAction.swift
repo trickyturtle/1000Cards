@@ -40,7 +40,7 @@ class GameAction{
         actionMessage["player"] = player
         actionMessage["action"] = action
         actionMessage["destination"] = dest
-        actionMessage.saveInBackground()
+        actionMessage.saveEventually()
         return actionMessage
     }
     

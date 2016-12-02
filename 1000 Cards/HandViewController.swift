@@ -58,14 +58,14 @@ class HandViewController: GameCardCarouselView
     }
     
     static func getPlayerHandNum(game: PFObject)->Int{
-        var i = 0
-        while i < 4{
+        var i = 1
+        while i < 5{
             if (PFUser.current()!.username! == game["player\(i)"]! as! String){
                 return i
             }
             i += 1
         }
-        return 0
+        return 0 //the player does not exist in the game
     }
     
     //TODO: set up a notification to handle this

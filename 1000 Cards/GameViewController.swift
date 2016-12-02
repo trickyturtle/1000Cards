@@ -25,24 +25,25 @@ class GameViewController: GameCardCarouselView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let temp = game["players"]
-//        if (temp != nil) {
-//            let relation = temp as! PFRelation
-//            let query = relation.query()
-//            var result = [PFObject]()
-//            do {
-//                result = try query.findObjects()
-//                
-//            } catch {
-//                print(error)
-//            }
-//            for obj in result {
-//                playerArray.append(obj as! PFUser)
-//            }
-        
+        //TODO: add a numPlayers value to games, so that we don't have to do this
+        let temp = game["players"]
+        if (temp != nil) {
+            let relation = temp as! PFRelation
+            let query = relation.query()
+            var result = [PFObject]()
+            do {
+                result = try query.findObjects()
+                
+            } catch {
+                print(error)
+            }
+            for obj in result {
+                playerArray.append(obj as! PFUser)
+            }
+        }
         
         var numPlayers = playerArray.count
-        var tempIndex = 0
+        var tempIndex:Int = 0
         let playerLabelArray = [player1Name, player2Name, player3Name, player4Name]
         let playerScoreLabelArray = [player1Score, player2Score, player3Score, player4Score]
         while(numPlayers > 0){
@@ -50,7 +51,9 @@ class GameViewController: GameCardCarouselView
 
             numPlayers -= 1
             tempIndex += 1
-            playerScoreLabelArray[tempIndex]?.text = game["player\(tempIndex)Score"] as! String?
+            print(tempIndex.description)
+            //TODO: why in the world does tempIndex need to be incremented rather than decremented?
+            playerScoreLabelArray[tempIndex + 1]?.text = game["player\(tempIndex.description)Score"] as! String?
         }
         while (tempIndex < 4){
             playerLabelArray[tempIndex]?.isHidden = true

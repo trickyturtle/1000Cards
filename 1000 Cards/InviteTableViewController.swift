@@ -284,10 +284,10 @@ class InviteTableViewController: UITableViewController {
         currentUser.saveInBackground()
         
         newGame["description"] = description
-        newGame["player1Score"] = 0
-        newGame["player2Score"] = 0
-        newGame["player3Score"] = 0
-        newGame["player4Score"] = 0
+        newGame["player1Score"] = "0"
+        newGame["player2Score"] = "0"
+        newGame["player3Score"] = "0"
+        newGame["player4Score"] = "0"
         
         return newGame
     }
