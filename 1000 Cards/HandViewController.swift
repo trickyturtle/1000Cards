@@ -68,35 +68,5 @@ class HandViewController: GameCardCarouselView
         return 0 //the player does not exist in the game
     }
     
-    //TODO: set up a notification to handle this
-    func playCard(){
-        var relation = game.relation(forKey: "")
-        let query = relation.query()
-        var result = [PFObject]()
-        do {
-            result = try query.findObjects()
-            let numCards = result.count
-            if numCards == 0{
-                let controller = UIAlertController(title: "Deck is empty!", message: "Create more cards!", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-            }else{
-                let controller = UIAlertController(title: "Card Drawn!", message: "It may take a minute for your hand to update, depending on your network connection", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK",style: .default, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                let card = result[Int(arc4random_uniform(UInt32(numCards)))]
-                relation.remove(card)
-                relation = game.relation(forKey: deckTypeKey)
-                relation.add(card)
-                //TODO: this needs to happen more quickly, we need save() and error handling or an alert
-                game.saveEventually()
-            }
-            
-            
-        } catch {
-            print(error)
-        }
-    }
-    
-    
+  
 }
